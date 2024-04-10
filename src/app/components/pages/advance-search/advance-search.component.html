@@ -1,0 +1,469 @@
+
+<div class="min-vh-100 w-100 ">
+
+<form [formGroup]="advanceSearch" (ngSubmit)="onSubmit2(advanceSearch.value,advanceSearch.valid)">
+    <div class="card mt-sm-3 mt-0"  style=" border-radius: 0px;">
+      <div class="card-body">
+        <h5 class="card-title">Basic Details</h5>
+        
+        <div class="row ">
+          <div class="col-lg-12" >
+          
+           
+          <div class="row pt-2" >
+            <div class="col-lg-4 col-sm-4 col-12">
+              <label  style="margin-left: 6px;">I am looking for</label>
+              <select class="form-select"  formControlName="lookingFor" >
+              
+               <option value="">Select Bride or Groom</option> 
+                <option value="groom">Groom</option>
+                <option value="bride">Bride</option>
+                
+              </select>
+              <span *ngIf="isFormSubmited && advanceSearch.controls['lookingFor'].errors">
+                <span *ngIf="advanceSearch.controls['lookingFor'].errors['required']" style="color:red">
+                 Please select to whome you are looking for.
+                </span>
+
+              </span>
+            </div>
+           
+            <div class="col-lg-2 col-sm-4 col-6 mt-sm-0 mt-2">
+              <label for="exampleInputText">Age</label>
+              <div class="d-flex justify-content-center align-items-center" style="gap: 1rem">
+                <select class="form-select" formControlName="minAge">
+                  <option value="">Min Age</option> 
+                  <option value="18">18</option>
+                  <option value="22">22</option>
+                </select>
+
+              </div>
+              <span *ngIf="isFormSubmited && advanceSearch.controls['minAge'].errors">
+              <span *ngIf="advanceSearch.controls['minAge'].errors['required']" style="color:red">
+               Please select the minimum age.
+              </span>
+              </span>
+            </div>
+              <div class="col-lg-2  col-sm-4 col-6 mt-sm-0 mt-2">
+              
+                  <label for=""></label>
+                  <select class="form-select" formControlName="maxAge">
+                  <option value="">Max Age</option> 
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                </select>
+            
+                <span *ngIf="isFormSubmited && advanceSearch.controls['maxAge'].errors">
+                  <span *ngIf="advanceSearch.controls['maxAge'].errors['required']" style="color:red">
+                  <small> Please select the maximum age.</small>
+                  </span>
+                 </span>
+              </div>
+              <div class="col-lg-2  col-sm-12 col-12 mt-md-0 mt-2">
+                <label for="exampleInputText">Height</label>
+                <div class="d-flex justify-content-center align-items-center " style="gap: 1rem;">
+                <select class="form-select" formControlName="height">
+                  <option value="">Min Height</option> 
+                  <option value="5">5 foot</option>
+                  <option value="5.3">5.3 foot</option>
+                </select>
+                </div>
+                <span *ngIf="isFormSubmited && advanceSearch.controls['height'].errors">
+                  <span *ngIf="advanceSearch.controls['height'].errors['required']" style="color:red">
+                   Please select the minimum height.
+                  </span>
+                 </span>
+              </div>
+            </div>
+         
+            
+
+            <div class="row">
+              <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                <label  style="margin-left: 6px;">Dont show this gotra</label>
+                <ng-multiselect-dropdown
+                  [settings]="dropdownSettings"
+                  [data]="dropdownList"
+                  formControlName="mygotras"
+                  (onSelect)="ongotraSelect($event)"
+                  (onSelectAll)="onSelectAll($event)"
+                  (onDeSelect)="ongotraDeSelect($event)"
+                  (onDeSelectAll)="onUnSelectAll()">
+              </ng-multiselect-dropdown>
+                
+              </div>
+              <span *ngIf="isFormSubmited && advanceSearch.controls['mygotras'].errors">
+                <span *ngIf="advanceSearch.controls['mygotras'].errors['required']" style="color:red">
+                 Please select the gotras.
+                </span>
+               </span>
+            </div>
+
+            <div class="row" >
+              <div class="col-lg-12 mt-3">
+              <span style="font-size: 14px;">  Present Residential Address Details ( Where candidate presently resides)</span>
+              </div>
+              <div class="col-lg-12 mt-2">
+                <!-- <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (click)="residingIn($event)" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Currently Residing in India
+                  </label>
+                </div> -->
+                <div class="form-check" *ngFor="let product of residing; let index = index">
+                  <label class="form-check-label text-break">
+                    <input class="form-check-input" type="checkbox" [ngModel]="selectedIndex === index"
+                        (change)="changeSelection($event, index)" [ngModelOptions]="{standalone: true}" />
+                    {{ product.country }}
+                    <span class="form-check-sign">
+                        <span class="check"></span>
+                    </span>
+                </label>
+                </div>
+                <span *ngIf="isFormSubmited && advanceSearch.controls['country'].errors && advanceSearch.controls['state'].errors && advanceSearch.controls['city'].errors">
+                  <span *ngIf="advanceSearch.controls['country'].errors['required'] && advanceSearch.controls['state'].errors['required']" style="color:red">
+                   Please insert all residential details.
+                  </span>
+                 </span>
+              </div>
+            </div>
+                
+            <div class="row" *ngIf="residingStatus">
+              <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                <label  style="margin-left: 6px;">Country</label>
+                <select class="form-select" formControlName="country" >
+                
+                 <option value="">country</option> 
+                  <option value="ind">India</option>
+                  <option value="uk">London</option>
+                  
+                </select>
+                <span *ngIf="isFormSubmited && advanceSearch.controls['country'].errors">
+                  <span *ngIf="advanceSearch.controls['country'].errors['required']" style="color:red">
+                   Please select the country.
+                  </span>
+                 </span>
+              </div>
+
+              <div class="col-lg-4 col-sm-6 col-6 mt-3">
+                <label  style="margin-left: 6px;">State</label>
+                <select class="form-select" formControlName="state" >
+                
+                 <option value="">State</option> 
+                  <option value="state1">state1</option>
+                  <option value="state2">state2</option>
+                  
+                </select>
+                <span *ngIf="isFormSubmited && advanceSearch.controls['state'].errors">
+                  <span *ngIf="advanceSearch.controls['state'].errors['required']" style="color:red">
+                   Please select the state.
+                  </span>
+                 </span>
+              </div>
+
+              <div class="col-lg-4 col-sm-6 col-6 mt-3">
+                <label  style="margin-left: 6px;">City</label>
+                <select class="form-select" formControlName="city" >
+                
+                 <option value="">City</option> 
+                  <option value="city1">City1</option>
+                  <option value="city2">City2</option>
+                  
+                </select>
+                <span *ngIf="isFormSubmited && advanceSearch.controls['city'].errors">
+                  <span *ngIf="advanceSearch.controls['city'].errors['required']" style="color:red">
+                   Please select the city.
+                  </span>
+                 </span>
+              </div>
+            </div>
+                
+            <div class="row">
+              
+              <div class="col-lg-12 mt-3">
+                <!-- <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (click)="residingOut($event)" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Currently Residing outside India
+                  </label>
+                </div> -->
+              </div>
+            </div>
+            <!-- <div formGroupName="residingOut">
+            <div class="row" *ngIf="residingOutStatus">
+              <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                <label  style="margin-left: 6px;">Country</label>
+                <select class="form-select" formControlName="country" >
+                
+                 <option value="">country</option> 
+                  <option value="ind">India</option>
+                  <option value="uk">London</option>
+                  
+                </select>
+                
+              </div>
+
+              <div class="col-lg-4 col-sm-6 col-6 mt-3">
+                <label  style="margin-left: 6px;">State</label>
+                <select class="form-select" formControlName="state" >
+                
+                 <option value="">State</option> 
+                  <option value="state1">state1</option>
+                  <option value="state2">state2</option>
+                  
+                </select>
+                
+              </div>
+
+              <div class="col-lg-4 col-sm-6 col-6 mt-3">
+                <label  style="margin-left: 6px;">City</label>
+                <select class="form-select" formControlName="city" >
+                
+                 <option value="">City</option> 
+                  <option value="city1">City1</option>
+                  <option value="city2">City2</option>
+                  
+                </select>
+                
+              </div>
+            </div>
+            </div> -->
+            <div class="row">
+              <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                <label  style="margin-left: 6px;">Maratial status</label>
+                <select class="form-select" formControlName="maratialStatus" >
+                
+                 <option value="">Select status</option> 
+                  <option value="married">Married</option>
+                  <option value="unmarried">Unmarried</option>
+                  
+                </select>
+                <span *ngIf="isFormSubmited && advanceSearch.controls['maratialStatus'].errors">
+                  <span *ngIf="advanceSearch.controls['maratialStatus'].errors['required']" style="color:red">
+                   Please select the maratial status.
+                  </span>
+                 </span>
+              </div>
+
+              <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                <label  style="margin-left: 6px;">Blood Group</label>
+                <select class="form-select" formControlName="bloodGroup" >
+                
+                 <option value="">Select blood group</option> 
+                  <option value="a+">A+</option>
+                  <option value="o">O</option>
+                  
+                </select>
+                <span *ngIf="isFormSubmited && advanceSearch.controls['bloodGroup'].errors">
+                  <span *ngIf="advanceSearch.controls['bloodGroup'].errors['required']" style="color:red">
+                   Please select the blood group.
+                  </span>
+                 </span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                <label  style="margin-left: 6px;">Mother Toungh</label>
+                <select class="form-select" formControlName="motherToungue" >
+                
+                 <option value="">Select language</option> 
+                  <option value="marati">Marati</option>
+                  <option value="hindi">Hindi</option>
+                  
+                </select>
+                <span *ngIf="isFormSubmited && advanceSearch.controls['motherToungue'].errors">
+                  <span *ngIf="advanceSearch.controls['motherToungue'].errors['required']" style="color:red">
+                   Please select the mother toungue.
+                  </span>
+                 </span>
+              </div>
+
+              <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                <label  style="margin-left: 6px;">Special case search</label>
+                <select class="form-select" formControlName="specialCaseSearch" >
+                
+                 <option value="">Handicapped</option> 
+                  <option value="b1">Blind</option>
+                  <option value="d1">Divyang</option>
+                  
+                </select>
+                <span *ngIf="isFormSubmited && advanceSearch.controls['specialCaseSearch'].errors">
+                  <span *ngIf="advanceSearch.controls['specialCaseSearch'].errors['required']" style="color:red">
+                   Please select the special case search.
+                  </span>
+                 </span>
+              </div>
+            </div>
+
+         
+          
+        
+          </div>
+      </div>    
+      </div>
+    </div>
+    
+    
+    <div class="card mt-sm-3 mt-3" style=" border-radius: 0px;">
+      <div class="card-body">
+        <h5 class="card-title">Education & Profession Details</h5>
+
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 col-12 mt-3">
+            <label  style="margin-left: 6px;">Qualification</label>
+            <select class="form-select" formControlName="qualification" >
+            
+             <option value="">Does not matter x</option> 
+              <option value="BA">BA</option>
+              <option value="BCOM">BCOM</option>
+              
+            </select>
+            <span *ngIf="isFormSubmited && advanceSearch.controls['qualification'].errors">
+              <span *ngIf="advanceSearch.controls['qualification'].errors['required']" style="color:red">
+               Please select the qualification.
+              </span>
+             </span>
+          </div>
+          <div class="col-lg-4 col-sm-12 col-12 mt-3">
+            <label  style="margin-left: 6px;">Education Area</label>
+            <select class="form-select" formControlName="educationArea" >
+            
+             <option value="">Does not matter x</option> 
+              <option value="marati">Marati</option>
+              <option value="hindi">Hindi</option>
+              
+            </select>
+            <span *ngIf="isFormSubmited && advanceSearch.controls['educationArea'].errors">
+              <span *ngIf="advanceSearch.controls['educationArea'].errors['required']" style="color:red">
+               Please select the education area.
+              </span>
+             </span>
+          </div>
+
+         
+        </div>
+
+        <div class="row">
+         
+          <div class="col-lg-4 col-sm-12 col-12 mt-3">
+            <label  style="margin-left: 6px;">Working With</label>
+            <select class="form-select" formControlName="workingWith" >
+            
+             <option value="">Does not matter x</option> 
+              <option value="all">All</option>
+              <option value="alon">Alon</option>
+              
+            </select>
+            <span *ngIf="isFormSubmited && advanceSearch.controls['workingWith'].errors">
+              <span *ngIf="advanceSearch.controls['workingWith'].errors['required']" style="color:red">
+               Please select the working with.
+              </span>
+             </span>
+          </div>
+
+          <div class="col-lg-4 col-sm-12 col-12 mt-3">
+            <label  style="margin-left: 6px;">Profession Area</label>
+            <select class="form-select" formControlName="professionArea" >
+            
+             <option value="">Does not matter x</option> 
+              <option value="e1">Expert</option>
+              <option value="t1">Trainer</option>
+              
+            </select>
+            <span *ngIf="isFormSubmited && advanceSearch.controls['professionArea'].errors">
+              <span *ngIf="advanceSearch.controls['professionArea'].errors['required']" style="color:red">
+               Please select the profession area.
+              </span>
+             </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-2 mt-3">
+           <label >Annual Income</label>
+          </div>
+          <div class="col-lg-6 d-flex col-12 mt-3">
+           <div class="form-check d-flex align-items-center form-check-inline">
+            <input class="form-check-input" type="radio" formControlName="incomeRange" id="inlineRadio1" value="option1" [(ngModel)]="selectedValue" (change)="handleChange($event)">
+            <label class="form-check-label"  for="inlineRadio1" >Doesnt matter</label>
+          </div>
+          <div class="form-check d-flex align-items-center form-check-inline">
+            <input class="form-check-input" type="radio" formControlName="incomeRange" id="inlineRadio2" value="option2" [(ngModel)]="selectedValue" (change)="handleChange($event)">
+            <label class="form-check-label" for="inlineRadio2" >Select an income range</label>
+          </div>
+          <span *ngIf="isFormSubmited && advanceSearch.controls['incomeRange'].errors">
+            <span *ngIf="advanceSearch.controls['incomeRange'].errors['required']" style="color:red">
+             Please select the income range.
+            </span>
+           </span>
+          </div>
+
+        </div>
+        <div *ngIf="selectedValue == 'option2'">
+        <div class="row">
+           
+            <div class="col-lg-3 col-sm-12 col-12 mt-3">
+              
+              <select class="form-select" name="working_with" >
+              
+               <option value="">INR(Indian Rupee)</option> 
+                <option value="100">10000</option>
+                <option value="200">20000</option>
+                
+              </select>
+              
+            </div>
+          
+        </div>
+       
+       
+        
+
+       <div class="row">
+        <div class="col-lg-5 mt-3">
+        <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider> 
+        </div>
+       
+       </div>
+      
+       <div class="row">
+         <div class="col-lg-2 col-5">
+          <input type="text" class="form-control"  [(ngModel)]="value" [ngModelOptions]="{standalone: true}" />
+         </div>
+         <div class="col-lg-1 col-2 d-flex justify-content-center align-items-center">
+            <label>to</label>
+         </div>
+         <div class="col-lg-2 col-5">
+          <input type="text" class="form-control"  [(ngModel)]="highValue" [ngModelOptions]="{standalone: true}" />
+         </div>
+       </div>
+        </div>
+        <div class="row">
+              
+          <div class="col-lg-12 mt-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Include Profiles who have not specified their income
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    
+    <div class="d-flex justify-content-center mb-3 smallSearchBtn" >
+      <button type="submit" style="width:130px;background-color: #D93134;color:white"   class="btn btn mt-5">Search</button>
+    </div> 
+    
+    <div class="col-12 SearchBtn">
+      <div class="footer fixed-bottom">
+        <div class="shadow-sm p-3 w-100" style="margin-top: 0px !important;">
+        <button type="submit" style="background-color: #D93134;color:white;padding:15px;" routerLink="/search-result" class="btn btn btn-block">Search</button>
+        </div>
+        </div>
+      </div>
+    </form>
+
+</div>    

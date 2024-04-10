@@ -1,0 +1,22 @@
+@media screen and (max-width:700px) {
+    .card{
+        width: 50vh;
+    }
+    button{
+        
+    }
+    
+}
+@media screen and (min-width:701px) {
+    .card{
+        width: 100vh;
+    }
+    
+}
+
+button{
+
+    border: 1px solid red;
+    box-shadow: none;
+     color: #000;
+}

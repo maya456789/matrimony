@@ -1,0 +1,165 @@
+@media (max-width: 768px) {
+  /* .imgs p {
+    font-size: 12px !important
+  }
+
+  .ids p {
+    font-size: 14px !important;
+  } */
+
+  .main2 {
+    display: flex !important;
+  }
+
+  .main1 {
+    /* padding: 0 1rem !important; */
+
+  }
+
+  .main {
+    /* margin: 10px 5px !important; */
+  }
+
+  .content {
+    /* padding: 0 !important; */
+  }
+  .card-sug{
+    width: 100%;
+    height: 130px;
+    background-position: center;
+    background-size: cover;
+     background-repeat: no-repeat;
+      border-top-left-radius: 32px;
+      border-top-right-radius: 32px;
+   } 
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .main {
+    /* margin: 10px 0px !important; */
+    /* background-color: aqua !important; */
+  }
+
+  
+
+}
+
+@media screen and (min-width:992px) {
+.div-5 {
+width: 20% !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+  .main {
+    /* display: flex !important;
+        flex-direction: row !important;
+        background-color: rebeccapurple; */
+    /* margin: 10px !important;
+        font-size: 15px !important;
+        padding: 0 !important; */
+  }
+}
+
+@media (min-width: 575px) and (max-width: 767px) {
+  .interest-id{
+    font-size: 14px !important;
+    font-weight: 600;
+   
+  }
+  .imgs{
+    padding:5px  !important;
+  }
+ 
+  .interest-name{
+  font-size: 12px !important;
+  margin-bottom: 5px;
+  }
+  
+  .interest-views{
+    font-size: 9px !important;
+  }
+  .interest-sent{
+    font-size: 11px !important;
+  }
+  
+  
+}
+@media (max-width: 575px) {
+  .interest-id{
+    font-size: 13px !important;
+    font-weight: 600;
+   
+  }
+  .imgs{
+    padding:3px  !important;
+  }
+  .content{
+    padding: 0px 7px 12px 7px !important;
+  }
+  .interest-name{
+  font-size: 12px !important;
+  margin-bottom: 5px;
+  }
+  
+  .interest-views{
+    font-size: 9px !important;
+  }
+  .interest-sent{
+    font-size: 11px !important;
+  }
+  
+  
+}
+
+.content{
+ padding: 0px 15px 17px 15px;
+}
+
+.imgs{
+  padding:5px ;
+}
+
+p{
+  margin-bottom: 0px;
+}
+
+.interest-id{
+  font-size: 16px;
+  font-weight: 600;
+ 
+}
+.interest-name{
+font-size: 14px;
+margin-bottom: 5px;
+}
+
+.interest-views{
+  font-size: 11px;
+}
+.interest-sent{
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+
+ .card-sug{
+  width: 100%;
+  height: 170px;
+  background-position: center;
+  background-size: cover;
+   background-repeat: no-repeat;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+ } 
+}

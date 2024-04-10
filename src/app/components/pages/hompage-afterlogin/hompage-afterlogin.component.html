@@ -1,0 +1,743 @@
+<div class="home-p text-center" >
+  
+  <div class="bg-img1" style="background-image: url(../../../../assets/img/Rectangle\ 2052.png);" >
+ 
+  <div class="heading " >
+    <div class="first-head font-weight-bold text-white " *ngFor="let obj of text">Welcome {{obj.name}} !
+    </div>
+   
+    <!-- <div class=" intrest  col-12   text-center mb-4 d-flex justify-content-center align-item-center ">
+      
+     <div class=" "   routerLink="/intrest-sent" [routerLinkActive]="['active-link']"
+          [routerLinkActiveOptions]="{ exact: true }">
+          <button style="border: none;" class="int">
+        <div class="card-body"  style="width: 80px;" >
+          <h4 class="card-title"><i class="fa-regular fa-user" style="color: #e02929;"></i></h4>
+          <h5 class="card-title" *ngFor="let pro of profile">{{pro.intrest}}</h5>
+          <h6 class="card-title pt-2">Intrests<br> Sent</h6>
+
+         
+        </div></button>
+      </div>
+      <div class="ml-2 "  routerLink="/intrest-recived" [routerLinkActive]="['active-link']"
+          [routerLinkActiveOptions]="{ exact: true }">
+          <button style="border: none;" class="int">
+        <div class="card-body"  style="width: 80px;">
+          <h4 class="card-title"><i class="fa-regular fa-user" style="color: #e02929;"></i></h4>
+          <h5 class="card-title" *ngFor="let pro of profile">{{pro.intrest}}</h5>
+          <h6 class="card-title pt-2">Intrest Recived</h6>
+
+         
+        </div></button>
+      </div>
+      <div class=" ml-2 "   routerLink="/intrest-accepted" [routerLinkActive]="['active-link']"
+          [routerLinkActiveOptions]="{ exact: true }">
+          <button style="border: none;" class="int">
+        <div class="card-body" style="width: 80px;" >
+          <h4 class="card-title"><i class="fa-regular fa-user" style="color: #e02929;"></i></h4>
+          <h5 class="card-title" *ngFor="let pro of profile">{{pro.intrest}}</h5>
+          <h6 class="card-title pt-2">Intrest Accepted</h6>
+
+         
+        </div></button>
+      </div>
+      <div class="ml-2 " routerLink="/my-favorite"  [routerLinkActive]="['active-link']"
+          [routerLinkActiveOptions]="{ exact: true }">
+          <button class="int" style="border: none;">
+        <div class="card-body"  style="width: 90px;">
+          <h4 class="card-title"><i class="fa-regular fa-user" style="color: #e02929;"></i></h4>
+          <h5 class="card-title" *ngFor="let pro of profile">{{pro.intrest}}</h5>
+          <h6 class="card-title pt-2">My Favorite Profiles</h6>
+
+         
+        </div></button>
+      </div>
+      
+    </div>
+     -->
+
+     <div class="col-lg-9 col-12 top-div font-weight-bold" *ngFor="let pro of profile">
+      <div class="row int1 col-md-auto col-sm-12 col-lg-12   mb-3">
+      <div class="col-3  " >
+        <div class=" btn-square-md text-align-center" routerLink="/intrest-sent" [routerLinkActive]="['active-link']"
+        [routerLinkActiveOptions]="{ exact: true }">
+          <i class="fa-regular fa-user fa fa-3x" style="color: #e02929;"></i>
+          <p class="text-black mb-0 lab font-weight-bold " *ngFor="let pro of profile">{{pro.intrest}}</p>
+          <p class=" text-black">Intrest Send</p>
+
+        </div>
+      </div>
+      <div class="col-3">
+        <div class=" btn-square-md text-align-center" routerLink="/intrest-recived" [routerLinkActive]="['active-link']"
+        [routerLinkActiveOptions]="{ exact: true }">
+          <i class="fa-regular fa-user fa fa-3x" style="color: #e02929;"></i>
+          <p class="text-black mb-0 lab font-weight-bold " *ngFor="let pro of profile">{{pro.intrest}}</p>
+          <p class=" text-black">Intrest Recived</p>
+
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="  btn-square-md" routerLink="/intrest-accepted" [routerLinkActive]="['active-link']"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <i class="fa-regular fa-user fa fa-3x" style="color: #e02929;"></i>
+          <p class="text-black mb-0 lab font-weight-bold " *ngFor="let pro of profile">{{pro.intrest}}</p>
+          <p class=" text-black">Intrest Accepted</p>
+        </div>
+      </div>
+      <div class="col-3 text-center " routerLink="/my-favorite"  [routerLinkActive]="['active-link']"
+      [routerLinkActiveOptions]="{ exact: true }" >
+        <div class=" btn-square-md text-align-center">
+          <i class="fa-regular fa-user fa fa-3x" style="color: #e02929;"></i>
+          <p class="text-black mb-0 lab font-weight-bold " *ngFor="let pro of profile">{{pro.intrest}}</p>
+          <p class=" text-black">My Favorite Profile</p>
+
+        </div>
+      </div>
+    </div>
+    </div> 
+   
+ 
+
+  </div> 
+    
+    
+  <div class="form-gen text-center">
+
+    <div class="container   col-lg-9 p-0" id="main-form" style="box-sizing: border-box;
+    box-shadow: 2px 2px rgb(255, 208, 250);
+    background-color: white;">
+      
+      <div class="d-flex top">
+        <div class="col-6 py-2 p-0" id="form-head">
+          <span class="btn font-weight-bold  " routerLink="/search-tabs/quick-search">Quick Search</span>
+        </div>
+
+        <div class="col-6 py-2 p-0 " id="form-head">
+          <span class=" btn " routerLink="/search-tabs/advance-search"
+            [routerLinkActive]="['active-link']" [routerLinkActiveOptions]="{ exact: true }"
+            style="background-color: transparent;border: none;box-shadow: none; color: rgb(61, 61, 61);">Advanced Search</span>
+        </div>  
+      </div>
+      <div class="progress" style="height: 5px;  border-radius: 0px; ">
+        <div class="progress-bar bg-danger" style="width: 50%;"></div>
+      </div>
+      <div class="">
+        <div class="col-12 text-center px-4"><br>
+          <form>
+            <div class="form-group">
+
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Email Id/Name/Surname" style="background-color: white;">
+            </div>
+           <div style="font-weight: 700; padding-bottom: 15px; padding-top: 5px;">OR</div> 
+            
+            <div class="d-flex  pb-1">
+              <span class="label col-6 p-0 " style="font-weight: 500; text-align: left;">I am looking for</span>
+              <span class="label col-6 " id="age" style="width: 85%;font-weight: 500;  text-align: left;">Age</span>
+            </div>
+
+            <div class=" row">
+              <div class="col-6">
+                <select class="form-select " aria-label="Default select example">
+                  <option selected>Bride</option>
+                  <option value="3">Groom</option>
+                </select>
+              </div>
+              <div class="col-2">
+                <select class="form-select " aria-label="Default select example">
+                  <option selected>Min Age</option>
+                  <option value="1">19</option>
+                  <option value="2">20</option>
+                  <option value="3">21</option>
+                  <option value="4">22</option>
+                </select>
+              </div>
+              <div class="col-2 ">
+                <select class="form-select " aria-label="Default select example">
+                  <option selected>Max Age</option>
+                  <option value="1">23</option>
+                  <option value="2">24</option>
+                  <option value="3">25</option>
+                </select>
+              </div>
+              <div class="col-2 p-0">
+                <button type="button" class="btn btn-success" routerLink="/search-result">Search</button>
+              </div>
+            </div><br>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-gen1 text-center">
+
+    <div class="container col-lg-9" id="main-form">
+
+      <div class="row top">
+        <div class="col mt-2 p-0" id="form-head">
+          <span class=" font-weight-bold btn">Quick Search</span>
+        </div>
+
+        <div class="col mt-2 p-0 " id="form-head">
+          <button class=" font-weight-bold btn" routerLink="/search-tabs/advance-search"
+            [routerLinkActive]="['active-link']" [routerLinkActiveOptions]="{ exact: true }"
+            style="background-color: transparent;border: none;box-shadow: none;">Advanced Search</button>
+        </div>
+      </div><br>
+      <div class="progress" style="height: 5px;   margin-left: -13px;">
+        <div class="progress-bar bg-danger" style="width: 50%;"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center"><br>
+          <form>
+            <div class="form-group">
+
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Email Id/Name/Surname" style="background-color: white;">
+            </div>
+            <b>OR</b><br>
+            <div class="d-flex font-weight-bold ">
+              <span class="label col-0">I am looking for</span>
+
+
+            </div><br>
+
+            <div class=" row">
+              <div class="col-lg-8">
+                <select class="form-select " aria-label="Default select example">
+                  <option selected>Bride</option>
+                  <option value="3">Groom</option>
+                </select>
+              </div><br><br>
+              <span class="label text-left font-weight-bold mb-4" id="age">Age</span>
+              <div class="col-6">
+                <select class="form-select " aria-label="Default select example">
+                  <option selected>Min Age</option>
+                  <option value="1">19</option>
+                  <option value="2">20</option>
+                  <option value="3">21</option>
+                  <option value="4">22</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <select class="form-select " aria-label="Default select example">
+                  <option selected>Max Age</option>
+                  <option value="1">23</option>
+                  <option value="2">24</option>
+                  <option value="3">25</option>
+                </select>
+              </div>
+              <div class="text-center"><br>
+                <button type="button" class="btn btn-success" routerLink="/search-result">Search</button>
+              </div>
+            </div><br>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </div> <br>
+  
+  
+  <br><div class="img-bann">
+    <img src="../../../../assets/img/HomePageBanner.png" style="width: 200%;" class="img-fluid" alt="Responsive image" > 
+    </div>
+  <div class="label-cls text-center">
+    <h3 class="tex-label3 mt-5" >Premium Member</h3>
+  </div>
+  
+  <div id="demo2" class="carousel slide" data-ride="carousel" data-interval="false">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo2" data-slide-to="0" class="active"></li>
+      <li data-target="#demo2" data-slide-to="1"></li>
+      <li data-target="#demo2" data-slide-to="2"></li>
+    </ul>
+    
+    <!-- The slideshow -->
+    <div class="container-fluid pb-2 carousel-inner no-padding" >
+      <div class="carousel-item active">
+        <div class="card-outer">
+          <div class="row">
+            <div class="col-lg-3  col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+              <div class="card-sl" style="border-radius: 35px;">
+    
+                <div class="card-image " style="border-radius: 35px;">
+    
+                  <div class="card-profile-image"
+                    style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                  </div>
+                  <div class="last-seen" style="background-color: rgb(245 229 245)">
+                    {{cardObj.lastseen}}
+                  </div>
+                </div>
+    
+                <div class="card-heading-id text-left ">
+                  ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                </div>
+                <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                  <p class="profile-text-m">{{cardObj.name}} </p>
+                  <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+    
+                  <p class="profile-text-m">{{cardObj.occupation}}</p>
+    
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-outer">
+          <div class="row">
+            <div class="col-lg-3  col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+              <div class="card-sl" style="border-radius: 35px;">
+    
+                <div class="card-image " style="border-radius: 35px;">
+    
+                  <div class="card-profile-image"
+                    style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                  </div>
+                  <div class="last-seen" style="background-color: rgb(245 229 245)">
+                    {{cardObj.lastseen}}
+                  </div>
+                </div>
+    
+                <div class="card-heading-id text-left ">
+                  ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                </div>
+                <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                  <p class="profile-text-m">{{cardObj.name}} </p>
+                  <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+    
+                  <p class="profile-text-m">{{cardObj.occupation}}</p>
+    
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-outer">
+          <div class="row">
+            <div class="col-lg-3  col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+              <div class="card-sl" style="border-radius: 35px;">
+    
+                <div class="card-image " style="border-radius: 35px;">
+    
+                  <div class="card-profile-image"
+                    style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                  </div>
+                  <div class="last-seen" style="background-color: rgb(245 229 245)">
+                    {{cardObj.lastseen}}
+                  </div>
+                </div>
+    
+                <div class="card-heading-id text-left ">
+                  ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                </div>
+                <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                  <p class="profile-text-m">{{cardObj.name}} </p>
+                  <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+    
+                  <p class="profile-text-m">{{cardObj.occupation}}</p>
+    
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo2" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+  <hr class="solid " style="margin-top: 4rem;padding-bottom: 1px;">
+  <div class="label-cls text-center">
+    <h3 class="tex-label3 mt-5 ">Suggested By Mediator</h3>
+  </div>
+  <div id="demo3" class="carousel slide" data-ride="carousel" data-interval="false">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo3" data-slide-to="0" class="active"></li>
+      <li data-target="#demo3" data-slide-to="1"></li>
+      <li data-target="#demo3" data-slide-to="2"></li>
+    </ul>
+    
+    <!-- The slideshow -->
+    <div class="container-fluid pb-2 carousel-inner no-padding" >
+      <div class="carousel-item active">
+        <div class="card-outer">
+          <div class="row">
+            <div class="col-lg-3  col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+              <div class="card-sl" style="border-radius: 35px;">
+    
+                <div class="card-image " style="border-radius: 35px;">
+    
+                  <div class="card-profile-image"
+                    style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                  </div>
+                  <div class="last-seen" style="background-color: rgb(245 229 245)">
+                    {{cardObj.lastseen}}
+                  </div>
+                </div>
+    
+                <div class="card-heading-id text-left ">
+                  ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                </div>
+                <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                  <p class="profile-text-m">{{cardObj.name}} </p>
+                  <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+    
+                  <p class="profile-text-m">{{cardObj.occupation}}</p>
+    
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-outer">
+          <div class="row">
+            <div class="col-lg-3  col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+              <div class="card-sl" style="border-radius: 35px;">
+    
+                <div class="card-image " style="border-radius: 35px;">
+    
+                  <div class="card-profile-image"
+                    style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                  </div>
+                  <div class="last-seen" style="background-color: rgb(245 229 245)">
+                    {{cardObj.lastseen}}
+                  </div>
+                </div>
+    
+                <div class="card-heading-id text-left ">
+                  ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                </div>
+                <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                  <p class="profile-text-m">{{cardObj.name}} </p>
+                  <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+    
+                  <p class="profile-text-m">{{cardObj.occupation}}</p>
+    
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-outer">
+          <div class="row">
+            <div class="col-lg-3  col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+              <div class="card-sl" style="border-radius: 35px;">
+    
+                <div class="card-image " style="border-radius: 35px;">
+    
+                  <div class="card-profile-image"
+                    style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                  </div>
+                  <div class="last-seen" style="background-color: rgb(245 229 245)">
+                    {{cardObj.lastseen}}
+                  </div>
+                </div>
+    
+                <div class="card-heading-id text-left ">
+                  ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                </div>
+                <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                  <p class="profile-text-m">{{cardObj.name}} </p>
+                  <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+    
+                  <p class="profile-text-m">{{cardObj.occupation}}</p>
+    
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <a class="carousel-control-prev" href="#demo3" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo3" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+  <hr class="solid " style="margin-top: 4rem;padding-bottom: 1px;">
+  <div class="label-cls text-center">
+    <h3 class="tex-label3 mt-5" >Suggested Profiles</h3>
+  </div>
+  
+  <div id="demo4" class="carousel slide" data-ride="carousel" data-interval="false">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo4" data-slide-to="0" class="active"></li>
+      <li data-target="#demo4" data-slide-to="1"></li>
+      <li data-target="#demo4" data-slide-to="2"></li>
+    </ul>
+    
+    <!-- The slideshow -->
+    <div class="container-fluid pb-2 carousel-inner no-padding" >
+      <div class="carousel-item active">
+        <div class="card-outer">
+          <div class="row">
+            <div class="col-lg-3  col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+              <div class="card-sl" style="border-radius: 35px;">
+    
+                <div class="card-image " style="border-radius: 35px;">
+    
+                  <div class="card-profile-image"
+                    style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                  </div>
+                  <div class="last-seen" style="background-color: rgb(245 229 245)">
+                    {{cardObj.lastseen}}
+                  </div>
+                </div>
+    
+                <div class="card-heading-id text-left ">
+                  ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                </div>
+                <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                  <p class="profile-text-m">{{cardObj.name}} </p>
+                  <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+    
+                  <p class="profile-text-m">{{cardObj.occupation}}</p>
+    
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-outer">
+          <div class="row">
+            <div class="col-lg-3  col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+              <div class="card-sl" style="border-radius: 35px;">
+    
+                <div class="card-image " style="border-radius: 35px;">
+    
+                  <div class="card-profile-image"
+                    style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                  </div>
+                  <div class="last-seen" style="background-color: rgb(245 229 245)">
+                    {{cardObj.lastseen}}
+                  </div>
+                </div>
+    
+                <div class="card-heading-id text-left ">
+                  ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                </div>
+                <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                  <p class="profile-text-m">{{cardObj.name}} </p>
+                  <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+    
+                  <p class="profile-text-m">{{cardObj.occupation}}</p>
+    
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-outer">
+          <div class="row">
+            <div class="col-lg-3  col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+              <div class="card-sl" style="border-radius: 35px;">
+    
+                <div class="card-image " style="border-radius: 35px;">
+    
+                  <div class="card-profile-image"
+                    style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                  </div>
+                  <div class="last-seen" style="background-color: rgb(245 229 245)">
+                    {{cardObj.lastseen}}
+                  </div>
+                </div>
+    
+                <div class="card-heading-id text-left ">
+                  ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                </div>
+                <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                  <p class="profile-text-m">{{cardObj.name}} </p>
+                  <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+    
+                  <p class="profile-text-m">{{cardObj.occupation}}</p>
+    
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <a class="carousel-control-prev" href="#demo4" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo4" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+  <hr class="solid " style="margin-top: 4rem;padding-bottom: 1px;">
+  <div class=" mt-5 pr-4 pl-4" style="background-color:  #F5F5F5">
+  <div class="ss mt-5 " style="background-color:  #f5f5f5;">
+    <h3 class="tex-label4 mt-2 pt-5 " >Select By Profession</h3>
+   
+  </div>
+  <div class=" pl-5  pr-5" style="margin-top:50px;">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 " *ngFor="let cardObj of cards2">
+        <div class=" bg-white" style="box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);">
+          <div class=" d-flex justify-content-start pl-3 pr-3 pt-3 ">
+            <i class="fa-solid fa-user-doctor fa-4x" style="color: #ff3f3f;"></i>
+          </div>
+          <div class="card-text text-left pb-3 text-black ">
+            <label class="label font-weight-bold">
+                    {{cardObj.work}}<br>
+              <label class="label font-weight-bold text-muted">
+                {{cardObj.result}}
+              </label></label>
+          </div>
+
+        </div> <br>
+      </div></div>
+        <!-- <div class="col-md-2 " *ngFor="let cardObj of cards2">
+            <div class="card-sl ">
+                <div class="card-image d-flex justify-content-start pl-4  ">
+                  <i class="fa-solid fa-user-doctor fa-4x" style="color: #db0000;"></i>
+                 </div>
+                <div class="card-text text-left pb-5 text-black ">
+                  <label class="label font-weight-bold">
+                  <b>
+                  {{cardObj.work}}</b><br>
+                  <label class="label font-weight-bold text-muted">
+                     {{cardObj.result}}
+                </label></label></div>
+              
+            </div> <br>
+        </div> -->
+      </div>
+      <button type="button" class="btn btn-success"routerLink="/select-profession">Show More Profession</button>
+      </div>
+  
+      <!-- <div class="profile1 ml-3 mr-3" style="margin-top:50px;">
+        <div class="row">
+            <div class="col-md-2 " style="width: 33%;" *ngFor="let cardObj of cards2">
+                <div class="card-sl ">
+                    <div class="card-image d-flex justify-content-start pl-2  ">
+                      <i class="fa-solid fa-user-doctor fa-4x" style="color: #db0000;"></i>
+                     </div>
+                    <div class="card-text text-left pb-5 text-black ">
+                      <label class="label font-weight-bold">
+                      <b>
+                      {{cardObj.work}}</b><br>
+                      <label class="label font-weight-bold text-muted">
+                         {{cardObj.result}}
+                    </label></label></div>
+                  
+                </div> <br>
+            </div>
+          </div>
+          <button type="button" class="btn btn-success" routerLink="/select-profession" >Show More Profession</button>
+          </div> -->
+  <br><br>
+  <div class="mb-5">
+    <div class="h2 font-weight-bold ">
+      Articles
+    </div>
+    <div id="carousel" (keydown)="handleKeyboardEvent($event)" tabindex="0">
+
+      <div class="col-auto card2" style="width: 350px;" *ngFor="let cardObj of cards3 ;let i = index"
+        [ngClass]="getClass(i)">
+
+        <div class="img2" class=" text-center  mr-4 border " style="gap: 1rem;"
+          style="box-shadow: 0px 0px 15px #ffffff; width: 100%;">
+          <div style="background-image: url({{cardObj.img}});
+        background-size: cover;height:190px !important;background-position: center;"></div>
+
+          <div class="card-body d-flex flex-column p-4" style="background-color: white;">
+            <div class="row ">
+              <div class="  d-flex  justify-content-start  col-12 ">
+                <p class=" mb-2 " style="text-align: start;" style="font-size: 12px; font-weight: 600; color:#dc3545">
+                  {{cardObj.date}}
+                </p>
+              </div>
+
+            </div>
+            <span class="h5 text-start " style="font-weight: 600;">{{cardObj.title}}
+            </span>
+            <p class="" style="font-size: 12px; font-weight: 400; text-align: justify;">{{cardObj.description}}<span
+                class="">Some
+                quick example text to build on the card title and make up the bulk of the card's content.</span>
+            </p>
+
+            <button type="button" style="border-radius: 45px !important; padding: 1px 10px; width: 65px;"
+              class="btn btn-danger  mt-auto align-self-center" routerLink="/articles"> > > </button>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="h-100 ">
+        <button (click)="moveToSelected('prev')" style="position: relative;
+            height: 100%;
+            left: -44%;
+            width: 100px;
+            background-color: #fffcf94f;
+            z-index: 20;
+            border: none;"><i class="fa-solid fa-chevron-up fa-rotate-270"
+            style="color: #D91046; background-color: white; border-radius: 50%; height: 30px; width: 30px;"></i>
+        </button>
+        <button (click)="moveToSelected('next')" style="position: relative;
+  height: 100%;
+  right: -44%;
+  width: 100px;
+  background-color: #fffcf94f;
+  z-index: 20;
+  border: none;
+  
+  "><i class="fa-solid fa-chevron-up fa-rotate-90  "
+            style="color: #D91046; background-color: white; border-radius: 50%; height: 30px; width: 30px;"></i></button>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="images-1  justify-content-between justify-content-space" style="gap: 1rem;" >
+  
+    <img class="imag-add" src="../../../../assets/img/anubandh3.png" alt="flower" width="30%"/>
+    <img class="imag-add " src="../../../../assets/img/anubandh-1.png" alt="flower" width="30%" />
+    <img class="imag-add" src="../../../../assets/img/anubandh-2.png" alt="flower"  width="30%"/>
+  </div><br>
+
+    

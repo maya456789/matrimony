@@ -1,0 +1,185 @@
+<div class="container-fluid">
+
+    <div class="row only-mobile">
+        <div class="col-12 ">
+            <div class="row d-flex justify-content-between">
+                <div class="col-2 " style="min-width: 200px;">
+                    <div class="">
+                        <a routerLink="/education" style="text-decoration: none; color: black;">
+                            <h6 style="padding: 10px 2px;"> <i class="fa fa-chevron-left"></i> Education</h6>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-2" style="min-width: 120px;">
+                    <button class="clear-button " style=" padding: 10px 2px; font-size: 14px;" type="reset"
+                        (click)="resetForm()">Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row sticky-div">
+        <div class="col-12 ">
+            <div class="row scrolling-container  d-flex justify-content-center">
+                <div class="col-11 section-container  d-flex justify-content-between">
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">1</div>
+                        <div class="line half-line"></div>
+                        <div class="section-name detail font-weight-bold">Personal Details</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">2</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Photo & Video</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">3</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Astro</div>
+                    </div>
+                    <div class=" container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">4</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Family Details</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">5</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Mediators</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">6</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Education</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">7</div>
+                        <div class="line  full-line"></div>
+                        <div class="section-name detail font-weight-bold">Occupation</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">8</div>
+                        <div class="only-mobile line  full-line"></div>
+                        <div class="only-desktop line half-line2"></div>
+                        <div class="section-name">Address</div>
+                    </div>
+                    <div
+                        class="only-mobile  container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">9</div>
+                        <div class="line  full-line"></div>
+                        <div class="section-name">Partner's Expectations</div>
+                    </div>
+                    <div class="only-mobile container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">10</div>
+                        <div class="line  full-line"></div>
+                        <div class="section-name">Upload Document</div>
+                    </div>
+                    <div class="only-mobile container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">11</div>
+                        <div class="line half-line2"></div>
+                        <div class="section-name">About him</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()"  >
+    
+     
+        <div class="row d-flex justify-content-center" style="height: 80vh;">
+            <div class="col-11">
+                <div class="row">
+                    <div class="col-md-4 input-div">
+                        <label for="occupation">Occupation Type</label>
+                        <select class="form-select" id="occupation" name="occupation"
+                            formControlName="occupation" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="0">Engineer</option>
+                            <option value="1">Doctor</option>
+                            <option value="2">Architect</option>
+                            <!-- ... more options as needed -->
+                        </select>
+                        <div *ngIf="myForm?.get('occupation')?.hasError('required') && myForm?.get('occupation')?.touched"
+                            class="error-msg">
+                            Please select valid occupation.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 input-div">
+                        <label for="companyname">Company Name</label>
+                        <input type="text" class="form-control" id="companyname" name="companyname"
+                            formControlName="companyname" placeholder="Enter Name" required>
+                        <div *ngIf="myForm?.get('companyname')?.hasError('required') && myForm?.get('companyname')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div><br>
+                    <div class="col-md-12 input-div">
+                        <label for="working">Working As</label>
+                        <input type="text" class="form-control" id="working" name="working"
+                            formControlName="working" placeholder="Enter..." required>
+                        <div *ngIf="myForm?.get('working')?.hasError('required') && myForm?.get('working')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div>
+                
+                            <div class="col-md-2 mr-4">
+                    <label for="income" id="income" style="width: 19rem;">Annual Income</label>   
+                    <select class="form-select  " id="income" name="income" style="width: 10rem;"
+                        formControlName="income" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="0">USD</option>
+                        <option value="1">INR</option>
+                        <option value="2">UKD</option>
+                        <!--... more options as needed -->
+                    </select>
+                    <div *ngIf="myForm?.get('income')?.hasError('required') && myForm?.get('income')?.touched"
+                        class="error-msg">
+                        Please select a valid .
+                    </div>
+                    </div>
+                    <div class="col-md-2    mt-0  input-div"   >
+                          <select class="form-select  " id="val" name="val" style="width: 19rem;"
+                            formControlName="val" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="0">150000</option>
+                            <option value="1">200000</option>
+                            <option value="2">300000</option>
+                            <!--... more options as needed -->
+                        </select>
+                        <div *ngIf="myForm?.get('val')?.hasError('required') && myForm?.get('val')?.touched"
+                            class="error-msg">
+                            Please select a valid number.
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            </div>
+   
+    
+      
+        <div class="row sticky-div-foot">
+            <div class="col-12 div d-flex justify-content-center">
+                <div class="col-11 button-container d-flex justify-content-between">
+                    <div class="only-desktop clear-alldiv">
+                        <button #outsideButton class="clear-button " type="reset" (click)="resetForm()">Clear All</button>
+                    </div>
+                    <div class="b-buttons d-flex justify-content-between gap-2">
+                        <div class="only-desktop previous-buttondiv d-flex align-items-center">
+                            <button class="previous-button btn btn-outline-danger"
+                                (click)="previous()">Previous</button>
+                        </div>
+                        <div class="continue-buttondiv d-flex align-items-center">
+                            <button class="continue-button btn btn-danger btn-block" type="submit" >Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>

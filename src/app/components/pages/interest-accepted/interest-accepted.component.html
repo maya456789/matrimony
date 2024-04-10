@@ -1,0 +1,104 @@
+<div style="padding: 0;">
+    <div class="banner" style="">
+        <img src="../../../../../assets/img/HomePageBanner.png" width="100%" alt="...">
+
+    </div>
+    <div class="mt-2 searchBar"
+        style="position: relative;width: 100%;height: 10rem; z-index: 1;box-shadow: 5px 5px 5px  #cdcdcd;background: white;">
+        <div class="row mr-0" style="padding-left: 4rem;margin-bottom: 1rem;margin-top: 1rem;">
+            <div class="searchBar mb-3  col-lg-5 col-md-6 ">
+                <input type="text" class="border " placeholder="Search ID or Name" style="border: none;
+                background-color: #F8F8F8;
+                padding-left: 15px;
+                width: 100%;
+                height: 2rem;
+                margin-top: 10px;
+                border-radius: 3px;
+                ">
+
+
+            </div>
+            <div class="filterBtn col-lg-10 col-md-12" style="">
+                <button class="text-white" style="color: white; background-color: #D91046;">Accepted By Me</button>
+                <button style=" ">Accepted By Others</button>
+                <button style=" ">Pending</button>
+                <button style=" ">Decline</button>
+                <button style=" ">Meeting status</button>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="searchBar2 " style="display: none;box-shadow: 5px 5px 5px  #cdcdcd;">
+        <div class="d-flex justify-content-between ">
+            <div>
+                <p> <i class="fa-solid fa-less-than"></i> Interest Accepted </p>
+
+            </div>
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="filterBtn2" style="position: relative;">
+            <button class="" style=" "><a href="">Accepted By Me</a></button>
+            <button style=" "><a href="">Pending</a></button>
+            <button style=" "><a href="">Decline</a></button>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="  mb-5 main1 " style="padding: 0 4rem;margin-top: 3rem;">
+        <div class="row main2">
+            <div class="d-flex justify-content-between" style="">
+                <p> <b>10 Accepted Conversations</b></p>
+                <i class="fa fa-bars" style="cursor: pointer; color: #D91046;display: none;" id="scrollIcon"></i>
+
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6  main mt-3" *ngFor="let cardsObj of cards" style="padding: 20px;">
+                <div class="" style="box-shadow: 0px 0px 5px #999; border-radius: 25px;">
+                    <div class="imgs" style="  padding: 5px 5px 0px 5px;">
+                        <img src="{{cardsObj.img}}" class="img-h" style="" alt="">
+                    </div>
+                    <div class="content" style="padding: 0px 10px 10px 10px;">
+                        <div class="ID d-flex justify-content-between text-center mb-0">
+                            <div class="ids" style="margin-left: 5px;">
+                                <p><b>ID: {{cardsObj.id}} </b><i class="fa-solid fa-medal fa-rotate-180"
+                                        style="color: #ecb213;"></i></p>
+                            </div>
+
+                        </div>
+                        <div class="name" style="
+                        padding-left: 5px;
+                        color: #999;
+                        ">
+                            <p class="mb-1">{{cardsObj.name}}</p>
+                            <p class="mb-1">{{cardsObj.address}}</p>
+                            <p class="mb-1"> {{cardsObj.education}}</p>
+                            <p class="interestRecevidTxt mb-1"><b style="color: green;">Interest
+                                    Accepted-</b>{{cardsObj.date}}| <span style="color: green;"><i
+                                        class="fa-solid fa-check-double" style="color: green;"></i> seen by her</span>
+                            </p>
+                            <p style="font-size: 15px !important; font-weight: 600;color: black;">You have accepted her
+                                interest</p>
+                        </div>
+                        <div class="viewBtn  justify-content-center">
+                            <button><i class="fa-brands fa-whatsapp"
+                                    style="color: green; font-size: 20px;margin-right: 12px;"></i>
+                                <a href="" style="color: red;">Whatsapp</a></button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

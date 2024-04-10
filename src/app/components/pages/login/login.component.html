@@ -1,0 +1,65 @@
+<div class="container-fluid login-page">
+    <div class="row">
+      <!-- Left side image -->
+      <div class="col-6 p-0 d-flex align-items-stretch  image-div">
+        <img src="../../../../assets/img/Rectangle 1885.png" alt="Login Image" class="img-fluid h-100 w-100" id="login-image">
+      </div>
+  
+      <!-- Right side content -->
+      <div class="col-6 d-flex align-items-center justify-content-center login-div">
+        <div class="col-9 login-form-container">
+          <h1 class="text-center mb-4" id="anubandh">anubandh</h1>
+  
+          <!-- Login form -->
+        
+          <!-- <form > 
+            <div class="form-group mt-3">
+              <label for="username">Login id*</label>
+              <input type="text" class="form-control no-outline" id="username" placeholder="Enter ID" name="username" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="password">Password*</label>
+              <input type="password" class="form-control no-outline" id="password"
+              placeholder="Enter Password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-danger btn-block mt-4">Login</button>
+            <div class="form-text text-center mt-4">
+              <a href="#" id="Forgotpass">Forgot Password?</a>
+            </div>
+            <div class="form-text text-center mt-2">
+              Don't have an account? <a routerLink="/registration" id="register" >Register</a>
+            </div>
+          </form> -->
+          <form [formGroup]="myForm" (ngSubmit)="submitForm()"> 
+            <div class="form-group mt-3">
+              <label for="username">Login id*</label>
+              <input type="text" class="form-control no-outline" id="username" placeholder="Enter ID" formControlName="username" required>
+              <div *ngIf="myForm?.get('username')?.hasError('required') && myForm?.get('username')?.touched"
+                   class="error-msg">
+                Login ID is required.
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <label for="password">Password*</label>
+              <input type="password" class="form-control no-outline" id="password"
+                     placeholder="Enter Password" formControlName="password" required>
+              <div *ngIf="myForm?.get('password')?.hasError('required') && myForm?.get('password')?.touched"
+                   class="error-msg">
+                Password is required.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-danger btn-block mt-4"
+          >Login</button>
+            <div class="form-text text-center mt-4">
+              <a href="#" id="Forgotpass">Forgot Password?</a>
+            </div>
+            <div class="form-text text-center mt-2">
+              Don't have an account? <a routerLink="/registration" id="register">Register</a>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  

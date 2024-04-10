@@ -1,0 +1,342 @@
+<div class="container-fluid">
+
+    <div class="row only-mobile">
+        <div class="col-12 ">
+            <div class="row d-flex justify-content-between">
+                <div class="col-2 " style="min-width: 200px;">
+                    <div class="">
+                        <a routerLink="/astro" style="text-decoration: none; color: black;">
+                            <h6 style="padding: 10px 2px;"> <i class="fa fa-chevron-left"></i> Astro</h6>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-2" style="min-width: 120px;">
+                    <button class="clear-button " style=" padding: 10px 2px; font-size: 14px;" type="reset"
+                        (click)="resetForm()">Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row sticky-div">
+        <div class="col-12  ">
+            <div class="row scrolling-container  d-flex justify-content-center">
+                <div class="col-11 section-container  d-flex justify-content-between">
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">1</div>
+                        <div class="line half-line"></div>
+                        <div class="section-name detail font-weight-bold">Personal Details</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">2</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Photo & Video</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">3</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Astro</div>
+                    </div>
+                    <div class=" container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">4</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Family Details</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">5</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name">Mediators</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">6</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name">Education</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">7</div>
+                        <div class="line  full-line"></div>
+                        <div class="section-name">Occupation</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">8</div>
+                        <div class="only-mobile line  full-line"></div>
+                        <div class="only-desktop line half-line2"></div>
+                        <div class="section-name">Address</div>
+                    </div>
+                    <div
+                        class="only-mobile  container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">9</div>
+                        <div class="line  full-line"></div>
+                        <div class="section-name">Partner's Expectations</div>
+                    </div>
+                    <div class="only-mobile container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">10</div>
+                        <div class="line  full-line"></div>
+                        <div class="section-name">Upload Document</div>
+                    </div>
+                    <div class="only-mobile container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">11</div>
+                        <div class="line half-line2"></div>
+                        <div class="section-name">About him</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()" >
+        <div class="row d-flex justify-content-center">
+            <div class="col-11">
+                <div class="row">
+                    <div class="col-md-4 input-div">
+                        <label for="fatherFirstName">Father's First Name</label>
+                        <input type="text" class="form-control" id="fatherFirstName" name="fatherFirstName"
+                            formControlName="fatherFirstName" placeholder="Enter Father's First Name" required>
+                        <div *ngIf="myForm?.get('fatherFirstName')?.hasError('required') && myForm?.get('fatherFirstName')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 input-div">
+                        <label for="fatherOccupation">Father's Occupation</label>
+                        <input type="text" class="form-control" id="fatherOccupation" name="fatherOccupation"
+                            formControlName="fatherOccupation" placeholder="Enter Father's Occupation" required>
+                        <div *ngIf="myForm?.get('fatherOccupation')?.hasError('required') && myForm?.get('fatherOccupation')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 input-div">
+                        <label for="fatherEducation">Father's Education</label>
+                        <input type="text" class="form-control" id="fatherEducation" name="fatherEducation"
+                            formControlName="fatherEducation" placeholder="Enter Father's Education" required>
+                        <div *ngIf="myForm?.get('fatherEducation')?.hasError('required') && myForm?.get('fatherEducation')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-11">
+                <div class="row">
+                    <div class="col-md-4 input-div">
+                        <label for="motherFirstName">Mother's First Name</label>
+                        <input type="text" class="form-control" id="motherFirstName" name="motherFirstName"
+                            formControlName="motherFirstName" placeholder="Enter Mother's First Name" required>
+                        <div *ngIf="myForm?.get('motherFirstName')?.hasError('required') && myForm?.get('motherFirstName')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 input-div">
+                        <label for="motherOccupation">Mother's Occupation</label>
+                        <input type="text" class="form-control" id="motherOccupation" name="motherOccupation"
+                            formControlName="motherOccupation" placeholder="Enter Mother's Occupation" required>
+                        <div *ngIf="myForm?.get('motherOccupation')?.hasError('required') && myForm?.get('motherOccupation')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 input-div">
+                        <label for="motherEducation">Mother's Education</label>
+                        <input type="text" class="form-control" id="motherEducation" name="motherEducation"
+                            formControlName="motherEducation" placeholder="Enter Mother's Education" required>
+                        <div *ngIf="myForm?.get('motherEducation')?.hasError('required') && myForm?.get('motherEducation')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-11">
+                <div class="row">
+                    <div class="col-md-4 input-div">
+                        <label for="numberOfBrothers">Number of Brothers</label>
+                        <select class="form-select" id="numberOfBrothers" name="numberOfBrothers"
+                            formControlName="numberOfBrothers" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <!-- ... more options as needed -->
+                        </select>
+                        <div *ngIf="myForm?.get('numberOfBrothers')?.hasError('required') && myForm?.get('numberOfBrothers')?.touched"
+                            class="error-msg">
+                            Please select a valid number.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 input-div">
+                        <label for="numberOfSisters">Number of Sisters</label>
+                        <select class="form-select" id="numberOfSisters" name="numberOfSisters"
+                            formControlName="numberOfSisters" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <!-- ... more options as needed -->
+                        </select>
+                        <div *ngIf="myForm?.get('numberOfSisters')?.hasError('required') && myForm?.get('numberOfSisters')?.touched"
+                            class="error-msg">
+                            Please select a valid number.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 input-div">
+                        <label for="brotherDetails">Brother's and Spouse's Details</label>
+                        <textarea class="form-control" id="brotherDetails" name="brotherDetails"
+                            formControlName="brotherDetails" placeholder="Enter Brother's and Spouse's Details"
+                            required></textarea>
+                        <div *ngIf="myForm?.get('brotherDetails')?.hasError('required') && myForm?.get('brotherDetails')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-11">
+                <div class="row">
+
+                    <div class="col-md-4 input-div">
+                        <label for="sisterDetails">Sister's and her Spouse's Details</label>
+                        <textarea class="form-control" id="sisterDetails" name="sisterDetails"
+                            formControlName="sisterDetails" placeholder="Enter Sister's and Spouse's Details"
+                            required></textarea>
+                        <div *ngIf="myForm?.get('sisterDetails')?.hasError('required') && myForm?.get('sisterDetails')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <form action="" [formGroup]="myForm2" (ngSubmit)="submitForm2()">
+        <div class="row d-flex justify-content-center mt-4" >
+            <div class="col-11 ">
+                <h5 style="font-weight: bold;">Maternal Details</h5>
+            </div>
+            <div class="col-11">
+                <div class="row ">
+                    <div class="col-md-4 input-div">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" formControlName="fullName"
+                            placeholder="Enter Full Name" required>
+                        <div *ngIf="myForm2?.get('fullName')?.hasError('required') && myForm2?.get('fullName')?.touched"
+                            class="error-msg">
+                            Please enter valid details.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 input-div">
+                        <label for="mobileNumber">Mobile Number</label>
+                        <div class="row  d-flex justify-content-between ">
+                            <div class="col-3">
+                                <select class="form-select" id="countryCode" name="countryCode"
+                                    formControlName="countryCode" required>
+                                    <option value="" disabled selected>Select Country Code</option>
+                                    <option value="country_code_value1">Country Code 1</option>
+                                    <option value="country_code_value2">Country Code 2</option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="col-9 ">
+                                <input type="text" class="form-control" id="mobileNumber" name="mobileNumber"
+                                    formControlName="mobileNumber" placeholder="Enter Mobile Number" required>
+                                <div *ngIf="myForm2?.get('mobileNumber')?.hasError('required') && myForm2?.get('mobileNumber')?.touched"
+                                    class="error-msg">
+                                    Please enter a valid Mobile Number.
+                                </div>
+                                <div *ngIf="myForm2?.get('countryCode')?.hasError('required') && myForm2?.get('countryCode')?.touched"
+                                    class="error-msg">
+                                    Please select a Country Code.
+                                </div>
+                                <div *ngIf="myForm2?.get('mobileNumber')?.hasError('pattern') && myForm2?.get('mobileNumber')?.touched"
+                                    class="error-msg">
+                                    Please enter a valid mobile number (8 to 12 digits).
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 input-div">
+                        <label for="relation">Relation</label>
+                        <select class="form-select" id="relation" name="relation" formControlName="relation" required>
+                            <option value="" disabled selected>Select Relation</option>
+                            <option value="parent">Parent</option>
+                            <option value="sibling">Sibling</option>
+                            <option value="friend">Friend</option>
+                            <!-- ... more options as needed -->
+                        </select>
+                        <div *ngIf="myForm2?.get('relation')?.hasError('required') && myForm2?.get('relation')?.touched"
+                            class="error-msg">
+                            Please select a valid relation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-11">
+                <div class="row mt-1" style="margin-bottom: 5rem;">
+
+                    <div class="col-md-4 input-div">
+                        <div class="continue-buttondiv d-flex align-items-center">
+                            <button class="continue-button btn btn-danger btn-block" type="submit">+ Add Member</button>
+                        </div>
+                        <div class=" clear-alldiv" style="display: none;">
+                            <button #outsideButton2 class="clear-button " type="reset">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+        <div class="row sticky-div-foot">
+            <div class="col-12 div d-flex justify-content-center">
+                <div class="col-11 button-container d-flex justify-content-between">
+                    <div class="only-desktop clear-alldiv">
+                        <button #outsideButton class="clear-button " type="reset" (click)="resetForm()">Clear All</button>
+                    </div>
+                    <div class="b-buttons d-flex justify-content-between gap-2">
+                        <div class="only-desktop previous-buttondiv d-flex align-items-center">
+                            <button class="previous-button btn btn-outline-danger"
+                                (click)="previous()">Previous</button>
+                        </div>
+                        <div class="continue-buttondiv d-flex align-items-center">
+                            <button class="continue-button btn btn-danger btn-block" type="submit">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>

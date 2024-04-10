@@ -1,0 +1,851 @@
+<div class="min-vh-100 w-100" style="overflow-x: hidden;">
+
+  <div class="col-lg-12 col-12 px-0 mx-0 py-0 my-0">
+    <div class="pt-2">
+      <div class="shadow-sm p-2 w-100">
+        <ul class="d-flex justify-content-around align-itmes-center nav nav-pills" id="pills-tab" role="tablist" >
+          <li class="nav-item pill-1 mainHeading" role="presentation">
+            <button
+              class="nav-link active"
+              id="pills-home-tab"
+              data-toggle="pill"
+              data-target="#pills-home"
+              type="button"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+              
+              
+            >
+              Quick Search
+            </button>
+          </li>
+          <li class="nav-item pill-2 mainHeading" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-profile-tab"
+              data-toggle="pill"
+              data-target="#pills-profile"
+              type="button"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >
+              Advanced Search
+            </button>
+          </li>
+          <li class="nav-item pill-3 mainHeading" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-contact-tab"
+              data-toggle="pill"
+              data-target="#pills-contact"
+              type="button"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+            >
+              My Saved Search
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content mt-2   pt-0" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+          
+        >
+       
+       
+        
+        <div class="mt-3">
+             <div class="row mt-3 ml-4 mr-5">
+              <div class="col-lg-12">
+              <form [formGroup]="quickSearch">
+                <div class="row">
+                <div class="col-lg-12 ">
+                  
+                  <input type="text" formControlName="name"  class="form-control input-lg flex-fill" id="exampleInputEmail1"  placeholder="Enter ID/Name/Surname" >
+                  
+                </div>
+                <div *ngIf="isFormSubmited && quickSearch.controls['name'].errors">
+                  <div *ngIf="quickSearch.controls['name'].errors['required']" style="color:red">
+                   Please insert Id or Name or Surname.
+                  </div>
+
+                </div>
+                </div>
+              <div class="row pt-2" >
+                <div class="col-lg-6 col-sm-6 col-12">
+                  <label  style="margin-left: 6px;">I m looking for</label>
+                  <select class="form-select" formControlName="look_for" >
+                  
+                   <option value="">Select Bride or Groom</option> 
+                    <option value="groom">Groom</option>
+                    <option value="bride">Bride</option>
+                    
+                  </select>
+                  <span *ngIf="isFormSubmited && quickSearch.controls['look_for'].errors">
+                    <span *ngIf="quickSearch.controls['look_for'].errors['required']" style="color:red">
+                     Please select to whome you are looking for.
+                    </span>
+  
+                  </span>
+                </div>
+               
+                <div class="col-lg-3 col-sm-3 col-6  ">
+                  <label for="exampleInputText">Age</label>
+                  <div class="d-flex justify-content-center align-items-center" style="gap: 1rem">
+                    <select class="form-select" formControlName="min_age">
+                      <option value="">Min Age</option> 
+                      <option value="18">18</option>
+                      <option value="22">22</option>
+                    </select>
+                  </div>
+                  <span *ngIf="isFormSubmited && quickSearch.controls['min_age'].errors">
+                    <span *ngIf="quickSearch.controls['min_age'].errors['required']" style="color:red">
+                     Please select the minimum age.
+                    </span>
+  
+                  </span>
+                </div>
+                  <div class="col-lg-3 col-sm-3 col-6 ">
+                    <div class="d-flex justify-content-center align-items-center " style="gap: 1rem;margin-top: 30px;">
+                    <select class="form-select" formControlName="max_age">
+                      <option value="">Max Age</option> 
+                      <option value="30">30</option>
+                      <option value="35">35</option>
+                    </select>
+                    </div>
+                    <span *ngIf="isFormSubmited && quickSearch.controls['max_age'].errors">
+                      <span *ngIf="quickSearch.controls['max_age'].errors['required']" style="color:red">
+                       Please select the maximum age.
+                      </span>
+    
+                    </span>
+                  </div>
+                </div>
+              
+             
+              <div class="d-flex justify-content-center " >
+                <button type="submit" style="width:130px;background-color: #D93134;color:white" routerLink="/search-result" (click)="onSubmit()" class="btn btn mt-5">Search</button>
+              </div>
+              
+            </form>
+              </div>
+          </div>    
+        </div>
+      
+          <!-- <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+                <form class="form-inline" role="form">  
+                        <input type="text" class="form-control input-lg flex-fill" id="search-church" placeholder="Enter (Id, Name, Surname)">
+                                 
+                </form>
+            </div> -->
+          
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+         
+          <form [formGroup]="advanceSearch">
+          <div class="card ml-4 mr-4"  style="box-shadow: 0 0 4px #999;">
+            <div class="card-body">
+              <h5 class="card-title">Basic Details</h5>
+              
+              <div class="row mt-3">
+                <div class="col-lg-12" >
+                
+                 
+                <div class="row pt-2" >
+                  <div class="col-lg-4 col-sm-4 col-12">
+                    <label  style="margin-left: 6px;">I m looking for</label>
+                    <select class="form-select" name="look_for" >
+                    
+                     <option value="">Select Bride or Groom</option> 
+                      <option value="groom">Groom</option>
+                      <option value="bride">Bride</option>
+                      
+                    </select>
+                   
+                  </div>
+                 
+                  <div class="col-lg-2 col-sm-4 col-6  ">
+                    <label for="exampleInputText">Age</label>
+                    <div class="d-flex justify-content-center align-items-center" style="gap: 1rem">
+                      <select class="form-select" name="min_age">
+                        <option value="">Min Age</option> 
+                        <option value="18">18</option>
+                        <option value="22">22</option>
+                      </select>
+                    </div>
+                   
+                  </div>
+                    <div class="col-lg-2  col-sm-4 col-6 ">
+                      <div class="d-flex justify-content-center align-items-center " style="gap: 1rem;margin-top: 30px;">
+                      <select class="form-select" name="max_age">
+                        <option value="">Max Age</option> 
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                      </select>
+                      </div>
+                    
+                    </div>
+                    <div class="col-lg-2  col-sm-12 col-12 ">
+                      <label for="exampleInputText">Height</label>
+                      <div class="d-flex justify-content-center align-items-center " style="gap: 1rem;">
+                      <select class="form-select" name="height">
+                        <option value="">Min Height</option> 
+                        <option value="5">5 foot</option>
+                        <option value="5.3">5.3 foot</option>
+                      </select>
+                      </div>
+                     
+                    </div>
+                  </div>
+               
+                  
+
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                      <label  style="margin-left: 6px;">Dont show this gotra</label>
+                      <ng-multiselect-dropdown
+                        [settings]="dropdownSettings"
+                        [data]="dropdownList"
+                        formControlName="mygotras"
+                        (onSelect)="ongotraSelect($event)"
+                        (onSelectAll)="onSelectAll($event)"
+                        (onDeSelect)="ongotraDeSelect($event)"
+                        (onDeSelectAll)="onUnSelectAll()">
+                    </ng-multiselect-dropdown>
+                      
+                    </div>
+                  </div>
+
+                  <div class="row" >
+                    <div class="col-lg-12 mt-3">
+                      Present Residential Address Details ( Where candidate presently resides)
+                    </div>
+                    <div class="col-lg-12 mt-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" (click)="residingIn($event)" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                          Currently Residing in India
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row" *ngIf="residingStatus">
+                    <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                      <label  style="margin-left: 6px;">Country</label>
+                      <select class="form-select" name="country" >
+                      
+                       <option value="">country</option> 
+                        <option value="ind">India</option>
+                        <option value="uk">London</option>
+                        
+                      </select>
+                      
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 col-6 mt-3">
+                      <label  style="margin-left: 6px;">State</label>
+                      <select class="form-select" name="state" >
+                      
+                       <option value="">State</option> 
+                        <option value="state1">state1</option>
+                        <option value="state2">state2</option>
+                        
+                      </select>
+                      
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 col-6 mt-3">
+                      <label  style="margin-left: 6px;">City</label>
+                      <select class="form-select" name="gotra" >
+                      
+                       <option value="">City</option> 
+                        <option value="city1">City1</option>
+                        <option value="city2">City2</option>
+                        
+                      </select>
+                      
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    
+                    <div class="col-lg-12 mt-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" (click)="residingOut($event)" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                          Currently Residing outside India
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row" *ngIf="residingOutStatus">
+                    <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                      <label  style="margin-left: 6px;">Country</label>
+                      <select class="form-select" name="country" >
+                      
+                       <option value="">country</option> 
+                        <option value="ind">India</option>
+                        <option value="uk">London</option>
+                        
+                      </select>
+                      
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 col-6 mt-3">
+                      <label  style="margin-left: 6px;">State</label>
+                      <select class="form-select" name="state" >
+                      
+                       <option value="">State</option> 
+                        <option value="state1">state1</option>
+                        <option value="state2">state2</option>
+                        
+                      </select>
+                      
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 col-6 mt-3">
+                      <label  style="margin-left: 6px;">City</label>
+                      <select class="form-select" name="gotra" >
+                      
+                       <option value="">City</option> 
+                        <option value="city1">City1</option>
+                        <option value="city2">City2</option>
+                        
+                      </select>
+                      
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                      <label  style="margin-left: 6px;">Maratial status</label>
+                      <select class="form-select" name="maratial_status" >
+                      
+                       <option value="">Select status</option> 
+                        <option value="married">Married</option>
+                        <option value="unmarried">Unmarried</option>
+                        
+                      </select>
+                      
+                    </div>
+
+                    <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                      <label  style="margin-left: 6px;">Blood Group</label>
+                      <select class="form-select" name="blood_group" >
+                      
+                       <option value="">Select blood group</option> 
+                        <option value="a+">A+</option>
+                        <option value="o">O</option>
+                        
+                      </select>
+                      
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                      <label  style="margin-left: 6px;">Mother Toungh</label>
+                      <select class="form-select" name="mother_toung" >
+                      
+                       <option value="">Select language</option> 
+                        <option value="marati">Marati</option>
+                        <option value="hindi">Hindi</option>
+                        
+                      </select>
+                      
+                    </div>
+
+                    <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                      <label  style="margin-left: 6px;">Special case search</label>
+                      <select class="form-select" name="special_case" >
+                      
+                       <option value="">Handicapped</option> 
+                        <option value="b1">Blind</option>
+                        <option value="d1">Divyang</option>
+                        
+                      </select>
+                      
+                    </div>
+                  </div>
+
+               
+                
+              
+                </div>
+            </div>    
+            </div>
+          </div>
+          
+          
+          <div class="card mt-4 ml-4 mr-4" style="box-shadow: 0 0 4px #999;">
+            <div class="card-body">
+              <h5 class="card-title">Education & Profession Details</h5>
+
+              <div class="row">
+                <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                  <label  style="margin-left: 6px;">Qualification</label>
+                  <select class="form-select" name="qualification" >
+                  
+                   <option value="">Does not matter x</option> 
+                    <option value="BA">BA</option>
+                    <option value="BCOM">BCOM</option>
+                    
+                  </select>
+                  
+                </div>
+                <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                  <label  style="margin-left: 6px;">Education Area</label>
+                  <select class="form-select" name="education_area" >
+                  
+                   <option value="">Does not matter x</option> 
+                    <option value="marati">Marati</option>
+                    <option value="hindi">Hindi</option>
+                    
+                  </select>
+                  
+                </div>
+
+               
+              </div>
+
+              <div class="row">
+               
+                <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                  <label  style="margin-left: 6px;">Working With</label>
+                  <select class="form-select" name="working_with" >
+                  
+                   <option value="">Does not matter x</option> 
+                    <option value="all">All</option>
+                    <option value="alon">Alon</option>
+                    
+                  </select>
+                  
+                </div>
+
+                <div class="col-lg-4 col-sm-12 col-12 mt-3">
+                  <label  style="margin-left: 6px;">Profession Area</label>
+                  <select class="form-select" name="profession_area" >
+                  
+                   <option value="">Does not matter x</option> 
+                    <option value="e1">Expert</option>
+                    <option value="t1">Trainer</option>
+                    
+                  </select>
+                  
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-2 mt-3">
+                 <label >Annual Income</label>
+                </div>
+                <div class="col-lg-6 col-12 mt-3">
+                 <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <label class="form-check-label"  for="inlineRadio1" >Doesnt matter</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2" >Select an income range</label>
+                </div>
+                </div>
+
+              </div>
+              <div class="row">
+                 
+                  <div class="col-lg-3 col-sm-12 col-12 mt-3">
+                    
+                    <select class="form-select" name="working_with" >
+                    
+                     <option value="">INR(Indian Rupee)</option> 
+                      <option value="100">10000</option>
+                      <option value="200">20000</option>
+                      
+                    </select>
+                    
+                  </div>
+                
+              </div>
+             
+              <!-- <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <input  type="range" name="start-range" step="50000" min="100000" max="1000000" value="" onchange="rangePrimary.value=value">
+                </div>
+                <div class="col-lg-3">
+                  <input type="text" class="form-control" id="rangePrimary" />
+                  
+                </div>
+              </div> -->
+              
+
+             <div class="row">
+              <div class="col-lg-5 mt-3">
+              <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider> 
+              </div>
+             
+             </div>
+             <!-- <div class="row">
+              <div class="col-lg-2 col-6">Income Range From: {{value}} </div>
+              <div class="col">Income Range To: {{highValue}}</div>
+              </div> -->
+             <div class="row">
+               <div class="col-lg-2 col-5">
+                <input type="text" class="form-control"  [(ngModel)]="value" [ngModelOptions]="{standalone: true}" />
+               </div>
+               <div class="col-lg-1 col-2 d-flex justify-content-center">
+                  <label>to</label>
+               </div>
+               <div class="col-lg-2 col-5">
+                <input type="text" class="form-control"  [(ngModel)]="highValue" [ngModelOptions]="{standalone: true}" />
+               </div>
+             </div>
+              <div class="row">
+                    
+                <div class="col-lg-12 mt-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      Include Profiles who have not specified their income
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+          
+          <div class="d-flex justify-content-center mb-3 smallSearchBtn" >
+            <button type="submit" style="width:130px;background-color: #D93134;color:white" routerLink="/search-result" (click)="onSubmit()" class="btn btn mt-5">Search</button>
+          </div> 
+          </form>
+          <div class="col-12 SearchBtn">
+            <div class="footer fixed-bottom">
+              <div class="shadow-sm p-3 w-100" style="margin-top: 0px !important;">
+              <button type="button" style="background-color: #D93134;color:white;padding:15px;" routerLink="/search-result" class="btn btn btn-block">Search</button>
+              </div>
+              </div>
+            </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-contact"
+          role="tabpanel"
+          aria-labelledby="pills-contact-tab"
+        >
+        <div class="shadow-sm p-3 w-100" style="margin-top: 0px !important;">
+          <div class="row">
+           
+            <div class="col-lg-4 col-11 ml-4">
+              <input type="text" class="form-control" placeholder="Modify search" style="background-color: #F8F8F8;" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+         <div class="col-lg-3 col-sm-4  pt-2 hideAdvanceSearch">
+        <p style="margin-left: 45px;">Home >> Search >> <span style="font-weight: bold;">Search Result</span></p>
+         </div>
+         <div class="col-lg-8 col-sm-12 col-12 pt-1 ">
+         <p style="color:#101010;padding: 3px;margin-left:40px;font-size: 16px;">128 results | Age 20-28, Height 5.1, Annual Income - 10L & above, Education- Post Graduates...</p>
+         </div>
+        </div>
+        <div class="main" style="padding: 0px 0px; margin-top: 3rem;">
+          <div class="row">
+              <div class="col-sm-3 filter mt-3 ml-5 " 
+                  style="box-shadow: 0 0 10px #999; margin-bottom: 3rem;padding-right: 10;">
+                  <div class="d-flex justify-content-between filterDiv" style="align-items: center; text-align: center;">
+                      <div>
+                          <h5>Filter</h5>
+                      </div>
+                      <div><span>Clear All</span></div>
+                  </div>
+                  <div class="hrLine"></div>
+
+                  <div>
+                    <div class="events mt-3">
+                      <h4>Basic Details</h4>
+                    </div>
+                    <div class="row pt-2" >
+                      <div class="col-sm-12 col-12">
+                        <label  style="margin-left: 6px;">I m looking for</label>
+                        <select class="form-select" name="look_for" >
+                        
+                         <option value="">Select Bride or Groom</option> 
+                          <option value="groom">Groom</option>
+                          <option value="bride">Bride</option>
+                          
+                        </select>
+                       
+                      </div>
+                     
+                      <div class="col-sm-6 col-6  ">
+                        <label for="exampleInputText">Age</label>
+                        <div class="d-flex justify-content-center align-items-center" style="gap: 1rem">
+                          <select class="form-select" name="min_age">
+                            <option value="">Min Age</option> 
+                            <option value="18">18</option>
+                            <option value="22">22</option>
+                          </select>
+                        </div>
+                       
+                      </div>
+                        <div class="col-sm-6 col-6 ">
+                          <div class="d-flex justify-content-center align-items-center " style="gap: 1rem;margin-top: 30px;">
+                          <select class="form-select" name="max_age">
+                            <option value="">Max Age</option> 
+                            <option value="30">30</option>
+                            <option value="35">35</option>
+                          </select>
+                          </div>
+                        
+                        </div>
+                        <div class="col-sm-12 col-12 ">
+                          <label for="exampleInputText">Height</label>
+                          <div class="d-flex justify-content-center align-items-center " style="gap: 1rem;">
+                          <select class="form-select" name="height">
+                            <option value="">Min Height</option> 
+                            <option value="5">5 foot</option>
+                            <option value="5.3">5.3 foot</option>
+                          </select>
+                          </div>
+                         
+                        </div>
+
+                        <div class="col-sm-12 col-12 mt-3">
+                          <label  style="margin-left: 6px;">Dont show this gotra</label>
+                          <ng-multiselect-dropdown
+                            [settings]="dropdownSettings"
+                            [data]="dropdownList"
+                            formControlName="mygotras"
+                            (onSelect)="ongotraSelect($event)"
+                            (onSelectAll)="onSelectAll($event)"
+                            (onDeSelect)="ongotraDeSelect($event)"
+                            (onDeSelectAll)="onUnSelectAll()">
+                        </ng-multiselect-dropdown>
+                          
+                        </div>
+                      </div>
+
+                      <div class="row" >
+                        <div class="col-sm-12 mt-3">
+                          Present Residential Address Details ( Where candidate presently resides)
+                        </div>
+                        <div class="col-sm-12 col-12 mt-3">
+                          <label  style="margin-left: 6px;">Country</label>
+                          <select class="form-select" name="country" >
+                          
+                           <option value="">country</option> 
+                            <option value="ind">India</option>
+                            <option value="uk">London</option>
+                            
+                          </select>
+                          
+                        </div>
+    
+                        <div class="col-sm-12 col-6 mt-3">
+                          <label  style="margin-left: 6px;">State</label>
+                          <select class="form-select" name="state" >
+                          
+                           <option value="">State</option> 
+                            <option value="state1">state1</option>
+                            <option value="state2">state2</option>
+                            
+                          </select>
+                          
+                        </div>
+    
+                        <div class="col-sm-12 col-6 mt-3">
+                          <label  style="margin-left: 6px;">City</label>
+                          <select class="form-select" name="gotra" >
+                          
+                           <option value="">City</option> 
+                            <option value="city1">City1</option>
+                            <option value="city2">City2</option>
+                            
+                          </select>
+                          
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-12 col-12 mt-3">
+                          <label  style="margin-left: 6px;">Maratial status</label>
+                          <select class="form-select" name="maratial_status" >
+                          
+                           <option value="">Select status</option> 
+                            <option value="married">Married</option>
+                            <option value="unmarried">Unmarried</option>
+                            
+                          </select>
+                          
+                        </div>
+    
+                        <div class="col-sm-12 col-12 mt-3">
+                          <label  style="margin-left: 6px;">Blood Group</label>
+                          <select class="form-select" name="blood_group" >
+                          
+                           <option value="">Select blood group</option> 
+                            <option value="a+">A+</option>
+                            <option value="o">O</option>
+                            
+                          </select>
+                          
+                        </div>
+                      </div>
+                      
+                    
+                  </div>
+                  <div class="hrLine mt-3"></div>
+                  <div class="events mt-3">
+                    <h4>Education and Occuption</h4>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-12 col-12 mt-3">
+                        <label  style="margin-left: 6px;">Qualification</label>
+                        <select class="form-select" name="qualification" >
+                        
+                         <option value="">Select qualification</option> 
+                          <option value="a+">MBA</option>
+                          <option value="o">BCA</option>
+                          
+                        </select>
+                        
+                      </div>
+                      <div class="col-sm-12 col-12 mt-3">
+                        <label  style="margin-left: 6px;">Education Area</label>
+                        <ng-multiselect-dropdown
+                          [settings]="dropdownSettings"
+                          [data]="dropdownList2"
+                          formControlName="mygotras"
+                          >
+                      </ng-multiselect-dropdown>
+                        
+                      </div>
+
+                      <div class="col-sm-12 col-12 mt-3">
+                        <label  style="margin-left: 6px;">Working With</label>
+                        <ng-multiselect-dropdown
+                          [settings]="dropdownSettings"
+                          [data]="dropdownList2"
+                          formControlName="mygotras"
+                         >
+                      </ng-multiselect-dropdown>
+                        
+                      </div>
+
+                      <div class="col-sm-12 col-12 mt-3">
+                        <label  style="margin-left: 6px;">Professional Area</label>
+                        <ng-multiselect-dropdown
+                          [settings]="dropdownSettings"
+                          [data]="dropdownList2"
+                          formControlName="mygotras"
+                         >
+                      </ng-multiselect-dropdown>
+                        
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-6 mt-3">
+                       <label >Annual Income</label>
+                      </div>
+                      <div class="col-sm-12 col-12 mt-3">
+                       <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label"  for="inlineRadio1" >Doesnt matter</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2" >Select an income range</label>
+                      </div>
+                      </div>
+      
+                    </div>
+
+
+              <div class="row">
+                <div class="col-sm-12 mt-3">
+                  <input type="range" name="range" step="50000" min="100000" max="1000000" value="" onchange="rangePrimary.value=value">
+                </div>
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" id="rangePrimary" />
+                </div>
+              </div>
+
+                 
+                  <div class="applyBtn">
+                      <button class="btn">Apply</button>
+                  </div>
+              </div>
+
+              <div class="col-lg-6 col-md-8 col-sm-12 col-12 mt-0 pt-0" >
+                <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-4 pl-lg-3 " *ngFor="let cardObj of cards"><br>
+              <div class="card-sl" style="border-radius: 35px;" >
+                <div class="card-image " style="border-radius: 35px;">
+                  <img
+                 src= {{cardObj.img}} />
+                 <div class="label text-success p-1 lastSeen" style="background-color: rgb(255, 210, 255);">
+                  {{cardObj.lastseen}}
+                 </div>
+                </div>    
+                <div class="card-heading d-flex justify-content-start cardId ">
+                  {{cardObj.id}}
+                  </div>
+                <div class="card-text text-left cardTextSize">
+                  {{cardObj.name}}  <br>
+                  {{cardObj.age}} ,   {{cardObj.address}}
+               </div>
+               <div class="card-text text-left cardTextSize">
+                     {{cardObj.occupation}}
+               </div>
+               </div>
+            </div>
+            </div>
+              </div>
+              <!-- <div>
+                <button type="button" class="btn button-primary" style="background-color: #FFFFFF;color:white">Save This Search</button>
+              </div> -->
+              <div class="col-sm-2 advertise">
+                <div class="d-flex justify-content-start ml-2" >
+                  <button type="submit" style="width:150px;background-color: #979494;color:white"  class="btn btn mt-3">Save This Search</button>
+                </div>
+                <div>
+                    <img src="../../../../../assets/img/Group 20922.png " style="width: 100%;" alt="">
+                </div>
+            </div>
+
+            <div class="col-12 saveThisSearchBtn">
+              <div class="footer fixed-bottom">
+                <div class="shadow-sm p-3 w-100" style="margin-top: 0px !important;">
+                <button type="button" style="background-color: #C1C1C1;color:#808080;padding: 15px;" class="btn btn btn-block">Save This Search</button>
+                </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

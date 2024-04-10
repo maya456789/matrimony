@@ -1,0 +1,67 @@
+.footerBar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  height: 70px !important;
+  background: #ffffff !important;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.3) !important;
+  max-width: 768px !important;
+  margin: 0 auto !important;
+  position: fixed !important;
+  bottom: 5px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 1 !important;
+}
+
+.home i {
+  display: block !important;
+  margin: auto !important;
+  font-size: 25px !important;
+  text-align: center !important;
+}
+
+.home {
+  padding: 10px !important;
+}
+
+.home a {
+  font-size: 15px !important;
+  text-decoration: none !important;
+  color: #000 !important;
+  font-weight: 500 !important;
+}
+
+
+
+.home:hover {
+  /* background: red !important; */
+}
+
+@media (min-width: 767px) {
+  .footerBar {
+
+    display: none !important;
+  }
+
+
+}
+
+
+.home-active{
+
+  color: red;
+
+}
+
+
+@media (max-width: 375px) {
+.home i{
+  font-size: 20px !important; 
+}
+.footer-name{
+  font-size: 12px !important;
+}
+}

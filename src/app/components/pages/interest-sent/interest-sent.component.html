@@ -1,0 +1,89 @@
+<div class="container-fluid p-0" style="padding: 0;">
+    <div class="banner" style="margin-top: 20px;">
+        <img src="../../../../../assets/img/HomePageBanner.png" width="100%" alt="...">
+
+    </div>
+    <div class="px-sm-5 px-1 mt-4">
+        <p>Home >> <b>Interest sent</b></p>
+    </div>
+
+
+    <div class="mt-4  mb-5 main1 px-sm-5 p-1" >
+        <div class="row main2 m-0 ">
+            <div  class=" div-5 col-md-4 col-sm-4 col-6 main mt-4  " *ngFor="let cardsObj of cards; let i = index;" style="">
+                <div class="" style="box-shadow:  0px 3px 6px #00000029, 0px 3px 6px #00000029; border-radius: 32px;">
+                    <div class="imgs" >
+                        <!-- <img src="{{cardsObj.img}}" style="" alt=""> -->
+                        <div class="card-sug" style="
+                        background-image: url('{{cardsObj.img}}');
+                       "></div>
+                        <p class="interest-sent" style="background-color:  #FFEAED; text-align: center; color: #00801A;">
+                            Interest sent <i class="fa-regular fa-circle-check" style="color: #00801A;"></i></p>
+                    </div>
+                    <div class="content" style="padding: 0px 15px 15px 15px;">
+                        <div class="ID d-flex justify-content-between  mb-0">
+                            <div class="ids d-flex align-items-center mb-1 mt-1" style="">
+                                <p class="interest-id">ID: {{cardsObj.id}} <i class="fa-regular fa-circle-check"
+                                        style="color: #F59C3B;"></i></p>
+                            </div>
+                            <div class="views  d-flex align-items-center">
+                                <p class="interest-views"><i class="fa-regular fa-eye"></i>{{cardsObj.view}}</p>
+                            </div>
+                        </div>
+                        <div class="name" style="
+                        color: #999;
+                        ">
+                            <p class="interest-name mb-1">{{cardsObj.name}}</p>
+                            <p class="interest-name mb-1">{{cardsObj.address}}</p>
+                            <p class="interest-name"> {{cardsObj.education}}</p>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+
+
+        <div class="mt-5">
+            <img src="./assets/img/Group 20914.png" width="100%" alt="">
+        </div>
+    
+        <div class="row main2 m-0 ">
+            <div  class=" div-5 col-md-4 col-sm-4 col-6 main mt-4  " *ngFor="let cardsObj of cards; let i = index;" style="">
+                <div class="" style="box-shadow:  0px 3px 6px #00000029, 0px 3px 6px #00000029; border-radius: 32px;">
+                    <div class="imgs" >
+                        <!-- <img src="{{cardsObj.img}}" style="" alt=""> -->
+                        <div class="card-sug" style="
+                        background-image: url('{{cardsObj.img}}');
+                        "></div>
+                        <p class="interest-sent" style="background-color:  #FFEAED; text-align: center; color: #00801A;">
+                            Interest sent <i class="fa-regular fa-circle-check" style="color: #00801A;"></i></p>
+                    </div>
+                    <div class="content" style="padding: 0px 15px 15px 15px;">
+                        <div class="ID d-flex justify-content-between  mb-0">
+                            <div class="ids d-flex align-items-center mb-1 mt-1" style="">
+                                <p class="interest-id">ID: {{cardsObj.id}} <i class="fa-regular fa-circle-check"
+                                        style="color: #F59C3B;"></i></p>
+                            </div>
+                            <div class="views  d-flex align-items-center">
+                                <p class="interest-views"><i class="fa-regular fa-eye"></i>{{cardsObj.view}}</p>
+                            </div>
+                        </div>
+                        <div class="name" style="
+                        color: #999;
+                        ">
+                            <p class="interest-name mb-1">{{cardsObj.name}}</p>
+                            <p class="interest-name mb-1">{{cardsObj.address}}</p>
+                            <p class="interest-name"> {{cardsObj.education}}</p>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+</div>

@@ -1,0 +1,49 @@
+<!-- STATIC CONTENT -->
+<!-- <nav class="navbar nav bg-primary">Navbar</nav> -->
+
+<!-- STATIC CONTENT -->
+<!-- TABS -->
+<div class="container-fluid p-0 ">
+  
+  <!-- TABS CONTAINER -->
+  
+  <div class="shadow-sm p-0 w-100 d-flex justify-content-center mt-2  "  >
+  <div class="nav nav-tabs d-flex nav-container-search" id="nav-tab" role="tablist">
+    <!-- TAB1 -->
+    <a
+      class="w-100 nav-item nav-link  quickSearch d-flex justify-content-center"
+      routerLink="/search-tabs/quick-search"
+      routerLinkActive="active"
+      style="flex: 1;color:black"
+    >
+      Quick Search
+    </a>
+    <!-- TAB2 -->
+    <a
+      class="w-100 nav-item nav-link advanceSearch d-flex justify-content-center"
+      routerLink="/search-tabs/advance-search"
+      routerLinkActive="active"
+      style="flex: 1;color:black"
+    >
+      Advance Search
+    </a>
+    <!-- TAB3 -->
+    <a
+      class="w-100 nav-item nav-link saveMySearch d-flex justify-content-center"
+      routerLink="/search-tabs/save-my-search"
+      routerLinkActive="active"
+      style="flex: 1;color:black"
+    >
+      My Saved Search
+    </a>
+  </div>
+
+</div>
+  <!-- Router outlet -->
+  <div class="w-100 d-flex justify-content-center">
+  <div class="nav-container-search">
+  <router-outlet></router-outlet>
+</div>
+</div>
+  <br><br>
+</div>

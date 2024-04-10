@@ -1,0 +1,143 @@
+<div class="pro " style="z-index: 8 !important;">
+<div class="slider-container "  style="height: 100vh;  overflow-y: auto; z-index: 6 !important; background-color: white; position: fixed;
+background-color: white;
+padding-bottom: 101px !important;">
+    <div class="slider-content" *ngFor="let cardObj2 of cards2">
+        <div class="row" style="padding: 5px 20px; margin: 0px !important;">
+          
+            <div class="row border m-0 p-0 mt-4" >
+                <div class="col-auto ">
+                   <!-- <img src="{{cardObj2.img}}" width="100%" style="height: 40px;margin-top: 10px;" alt="">
+                    -->
+                    <div style="background-image: url('{{cardObj2.img}}');height: 80px;width: 80px;background-position:center;background-repeat: no-repeat;background-size: cover;border-radius: 50%;
+                    margin-top: 10px;">   </div> 
+                </div>
+                <div class="col-lg-8 "> 
+                    <p class="mb-0 mt-1 "><b>ID:{{cardObj2.id}}</b></p>
+                    <p class="mb-0">{{cardObj2.name}}</p>
+                    <p class="mb-0">{{cardObj2.address}}</p>
+                    <p>{{cardObj2.education}} </p>
+                    <div class="mb-2">
+                        <a routerLink="/my-profile" style="color: red;text-decoration: none;">Update & View Profile</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- <div class="row p-0 m-0">
+                <div class="col-lg-3 text-center" style="border: 1px solid;">
+                    <p>Interest Sent</p>
+                    <p>12</p>
+                </div>
+                <div class="col-lg-3"style="border: 1px solid;">
+                    <p>Interest Sent</p>
+                    <p>12</p>
+                </div>
+                <div class="col-lg-3">
+                    <p>Interest Sent</p>
+                    <p>12</p>
+                </div>
+                <div class="col-lg-3">
+                    <p>Interest Sent</p>
+                    <p>12</p>
+                </div>
+             
+
+            </div> -->
+
+            <div class="  d-flex justify-content-between interest mt-3 p-0" style="gap: 10px;">
+                <div class="border" routerLink="/intrest-sent" style="">
+                    <p>Interest Sent</p>
+                    <p>12</p>
+                </div>
+                <div class="border" routerLink="/intrest-recived" style="">
+                    <p>Interest Recevied</p>
+                    <p>12</p>
+                </div>
+                <div class="border" routerLink="/intrest-accepted">
+                    <p>Interest Accepted</p>
+                    <p>12</p>
+                </div>
+                <div class="border" routerLink="/my-favorite">
+                    <p>My Favorite Profile</p>
+                    <p>12</p>
+                </div>
+
+            </div>
+            <div class="mt-3 py-3 border" >
+                <button class="bg-white border d-flex justify-content-between py-2"
+                    style="width: 100%;text-align: center; align-items: center;">
+                    <p class="mb-0">My Membership</p>
+                    <p class="mb-0">></p>
+                </button>
+                <button class=" bg-white border d-flex justify-content-between py-2 mt-2"
+                    style="width: 100%;text-align: center; align-items: center;">
+                    <p class="mb-0">Hide/Delet Profile</p>
+                    <p class="mb-0">></p>
+                </button>
+            </div>
+            <div class="mt-3 py-3 border">
+                <button class=" border bg-white d-flex justify-content-between py-2" routerLink="/terms-condition"
+                    style="width: 100%;text-align: center; align-items: center;">
+                    <p class="mb-0">Terms & Conditions</p>
+                    <p class="mb-0">></p>
+                </button>
+                <button class="bg-white border d-flex justify-content-between py-2 mt-2"
+                    style="width: 100%;text-align: center; align-items: center;" routerLink="/faq">
+                    <p class="mb-0">FAQ's</p>
+                    <p class="mb-0">></p>
+                </button>
+            </div>
+
+            <div class=" border contactsDetails mt-3 " style="">
+                <div class="">
+                    <h5>Contact Us</h5>
+                </div>
+                <div class="d-flex">
+                    <div class="" style="margin-right: 10px;">
+                        <i class="fa-solid fa-location-dot" style="color: orange"></i>
+                    </div>
+                    <div>
+                        <span class="">
+                            404, Ved Vihar, Bhusari Colony Kothrud,<br />
+                            pune 411038
+                        </span>
+                    </div>
+
+                </div>
+                <div class="d-flex">
+                    <div class="" style="margin-right: 10px;">
+                        <i class="fa-solid fa-phone" style="color: orange"></i>
+                    </div>
+                    <div>
+                        <span class="">
+                            +91 930 955 4954 ( 9 AM - 6 PM India time )
+                        </span>
+                    </div>
+
+                </div>
+                <div class="d-flex">
+                    <div class="" style="margin-right: 10px;">
+                        <i class="fa-solid fa-envelope" style="color: orange"></i>
+                    </div>
+                    <div>
+                        <span class="">
+                            <a href="" style="text-decoration: none; color: #080808;">info@anubandh.com</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3 py-3 border mb-5" >
+                <button class=" bg-white border d-flex justify-content-between py-2"
+                    style="width: 100%;text-align: center; align-items: center;" (click)="logout2()">
+                    <p class="mb-0">Log Out</p>
+                    <p class="mb-0">></p>
+                </button>
+              
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</div>

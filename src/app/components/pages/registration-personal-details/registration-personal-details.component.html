@@ -1,0 +1,489 @@
+<div class="container-fluid">
+
+  <div class="row only-mobile">
+    <div class="col-12 ">
+      <div class="row d-flex justify-content-between">
+        <div class="col-2 " style="min-width: 200px;">
+          <div class="" >
+            <a routerLink="/set-password" style="text-decoration: none; color: black;">  <h6 style="padding: 10px 2px;" > <i class="fa fa-chevron-left"></i> Personal Details</h6></a>
+          
+          </div>
+        </div>
+        <div class="col-2" style="min-width: 120px;">
+          <button class="clear-button " style=" padding: 10px 2px; font-size: 14px;" type="reset" (click)="resetForm()">Clear All</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row sticky-div"
+  >
+    <div class="col-12 ">
+      <div class="row   scrolling-container  d-flex justify-content-center">
+        <div class="col-11  section-container  d-flex justify-content-between">
+          <div class="container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle green">1</div>
+            <div class="line half-line"></div>
+            <div class="section-name detail font-weight-bold   ">Personal Details</div>
+          </div>
+          <div class="container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle ">2</div>
+            <div class="line full-line" ></div>
+            <div class="section-name detail">Photo & Video</div>
+          </div>
+          <div class="container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle ">3</div>
+            <div class="line full-line" ></div>
+            <div class="section-name detail">Astro</div>
+          </div>
+          <div class=" container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle ">4</div>
+            <div class="line full-line"></div>
+            <div class="section-name detail">Family Details</div>
+          </div>
+          <div class="container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle ">5</div>
+            <div class="line full-line"></div>
+            <div class="section-name detail">Mediators</div>
+          </div>
+          <div class="container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle ">6</div>
+            <div class="line full-line" ></div>
+            <div class="section-name detail">Education</div>
+          </div>
+          <div class="container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle ">7</div>
+            <div class="line  full-line" ></div>
+            <div class="section-name detail">Occupation</div>
+          </div>
+          <div class="container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle ">8</div>
+            <div class="only-mobile line  full-line" ></div>
+            <div class="only-desktop line half-line2" ></div>
+            <div class="section-name detail">Address</div>
+          </div>
+          <div class="only-mobile  container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle ">9</div>
+            <div class="line  full-line" ></div>
+            <div class="section-name">Partner's Expectations</div>
+          </div>
+          <div class="only-mobile container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle ">10</div>
+            <div class="line  full-line" ></div>
+            <div class="section-name">Upload Document</div>
+          </div>
+          <div class="only-mobile container-box d-flex flex-column justify-content-center align-items-center">
+            <div class="circle ">11</div>
+            <div class="line half-line2" ></div>
+            <div class="section-name">About him</div>
+          </div>
+        </div>
+    
+        <!-- <div class="col-12 section8 d-flex flex-column align-items-center">
+          
+            <div class="col-10">
+                <div class="circle-section">
+                    <div class="circle green">1</div>
+                    <div class="line"></div>
+                    <div class="circle">2</div>
+                    <div class="line"></div>
+                    <div class="circle">3</div>
+                    <div class="line"></div>
+                    <div class="circle">4</div>
+                    <div class="line"></div>
+                    <div class="circle">5</div>
+                    <div class="line"></div>
+                    <div class="circle">6</div>
+                    <div class="line"></div>
+                    <div class="circle">7</div>
+                    <div class="line"></div>
+                    <div class="circle">8</div>
+                    <div class="line only-mobile"></div>
+                    <div class="circle only-mobile text-center">9</div>
+                    <div class="line only-mobile"></div>
+                    <div class="circle only-mobile">10</div>
+                    <div class="line only-mobile"></div>
+                    <div class="circle only-mobile">11</div>
+                 
+                </div>
+            </div>
+            <div class="col-11">
+                <div class="circle-section d-flex justify-content-evenly text-break">
+                    <div class="section-name">Personal Details</div>
+                    <div class="section-name">Photo & Video</div>
+                    <div class="section-name">Astro</div>
+                    <div class="section-name">Family Details</div>
+                    <div class="section-name">Mediator</div>
+                    <div class="section-name">Education</div>
+                    <div class="section-name">Occupation</div>
+                    <div class="section-name">Address</div>
+                    <div class="section-name only-mobile">Address</div>
+                    <div class="section-name only-mobile">Address</div>
+                    <div class="section-name only-mobile">Address</div>
+                </div>
+            </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="line"></div> -->
+  <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+    <div class="row d-flex justify-content-center ">
+      <div class="col-11">
+        <div class="row">
+          <div class="col-md-4 input-div">
+            <label for="gender">Gender</label>
+            <select class="form-select" id="gender" name="gender" formControlName="gender" required>
+              <option value="" disabled selected>Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            <div *ngIf="myForm?.get('gender')?.hasError('required') && myForm?.get('gender')?.touched"
+              class="error-msg">
+              Please enter valid details.
+            </div>
+          </div>
+          <div class="col-md-4 input-div">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control " id="firstname" name="firstname" formControlName="firstname"
+              placeholder="Enter First Name" required>
+            <div *ngIf="myForm?.get('firstname')?.hasError('required') && myForm?.get('firstname')?.touched"
+              class="error-msg">
+              Please enter valid details.
+            </div>
+          </div>
+
+          <div class="col-md-4 input-div">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" id="lastname" name="lastname" formControlName="lastname"
+              placeholder="Enter Last Name" required>
+            <div *ngIf="myForm?.get('lastname')?.hasError('required') && myForm?.get('lastname')?.touched"
+              class="error-msg">
+              Please enter valid details.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-11">
+        <div class="row">
+          <div class="col-md-4 input-div">
+            <label for="gotra1">Gotra 1</label>
+            <select class="form-select" id="gotra1" name="gotra1" formControlName="gotra1" required>
+              <option value="" disabled selected>Select Gotra 1</option>
+              <option value="gotra1_value1">Gotra 1 Option 1</option>
+              <option value="gotra1_value2">Gotra 1 Option 2</option>
+
+            </select>
+            <div *ngIf="myForm?.get('gotra1')?.hasError('required') && myForm?.get('gotra1')?.touched"
+              class="error-msg">
+              Please select Gotra 1.
+            </div>
+          </div>
+
+          <div class="col-md-4 input-div">
+            <label for="gotra2">Gotra 2</label>
+            <select class="form-select" id="gotra2" name="gotra2" formControlName="gotra2" required>
+              <option value="" disabled selected>Select Gotra 2</option>
+              <option value="gotra2_value1">Gotra 2 Option 1</option>
+              <option value="gotra2_value2">Gotra 2 Option 2</option>
+
+            </select>
+            <div *ngIf="myForm?.get('gotra2')?.hasError('required') && myForm?.get('gotra2')?.touched"
+              class="error-msg">
+              Please select Gotra 2.
+            </div>
+          </div>
+
+
+          <div class="col-md-4 input-div">
+            <label for="specialCases">Special Cases</label>
+            <select class="form-select" id="specialCases" name="specialCases" formControlName="specialCases" required>
+              <option value="" disabled selected>Select Special Cases</option>
+              <option value="special_case_value1">Special Case Option 1</option>
+              <option value="special_case_value2">Special Case Option 2</option>
+
+            </select>
+            <div *ngIf="myForm?.get('specialCases')?.hasError('required') && myForm?.get('specialCases')?.touched"
+              class="error-msg">
+              Please select a Special Case.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-11">
+        <div class="row">
+
+          <div class="col-md-4 input-div">
+            <label for="mobileNumber">Mobile Number</label>
+            <div class="row  d-flex justify-content-between ">
+              <div class="col-3">
+                <select class="form-select" id="countryCode" name="countryCode" formControlName="countryCode" required>
+                  <option value=""  selected>+91</option>
+                  <option value="country_code_value1">+82</option>
+                  <option value="country_code_value2">+76</option>
+
+                </select>
+
+              </div>
+
+              <div class="col-9 ">
+                <input type="text" class="form-control" id="mobileNumber" name="mobileNumber"
+                  formControlName="mobileNumber" placeholder="Enter Mobile Number" required>
+                <div *ngIf="myForm?.get('mobileNumber')?.hasError('required') && myForm?.get('mobileNumber')?.touched"
+                  class="error-msg">
+                  Please enter a valid Mobile Number.
+                </div>
+                <div *ngIf="myForm?.get('countryCode')?.hasError('required') && myForm?.get('countryCode')?.touched"
+                  class="error-msg">
+                  Please select a Country Code.
+                </div>
+                <div *ngIf="myForm?.get('mobileNumber')?.hasError('pattern') && myForm?.get('mobileNumber')?.touched"
+                  class="error-msg">
+                  Please enter a valid mobile number (8 to 12 digits).
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="col-md-4 input-div">
+            <label for="parentsMobile">Parent's Mobile Number</label>
+            <div class="row  d-flex justify-content-between ">
+              <div class="col-3">
+                <select class="form-select" id="pcountryCode" name="pcountryCode" formControlName="pcountryCode"
+                  required>
+                  <option value=""  selected>+91</option>
+                  <option value="country_code_value1">+82</option>
+                  <option value="country_code_value2">+76</option>
+
+                </select>
+
+              </div>
+
+              <div class="col-9 ">
+                <input type="text" class="form-control" id="parentsMobile" name="parentsMobile"
+                  formControlName="parentsMobile" placeholder="Enter Parent's Mobile Number" required>
+                <div *ngIf="myForm?.get('parentsMobile')?.hasError('required') && myForm?.get('parentsMobile')?.touched"
+                  class="error-msg">
+                  Please enter a valid Mobile Number.
+                </div>
+                <div *ngIf="myForm?.get('pcountryCode')?.hasError('required') && myForm?.get('pcountryCode')?.touched"
+                  class="error-msg">
+                  Please select a Country Code.
+                </div>
+                <div *ngIf="myForm?.get('parentsMobile')?.hasError('pattern') && myForm?.get('parentsMobile')?.touched"
+                  class="error-msg">
+                  Please enter a valid mobile number (8 to 12 digits).
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="col-md-4 input-div">
+            <label for="relationship">Relationship with Member</label>
+            <select class="form-select" id="relationship" name="relationship" formControlName="relationship" required>
+              <option value="" disabled selected>Select Relationship</option>
+              <option value="relationship_value1">Relationship Option 1</option>
+              <option value="relationship_value2">Relationship Option 2</option>
+
+            </select>
+            <div *ngIf="myForm?.get('relationship')?.hasError('required') && myForm?.get('relationship')?.touched"
+              class="error-msg">
+              Please select a Relationship.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-11">
+        <div class="row">
+          <!-- ... Previous Inputs ... -->
+
+          <!-- Email Input -->
+          <div class="col-md-4 input-div">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" formControlName="email"
+              placeholder="Enter Email" required>
+            <div *ngIf="myForm?.get('email')?.hasError('required') && myForm?.get('email')?.touched" class="error-msg">
+              Please enter a valid email address.
+            </div>
+            <div *ngIf="myForm?.get('email')?.hasError('email') && myForm?.get('email')?.touched" class="error-msg">
+              Please enter a valid email address.
+            </div>
+          </div>
+
+          <!-- Date of Birth (DOB) Input -->
+          <div class="col-md-4 input-div">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" name="dob" formControlName="dob" required>
+            <div *ngIf="myForm?.get('dob')?.hasError('required') && myForm?.get('dob')?.touched" class="error-msg">
+              Please enter a valid date of birth.
+            </div>
+          </div>
+
+          <!-- Blood Group Select Input -->
+          <div class="col-md-4 input-div">
+            <label for="bloodGroup">Blood Group</label>
+            <select class="form-select" id="bloodGroup" name="bloodGroup" formControlName="bloodGroup" required>
+              <option value="" disabled selected>Select Blood Group</option>
+              <option value="A+">A+</option>
+              <option value="B+">B+</option>
+              <option value="AB+">AB+</option>
+              <option value="O+">O+</option>
+              <option value="A-">A-</option>
+              <option value="B-">B-</option>
+              <option value="AB-">AB-</option>
+              <option value="O-">O-</option>
+            </select>
+            <div *ngIf="myForm?.get('bloodGroup')?.hasError('required') && myForm?.get('bloodGroup')?.touched"
+              class="error-msg">
+              Please select a blood group.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-11">
+        <div class="row">
+          <!-- ... Previous Inputs ... -->
+
+          <!-- Height Select Input -->
+          <div class="col-md-4 input-div">
+            <label for="height">Height</label>
+            <select class="form-select" id="height" name="height" formControlName="height" required>
+              <option value="" disabled selected>Select Height</option>
+              <option value="short">Short</option>
+              <option value="average">Average</option>
+              <option value="tall">Tall</option>
+            </select>
+            <div *ngIf="myForm?.get('height')?.hasError('required') && myForm?.get('height')?.touched"
+              class="error-msg">
+              Please select a height.
+            </div>
+          </div>
+
+          <!-- Marital Status Select Input -->
+          <div class="col-md-4 input-div">
+            <label for="maritalStatus">Marital Status</label>
+            <select class="form-select" id="maritalStatus" name="maritalStatus" formControlName="maritalStatus"
+              required>
+              <option value="" disabled selected>Select Marital Status</option>
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+              <option value="widowed">Widowed</option>
+            </select>
+            <div *ngIf="myForm?.get('maritalStatus')?.hasError('required') && myForm?.get('maritalStatus')?.touched"
+              class="error-msg">
+              Please select a marital status.
+            </div>
+          </div>
+
+          <!-- Age Input -->
+          <div class="col-md-4 input-div">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center mt-4">
+      <div class="col-11 ">
+        <h5 style="font-weight: bold;">Lifestyle Preferences</h5>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-11">
+          <div class="row " style="margin-bottom: 5rem;">
+            <!-- ... Previous Inputs ... -->
+
+            <!-- Eating Habits Select Input -->
+            <div class="col-md-4 input-div">
+              <label for="eatingHabits">Eating Habits</label>
+              <select class="form-select" id="eatingHabits" name="eatingHabits" formControlName="eatingHabits" required>
+                <option value="" disabled selected>Select Eating Habits</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="non_vegetarian">Non-Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <!-- Add more options as needed -->
+              </select>
+              <div *ngIf="myForm?.get('eatingHabits')?.hasError('required') && myForm?.get('eatingHabits')?.touched"
+                class="error-msg">
+                Please select eating habits.
+              </div>
+            </div>
+
+            <!-- Drinking Habits Select Input -->
+            <div class="col-md-4 input-div">
+              <label for="drinkingHabits">Drinking Habits</label>
+              <select class="form-select" id="drinkingHabits" name="drinkingHabits" formControlName="drinkingHabits"
+                required>
+                <option value="" disabled selected>Select Drinking Habits</option>
+                <option value="non_drinker">Non-Drinker</option>
+                <option value="social_drinker">Social Drinker</option>
+                <option value="regular_drinker">Regular Drinker</option>
+                <!-- Add more options as needed -->
+              </select>
+              <div *ngIf="myForm?.get('drinkingHabits')?.hasError('required') && myForm?.get('drinkingHabits')?.touched"
+                class="error-msg">
+                Please select drinking habits.
+              </div>
+            </div>
+
+            <!-- Smoking Habits Select Input -->
+            <div class="col-md-4 input-div">
+              <label for="smokingHabits">Smoking Habits</label>
+              <select class="form-select" id="smokingHabits" name="smokingHabits" formControlName="smokingHabits"
+                required>
+                <option value="" disabled selected>Select Smoking Habits</option>
+                <option value="non_smoker">Non-Smoker</option>
+                <option value="occasional_smoker">Occasional Smoker</option>
+                <option value="regular_smoker">Regular Smoker</option>
+                <!-- Add more options as needed -->
+              </select>
+              <div *ngIf="myForm?.get('smokingHabits')?.hasError('required') && myForm?.get('smokingHabits')?.touched"
+                class="error-msg">
+                Please select smoking habits.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row sticky-div-foot">
+      <div class="col-12 div d-flex justify-content-center">
+        <div class="col-11 button-container d-flex justify-content-between">
+          <div class="only-desktop clear-alldiv">
+            <button #outsideButton class="clear-button " type="reset">Clear All</button>
+          </div>
+          <div class="b-buttons d-flex justify-content-between gap-2">
+            <!-- <div class="previous-buttondiv">
+                            <button class="previous-button btn btn-outline-danger" type="">Previous</button>
+                        </div> -->
+            <div class="continue-buttondiv d-flex align-items-center">
+              <button class="continue-button btn btn-danger btn-block" type="submit">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+</div>
+
+
+

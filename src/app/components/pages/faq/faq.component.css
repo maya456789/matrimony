@@ -1,0 +1,16 @@
+.bank-details-text{
+    margin-bottom: 0;
+    color:rgb(62,3,224);
+    font-weight: 800;
+    font-size: 18px;
+}
+.txt-clr{
+    color:rgb(62,3,224);
+}
+.link:hover{
+    cursor: pointer;
+}
+
+p{
+    font-weight: 500;
+}

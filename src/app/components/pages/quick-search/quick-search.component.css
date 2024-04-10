@@ -1,0 +1,576 @@
+
+
+/* .nav-pills > .active > button,
+.nav-pills > .active > button,.nav-pills > li > button {
+text-decoration: none;
+font-weight: bold;
+border-radius:0px;
+border-bottom-width: 4px;
+border-bottom-style: solid;
+border-bottom-color: #FF6600;
+    color: #000 !important;
+  background-color: transparent !important;
+}
+.nav-pills > li > button{
+    border-radius:0px;
+} */
+
+
+
+/* not active*/
+.nav-pills .pill-1 .nav-link:not(.active) {
+  
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:0px;
+    border-bottom-width: none;
+    border-bottom-style: none;
+    border-bottom-color: #FF6600;
+    color:none;
+    background-color: none;
+  }
+  
+  .nav-pills .pill-2 .nav-link:not(.active) {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:0px;
+    border-bottom-width: none;
+    border-bottom-style: none;
+    border-bottom-color: #FF6600;
+        color:none;
+      background-color: none;
+  }
+  
+  .nav-pills .pill-3 .nav-link:not(.active) {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:0px;
+    border-bottom-width: none;
+    border-bottom-style: none;
+    border-bottom-color: #FF6600;
+        color:none;
+      background-color: none;
+  }
+  
+  
+  /* active (faded) */
+   .nav-pills .pill-1 .nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:0px;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF6600;
+        color: #000 !important;
+      background-color: transparent !important;
+  
+  }
+  
+  .nav-pills .pill-2 .nav-link {
+    
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:0px;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF6600;
+        color: #000 !important;
+      background-color: transparent !important;
+  }
+  
+  .nav-pills .pill-3 .nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:0px;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF6600;
+        color: #000 !important;
+      background-color: transparent !important;
+  } 
+  
+  .card-sl {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  
+  .card-image img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 8px 8px 0px 0;
+  }
+  .card-heading {
+    font-size: 18px;
+    font-weight: bold;
+    background: #fff;
+    padding: 10px 15px;
+  }
+  
+  .card-text {
+    padding: 5px 10px;
+    background: #fff;
+    font-size: 14px;
+    color: #636262;
+  }
+  
+  .card-button {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 90%;
+    background-color: #1F487E;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .card-button:hover {
+    text-decoration: none;
+    background-color: #1D3461;
+    color: #fff;
+  
+  }
+  
+  
+  
+  .container {
+    font-size: 20px !important;
+  }
+  
+  .nextButtons button {
+    margin: 0px 10px;
+    padding: 5px 15px !important;
+    border: 2px solid red;
+    border-radius: 2px !important;
+    font-weight: 500;
+  
+  }
+  
+  .nextButtons {
+    margin-right: 15px !important;
+  }
+  
+  .hrLine {
+  
+    background-color: #ede7e7;
+    width: 90% !important;
+    text-align: center;
+    height: 2px;
+    justify-content: center;
+    margin: auto;
+  
+  }
+  
+  .events button {
+    border: 1px solid;
+    margin-right: 10px;
+    padding-right: 15px;
+  }
+  
+  .filterDiv {
+    margin: 25px 0px 10px 0px !important;
+  }
+  
+  .filterDiv span {
+    font-weight: 500 !important;
+  }
+  
+  .filterDiv h4 {
+    font-weight: 700 !important;
+  
+  }
+  
+  .col-sm-3 h4 {
+    color: red !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+  }
+  
+  .events button a {
+    text-decoration: none !important;
+    color: #000 !important;
+    font-weight: 500 !important;
+  }
+  
+  .events button {
+    border-radius: 3px !important;
+    cursor: pointer !important;
+  }
+  
+  .date button {
+    border: 1px solid;
+    margin-right: 10px;
+    font-weight: 500 !important;
+  }
+  
+  .location label {
+    font-weight: 500 !important;
+  }
+  
+  .location select {
+    stroke: 1px solid #fff;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 5vh;
+  }
+  
+  .applyBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .applyBtn button {
+    margin: 35px !important;
+    border: 2px solid;
+    padding: 10px 35px !important;
+    font-size: 20px;
+    background: red !important;
+    color: #fff !important;
+  }
+  
+  .middleContainer {
+    display: flex;
+  }
+  
+  .second {
+    padding: 20px !important;
+  }
+  
+  .dateAndHeading p {
+    color: red !important;
+    font-size: 15px;
+  }
+  
+  .bar {
+    display: none !important;
+  }
+  
+  
+  
+  @media(max-width:500px){
+    .mainHeading{
+      font-size: 12px;
+      padding: 2px;
+    }
+  }
+  
+  @media(max-width:413px){
+    .mainHeading{
+      font-size: 10px;
+      padding: 2px;
+    }
+  }
+  
+  @media(max-width:776px){
+    
+   
+  }
+  
+  
+  
+  @media (max-width:768px) {
+  
+  
+    .bar {
+        display: block !important;
+  
+  
+    }
+  
+    .fa-bars {
+        font-size: 25px !important;
+        position: fixed !important;
+        right: 0 !important;
+        margin-right: 2rem !important;
+    }
+  
+  /* 
+    .col-sm-6 {
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 10px !important;
+    } */
+  
+  
+    .filter {
+        position: absolute !important;
+        top: 23rem !important;
+        right: 0;
+        background-color: #fdfdfd;
+        height: 90vh !important;
+        width: 70% !important;
+        padding: 5px 25px !important;
+    }
+  
+  
+    .nextButtons {
+        display: none !important;
+    }
+  
+    .middleContainer {
+        display: flex !important;
+        flex-direction: row !important;
+        /* margin-right: 2rem; */
+    }
+  
+    .main {
+        padding: 10px !important;
+        margin: 15px !important;
+    }
+  
+    .first {
+        flex: 50 !important;
+    }
+  
+    .second {
+        flex: 50 !important;
+        padding: 0 !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+  
+    .dateAndHeading p {
+        font-size: 12px !important;
+    }
+  
+    .firstAddress h3 {
+        font-size: 17px !important;
+    }
+  
+    .venue, .date {
+        font-size: 12px !important;
+    }
+  
+    .link a {
+        font-size: 14px !important;
+    }
+  
+    .dateAndHeading {
+        margin: 0 !important;
+    }
+  
+    .events button {
+        margin-top: 10px !important;
+    }
+  
+    .date button {
+        margin-top: 10px !important;
+    }
+  
+  }
+  
+  .lastSeen{
+    font-size:12px ;
+  }
+  
+  @media(max-width:768px){
+    .filter {
+      display: none !important;
+  } 
+  
+  .card-sl{
+    width:8rem;
+  }
+  }
+  
+  
+  @media (max-width:500px) {
+    
+    .cardId{
+      font-size: 12px;
+    }
+  
+    .cardTextSize{
+      font-size: 8px;
+     }
+   }
+  
+   @media(min-width:576px){
+  
+    .SearchBtn{
+      display:none !important;
+    }
+    .saveThisSearchBtn{
+      display:none !important;
+    }
+  }
+  
+  @media(max-width:576px){
+  
+    .smallSearchBtn{
+      display:none !important;
+    }
+
+    .email-11{
+      font-size: 13px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1200px) {
+  
+    .nextButtons button {
+        margin-top: 10px;
+    }
+  
+    .middleContainer {
+        flex-direction: column;
+    }
+  
+    .second {
+        text-align: center;
+    }
+  
+    .events button {
+        margin-top: 10px !important;
+    }
+  
+    .date button {
+        margin-top: 10px !important;
+    }
+  
+    .filter {
+        display: block !important;
+    } 
+  }
+  
+  
+  
+  @media (min-width: 1200px) {
+    .filter {
+        display: block !important;
+    }
+  
+  
+  }
+  
+  @media(max-width:991px){
+    /* .filter {
+      display: none !important;
+  } */
+  .advertise {
+    display: none !important;
+  }
+  
+  .hideAdvanceSearch{
+    display: none;
+  }
+  
+  .card-sl{
+    width:8rem;
+    
+    
+  }
+  
+  }
+  
+  @media(min-width:576px) and (max-width:767px){
+    .card-sl{
+      width:8rem;
+    } 
+  }
+  
+  
+  @media(max-width:437px){
+  
+    .card-sl{
+      width:7rem;
+    }
+  }
+  
+  @media(min-width:1041px) and (max-width:1372px){
+  
+    .lastSeen{
+      font-size: 8px;
+    }
+  }
+  
+  @media(min-width:992px) and (max-width:1041px){
+    .lastSeen{
+      font-size: 7px;
+    }
+  }
+  
+  @media(min-width:768px) and (max-width:991px){
+    .lastSeen{
+      font-size: 9px;
+    }
+  }
+  
+  @media(max-width:767px){
+    .lastSeen{
+      font-size: 9px;
+    }
+  }
+  
+  @media(max-width:438px){
+    .lastSeen{
+      font-size: 8px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 768px) {
+    .card-sl{
+      width:7.5rem;
+      margin-left: 90px;
+    }
+  }
+  
+  
+  /* Range Picker start*/
+  
+  /* We need to use ::ng-deep to overcome view encapsulation*/
+  
+      .custom-ngx-slider .ngx-slider .ngx-slider-bar {
+        background: #ffe4d1;
+        height: 5px;
+      }
+      .custom-ngx-slider .ngx-slider .ngx-slider-selection {
+        background: red;
+      }
+    
+      .custom-ngx-slider .ngx-slider .ngx-slider-pointer {
+        width: 10px;
+        height: 15px;
+        top: auto; /* to remove the default positioning */
+        bottom: 0;
+        background-color: #22c70a;
+      }
+    
+      .custom-ngx-slider .ngx-slider .ngx-slider-pointer:after {
+        display: none;
+      }
+    
+      .custom-ngx-slider .ngx-slider .ngx-slider-bubble {
+        bottom: 14px;
+      }
+    
+      .custom-ngx-slider .ngx-slider .ngx-slider-limit {
+        font-weight: bold;
+        color: red;
+      }
+    
+      .custom-ngx-slider .ngx-slider .ngx-slider-tick {
+        width: 3px;
+        height: 15px;
+        margin-left: 4px;
+        border-radius: 0;
+        background: #ccc;
+        top: -1px;
+      }
+    
+      .custom-ngx-slider .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+        background: rgb(0, 110, 255);
+      }
+    
+
+      label{
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 0.1rem;
+      }
+
+

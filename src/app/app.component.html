@@ -1,0 +1,19 @@
+
+
+
+<div *ngIf="!pageStateService.isLoggedIn">
+    <app-header *ngIf="pageStateService.showHeader"></app-header>
+    <router-outlet ></router-outlet>
+   
+<app-footer *ngIf="pageStateService.showHeader"></app-footer>
+ <app-footer-bar *ngIf="pageStateService.showHeader"></app-footer-bar> 
+</div>
+
+<div *ngIf="pageStateService.isLoggedIn">
+    <app-header-after-login></app-header-after-login>
+    <router-outlet></router-outlet>
+<app-footer *ngIf="pageStateService.showHeader"></app-footer>
+ <app-footer-bar></app-footer-bar> 
+</div>
+
+

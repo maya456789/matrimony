@@ -1,0 +1,386 @@
+
+
+        <div class="shadow-sm p-3 top-modify-search " style="margin-top: 0px !important; ">
+          <div class="row m-0">
+           
+            <div class="col-lg-4 col-11 p-0" style="margin-left: 5%;">
+              <input type="text" class="form-control" placeholder="Modify search" style="background-color: #F8F8F8;" />
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex  m-0">
+         <div class="col-lg-3 col-sm-4 pl-0 pr-0 pt-2 hidesaveMySearch">
+        <p style="font-weight: 500;">Home >> Search >> <span style="font-weight: bold;">Search Result</span></p>
+         </div>
+         <div class="col-lg-8 col-sm-10 col-11 pt-1">
+         <p style="color:#101010;padding: 3px;font-size: 16px; font-weight: 500;">128 results | Age 20-28, Height 5.1, Annual Income - 10L & above, Education- Post Graduates...</p>
+         </div>
+        </div>
+       
+          <div class="row d-flex justify-content-between m-0   ">
+              <div class="col-xl-3 col-lg-3 col-md-3 filter mt-4" 
+                  style="box-shadow: 0px 0px 6px #00000029; margin-bottom: 3rem; z-index: 3;">
+                  <div [formGroup]="saveMySearch" >
+                  <div class="d-flex justify-content-between filterDiv" style="align-items: center; text-align: center;">
+                      <div>
+                          <h5 style="font-weight: 600; margin: 0px;">Filter</h5>
+                      </div>
+                      <div><span>Clear All</span></div>
+                  </div>
+                  <div class="hrLine"></div>
+
+                  <div>
+                    <div class="events mt-3">
+                      <h4 class="head-title">Basic Details</h4>
+                    </div>
+                    <div class="row pt-2" >
+                      <div class="col-sm-12 col-12">
+                        <label  style="margin-left: 6px;">I m looking for</label>
+                        <select class="form-select" formControlName="lookingFor" >
+                        
+                         <option value="">Select Bride or Groom</option> 
+                          <option value="groom">Groom</option>
+                          <option value="bride">Bride</option>
+                          
+                        </select>
+                        <span *ngIf="isFormSubmited && saveMySearch.controls['lookingFor'].errors">
+                          <span *ngIf="saveMySearch.controls['lookingFor'].errors['required']" style="color:red">
+                           Please select to whome you are looking for.
+                          </span>
+          
+                        </span>
+                      </div>
+                     
+                      <div class="col-sm-6 col-6  ">
+                        <label for="exampleInputText">Age</label>
+                        <div class="d-flex justify-content-center align-items-center" style="gap: 1rem">
+                          <select class="form-select" formControlName="minAge" [(ngModel)]="value3">
+                            <option value="">Min Age</option> 
+                            <option value="18">18</option>
+                            <option value="22">22</option>
+                          </select>
+                        </div>
+                        <span *ngIf="isFormSubmited && saveMySearch.controls['minAge'].errors">
+                          <span *ngIf="saveMySearch.controls['minAge'].errors['required']" style="color:red">
+                           Please select the minimum age.
+                          </span>
+                          </span>
+                      </div>
+                        <div class="col-sm-6 col-6 ">
+                          <label for=""></label>
+                          <div class="d-flex justify-content-center align-items-center " style="gap: 1rem;">
+                          <select class="form-select" formControlName="maxAge" [(ngModel)]="highValue3">
+                            <option value="">Max Age</option> 
+                            <option value="30">30</option>
+                            <option value="35">35</option>
+                          </select>
+                          </div>
+                          <span *ngIf="isFormSubmited && saveMySearch.controls['maxAge'].errors">
+                            <span *ngIf="saveMySearch.controls['maxAge'].errors['required']" style="color:red">
+                            <small> Please select the maximum age.</small>
+                            </span>
+                           </span>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12 mt-3">
+                          <ngx-slider [(value)]="value3" [(highValue)]="highValue3" [options]="options3"></ngx-slider> 
+                          </div>
+                         
+                         </div>
+                        <div class="col-sm-12 col-12 ">
+                          <label for="exampleInputText">Height</label>
+                          <div class="d-flex justify-content-center align-items-center " style="gap: 1rem;">
+                          <select class="form-select" formControlName="height">
+                            <option value="">Min Height</option> 
+                            <option value="5">5 foot</option>
+                            <option value="5.3">5.3 foot</option>
+                          </select>
+                          </div>
+                          <span *ngIf="isFormSubmited && saveMySearch.controls['height'].errors">
+                            <span *ngIf="saveMySearch.controls['height'].errors['required']" style="color:red">
+                             Please select the minimum height.
+                            </span>
+                           </span>
+                        </div>
+
+                        <div class="col-sm-12 col-12 mt-3">
+                          <label  style="margin-left: 6px;">Dont show this gotra</label>
+                           <ng-multiselect-dropdown
+                            [settings]="dropdownSettings"
+                            [data]="dropdownList"
+                            formControlName="mygotras"
+                            (onSelect)="ongotraSelect($event)"
+                            (onSelectAll)="onSelectAll($event)"
+                            (onDeSelect)="ongotraDeSelect($event)"
+                            (onDeSelectAll)="onUnSelectAll()">
+                        </ng-multiselect-dropdown> 
+                        <span *ngIf="isFormSubmited && saveMySearch.controls['mygotras'].errors">
+                          <span *ngIf="saveMySearch.controls['mygotras'].errors['required']" style="color:red">
+                           Please select the gotras.
+                          </span>
+                         </span>
+                        </div>
+
+                      </div>
+
+                      <div class="row" >
+                        <div class="col-sm-12 mt-3">
+                       <span style="font-size: 14px;"> Present Residential Address Details ( Where candidate presently resides)</span>
+                        </div>
+                        <div class="col-sm-12 col-12 mt-3">
+                          <label  style="margin-left: 6px;">Country</label>
+                          <select class="form-select" formControlName="country" >
+                          
+                           <option value="">country</option> 
+                            <option value="ind">India</option>
+                            <option value="uk">London</option>
+                            
+                          </select>
+                          <span *ngIf="isFormSubmited && saveMySearch.controls['country'].errors">
+                            <span *ngIf="saveMySearch.controls['country'].errors['required']" style="color:red">
+                             Please select the country.
+                            </span>
+                           </span>
+                        </div>
+    
+                        <div class="col-sm-12 col-6 mt-3">
+                          <label  style="margin-left: 6px;">State</label>
+                          <select class="form-select" formControlName="state" >
+                          
+                           <option value="">State</option> 
+                            <option value="state1">state1</option>
+                            <option value="state2">state2</option>
+                            
+                          </select>
+                          <span *ngIf="isFormSubmited && saveMySearch.controls['state'].errors">
+                            <span *ngIf="saveMySearch.controls['state'].errors['required']" style="color:red">
+                             Please select the state.
+                            </span>
+                           </span>
+                        </div>
+    
+                        <div class="col-sm-12 col-6 mt-3">
+                          <label  style="margin-left: 6px;">City</label>
+                          <select class="form-select" formControlName="city" >
+                          
+                           <option value="">City</option> 
+                            <option value="city1">City1</option>
+                            <option value="city2">City2</option>
+                            
+                          </select>
+                          <span *ngIf="isFormSubmited && saveMySearch.controls['city'].errors">
+                            <span *ngIf="saveMySearch.controls['city'].errors['required']" style="color:red">
+                             Please select the city.
+                            </span>
+                           </span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-12 col-12 mt-3">
+                          <label  style="margin-left: 6px;">Maratial status</label>
+                          <select class="form-select" formControlName="maratialStatus" >
+                          
+                           <option value="">Select status</option> 
+                            <option value="married">Married</option>
+                            <option value="unmarried">Unmarried</option>
+                            
+                          </select>
+                          <span *ngIf="isFormSubmited && saveMySearch.controls['maratialStatus'].errors">
+                            <span *ngIf="saveMySearch.controls['maratialStatus'].errors['required']" style="color:red">
+                             Please select the maratial status.
+                            </span>
+                           </span>
+                        </div>
+    
+                        <div class="col-sm-12 col-12 mt-3">
+                          <label  style="margin-left: 6px;">Blood Group</label>
+                          <select class="form-select" formControlName="bloodGroup" >
+                          
+                           <option value="">Select blood group</option> 
+                            <option value="a+">A+</option>
+                            <option value="o">O</option>
+                            
+                          </select>
+                          <span *ngIf="isFormSubmited && saveMySearch.controls['bloodGroup'].errors">
+                            <span *ngIf="saveMySearch.controls['bloodGroup'].errors['required']" style="color:red">
+                             Please select the blood group.
+                            </span>
+                           </span>
+                        </div>
+                      </div>
+                      
+                    
+                  </div>
+                  <div class="hrLine mt-3"></div>
+                  <div class="events mt-3">
+                    <h4 class="head-title">Education and Occuption</h4>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-12 col-12 mt-3">
+                        <label  style="margin-left: 6px;">Qualification</label>
+                        <select class="form-select" formControlName="qualification" >
+                        
+                         <option value="">Select qualification</option> 
+                          <option value="a+">MBA</option>
+                          <option value="o">BCA</option>
+                          
+                        </select>
+                        <span *ngIf="isFormSubmited && saveMySearch.controls['qualification'].errors">
+                          <span *ngIf="saveMySearch.controls['qualification'].errors['required']" style="color:red">
+                           Please select the qualification.
+                          </span>
+                         </span>
+                      </div>
+                      <div class="col-sm-12 col-12 mt-3">
+                        <label  style="margin-left: 6px;">Education Area</label>
+                        <ng-multiselect-dropdown
+                          [settings]="dropdownSettings"
+                          [data]="dropdownList2"
+                          formControlName="educationArea"
+                          >
+                      </ng-multiselect-dropdown> 
+                      <span *ngIf="isFormSubmited && saveMySearch.controls['educationArea'].errors">
+                        <span *ngIf="saveMySearch.controls['educationArea'].errors['required']" style="color:red">
+                         Please select the education area.
+                        </span>
+                       </span>
+                      </div>
+
+                      <div class="col-sm-12 col-12 mt-3">
+                        <label  style="margin-left: 6px;">Working With</label>
+                        <ng-multiselect-dropdown
+                          [settings]="dropdownSettings"
+                          [data]="dropdownList2"
+                          formControlName="workingWith"
+                         >
+                      </ng-multiselect-dropdown> 
+                      <span *ngIf="isFormSubmited && saveMySearch.controls['workingWith'].errors">
+                        <span *ngIf="saveMySearch.controls['workingWith'].errors['required']" style="color:red">
+                         Please select the working with.
+                        </span>
+                       </span>
+                      </div>
+
+                      <div class="col-sm-12 col-12 mt-3">
+                        <label  style="margin-left: 6px;">Professional Area</label>
+                        <ng-multiselect-dropdown
+                          [settings]="dropdownSettings"
+                          [data]="dropdownList2"
+                          formControlName="professionalArea"
+                         >
+                      </ng-multiselect-dropdown> 
+                      <span *ngIf="isFormSubmited && saveMySearch.controls['professionalArea'].errors">
+                        <span *ngIf="saveMySearch.controls['professionalArea'].errors['required']" style="color:red">
+                         Please select the professional area.
+                        </span>
+                       </span>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-6 mt-3">
+                       <label >Annual Income</label>
+                      </div>
+                      <div class="col-sm-12 col-12 mt-3">
+                       <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" formControlName="incomeRange" id="inlineRadio1" value="option1" [(ngModel)]="selectedValue" (change)="handleChange($event)">
+                        <label class="form-check-label"  for="inlineRadio1" >Doesnt matter</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" formControlName="incomeRange" id="inlineRadio2" value="option2" [(ngModel)]="selectedValue" (change)="handleChange($event)">
+                        <label class="form-check-label" for="inlineRadio2" >Select an income range</label>
+                      </div>
+                      </div>
+                      <span *ngIf="isFormSubmited && saveMySearch.controls['incomeRange'].errors">
+                        <span *ngIf="saveMySearch.controls['incomeRange'].errors['required']" style="color:red">
+                         Please select the income range.
+                        </span>
+                       </span>
+                    </div>
+
+                    <div *ngIf="selectedValue == 'option2'">
+                    <div class="row">
+                      <div class="col-lg-12 mt-3">
+                      <ngx-slider [(value)]="value2" [(highValue)]="highValue2" [options]="options2"></ngx-slider> 
+                      </div>
+                     
+                     </div>
+
+                    <div class="row mt-lg-2">
+                      <div class="col-lg-5 col-5">
+                       <input type="text" class="form-control"  [(ngModel)]="value2" [ngModelOptions]="{standalone: true}" />
+                      </div>
+                      <div class="col-lg-1 col-2 d-flex justify-content-center">
+                         <label>to</label>
+                      </div>
+                      <div class="col-lg-5 col-5">
+                       <input type="text" class="form-control"  [(ngModel)]="highValue2" [ngModelOptions]="{standalone: true}" />
+                      </div>
+                    </div>
+
+                    </div>
+                 
+                  <div class="applyBtn">
+                      <button type="submit" class="btn btn-danger" (click)="onSubmit2(saveMySearch.value,saveMySearch.valid)" >Apply</button>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="col-xl-7 col-lg-7 col-md-9   p-0 " >
+                <div class="row m-0">
+                  <div class="card-outer m-0 ">
+                    <div class="row m-0">
+                      <div class="col-xl-4 col-lg-6 col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+                        <div class="card-sl" style="border-radius: 35px;">
+              
+                          <div class="card-image " style="border-radius: 35px;">
+              
+                            <div class="card-profile-image"
+                              style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                            </div>
+                            <div class="last-seen" style="background-color: rgb(245 229 245)">
+                              {{cardObj.lastseen}}
+                            </div>
+                          </div>
+              
+                          <div class="card-heading-id text-left ">
+                            ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                          </div>
+                          <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                            <p class="profile-text-m">{{cardObj.name}} </p>
+                            <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+              
+                            <p class="profile-text-m">{{cardObj.occupation}}</p>
+              
+                          </div>
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+              </div>
+              <!-- <div>
+                <button type="button" class="btn button-primary" style="background-color: #FFFFFF;color:white">Save This Search</button>
+              </div> -->
+              <div class="col-xl-2 col-lg-2 col-md-2  advertise mt-2">
+                <div class="d-flex justify-content-start ml-2" >
+                  <button type="submit" style="width:150px;background-color: #979494;color:white"  class="btn btn mt-3">Save This Search</button>
+                </div>
+                <div>
+                    <img src="../../../../../assets/img/Group 20922.png " style="width: 100%;" alt="">
+                </div>
+            </div>
+
+            <div class="col-12 saveThisSearchBtn">
+              <div class="footer fixed-bottom">
+                <div class="shadow-sm p-3 w-100" style="margin-top: 0px !important;">
+                <button type="button" style="background-color: #C1C1C1;color:#808080;padding: 15px;" class="btn btn btn-block">Save This Search</button>
+                </div>
+                </div>
+              </div>
+          </div>
+        
+        

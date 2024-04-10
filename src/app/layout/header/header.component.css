@@ -1,0 +1,183 @@
+.collapse {
+  margin: 0;
+  padding: 0;
+}
+
+.collapse li a {
+  font-weight: 700;
+  color: #000;
+  font-size: 14px;
+}
+
+@media (min-width: 1570px) {
+  .collapse li a {
+    font-weight: 700;
+    color: #000;
+    font-size: 16px;
+  }
+}
+
+.collapse ul li a:hover {
+  color: red !important;
+}
+
+
+
+
+
+.nav-item {
+  margin: 0 15px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container-fluid {
+  position: sticky;
+  top: 0px !important;
+  z-index: 16 !important;
+}
+
+
+.fa-solid {
+  position: absolute;
+  top: 35px !important;
+  left: 155px;
+}
+
+.fa-solid {
+  display: none !important;
+}
+
+.home {
+  display: none !important;
+}
+
+
+
+@media (max-width: 1200px) {
+  .login-red{
+    background-color: #D93134;
+    color: #ffffff !important;
+  }
+  .element-cus{
+    width: 90%; background-color: #ffffff;height: 100vh;
+    background-color: #ffffff;
+    overflow-y: auto;
+  }
+  .nav-item {
+    margin: 0px;
+  }
+
+  .navlink {
+
+    animation: slideIn 1s ease-in-out forwards;
+    transform: translateX(-100%);
+  }
+
+  .navlink.show {
+    animation: slideOut 1s ease-in-out forwards !important;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .registor-now {
+    display: none !important;
+
+  }
+
+  .collapse li {
+    padding-left: 30px !important;
+    width: 100%;
+  }
+
+  .navlink.show {
+    display: none !important;
+  }
+
+  hr {
+    border: 1px solid;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .fa-solid {
+    display: block !important;
+  }
+
+  .home {
+    display: block !important;
+  }
+
+  .navlink {
+    position: absolute;
+    top: 0px !important;
+    left: 0;
+    
+    height: 100vh !important;
+    width: 100% !important;
+    display: flex;
+    z-index: 1 !important;
+
+  }
+
+  .navlink ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+
+  .navlink ul li {
+    padding: 30px 0px;
+    font-size: 20px;
+  }
+
+  .FAQ {
+    display: none !important;
+  }
+
+  .collapse li a {
+    font-weight: 500;
+    color: #000;
+
+  }
+}
+
+
+input[type="radio"] {
+accent-color: #D93134; /* Change the text color to red */
+}
+
+.home-active{
+
+  color: #D93134;
+
+}
+
+.element-cus {
+  /* overflow-y: scroll; */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+
+.element-cus::-webkit-scrollbar {
+  width: 0px; /* Safari and Chrome */
+}

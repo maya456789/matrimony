@@ -1,0 +1,101 @@
+
+.registration-page {
+    height: 98.6vh;
+   
+  }
+  
+  .registration-form-container {
+    padding-top: 5% !important;
+    max-width: 100%;
+    padding: 20px;
+    background-color:#fff;
+  }
+  .registration-form-container h1 {
+    font-weight: 700;
+    font-size: 35px;
+  }
+  
+  .registration-form-container form {
+    margin-top: 20px;
+  }
+  
+  .registration-form-container .form-group label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #030304;
+  }
+  .form-control{
+    font-size: 12px;
+    height: 35px;
+  }
+  .registration-form-container .form-check-label {
+    color: #28a745; 
+  }
+  .registration-image{
+    min-height: 100vh !important;
+  }
+
+
+/* Custom styles for the checkboxes */
+.form-check-input:checked {
+  background-color: #28a745; /* Green color for checked checkbox */
+}
+
+/* Custom styles for the Continue button */
+.btn-continue {
+  background-color: #D93134; /* Red color for the button */
+  width: 100%; /* Set width to 100% */
+}
+a{
+  color: #28a745;
+}
+#login{
+  text-decoration: none;
+  color: #dc3545;
+  font-weight: bold;
+}
+.main-div{
+  background-color:#fff;
+}
+.registration-div{
+  background-color:#fff;
+  height: 100% ;
+  /* overflow-y: scroll; */
+}
+/* For webkit browsers */
+/* Hide the scrollbar */
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+ 
+}
+
+@media (max-width: 766.98px) {
+  .image-div{  
+    display: none !important;
+  }
+  .registration-div{
+    width: 100%;
+  }
+}
+
+@media (max-width: 766.98px) and (min-width:568px) {
+ 
+}
+
+@media (max-width: 575.98px) {
+ .registration-form-container{
+  margin-top: 2rem;
+  width: 95%;
+ }
+ #registration{
+  font-size: 25px;
+ }
+ 
+}
+.error-msg {
+  color: #D93134;
+  font-size: smaller;
+}

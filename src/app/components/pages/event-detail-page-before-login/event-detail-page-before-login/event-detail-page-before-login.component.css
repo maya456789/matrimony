@@ -1,0 +1,55 @@
+.detailHeading {
+    font-weight: 500 !important;
+}
+
+.registerBtn button {
+    background: red !important;
+    /* color: white !important; */
+    padding: 5px 15px !important;
+    border-radius: 3px !important;
+}
+
+.registerBtn button a {
+    text-decoration: none !important;
+    color: white !important;
+
+}
+
+.date p {
+    color: red !important;
+    font-weight: 600;
+}
+
+.time p {
+    margin-left: 1rem !important;
+    font-weight: 400 !important;
+}
+
+.addressDetail p {
+    font-weight: 400 !important;
+}
+
+.heading h2 {
+    font-weight: 700 !important;
+}
+
+.otherEvent {
+    margin: 3rem 0 !important;
+}
+
+.otherEvent h1 {
+    font-weight: 600 !important;
+}
+
+.dateAndHeading p {
+    color: red !important;
+}
+
+
+/* @media (max-width: 991px){
+    .cards{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+} */

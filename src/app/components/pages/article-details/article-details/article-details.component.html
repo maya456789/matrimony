@@ -1,0 +1,363 @@
+
+
+<div  style="margin-top: 20px;">
+    <img src="../../../../../assets/img/HomePageBanner.png" class="card-img-top" alt="...">
+  </div>
+
+<div class="container-fluid px-sm-5">
+  
+    <div class="row">
+        <p class="card-text topHeading" style="font-size: 12px;margin: 20px;margin-left: 0px !important;">Home >> News >> <span style="font-weight:bold;">Matrimonial for the better half of your life</span></p>
+    </div>
+        <div class="row "> 
+          <div class="col-lg-9 mobileView">
+           <div class="card  mb-3 "  class="cardBorder mainCardWidth">
+           <div class=" mat-img " style="background-image: url('../../../../../assets/img/04.png');
+           background-repeat: no-repeat; background-position: center;background-size: cover;">
+
+           </div>
+            <!-- <img src="../../../../../assets/img/04.png"  class="card-img" alt="Matrimonial image"> -->
+            <div class="row mt-2">
+              <div class="col-sm-6 col-6">
+               <h6 style="color:red">Published on</h6>
+               <p  style="font-size: 12px;">25th October 2022,6:30pm</p>
+              </div>
+               <div class="col-sm-6 col-6"  >
+               <h6  style="color:red" class="d-flex justify-content-end ">Published by</h6>
+               <p  style="font-size: 12px;margin-top: 0px !important;" class="d-flex justify-content-end ">anubhandh</p>
+              </div>
+           </div>
+          </div>
+         
+          </div>
+          <div class="col" >
+            <div  id="tabs" #tabs class="smallCard">
+
+              <ul class="nav d-flex justify-content-between">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#popular" [ngClass]="{ 'active':activeTab==='popular'}" (click)="popular('popular')"
+                     data-toggle="tab" style="padding: 0px !important;color:black;padding-top: 0px !important;">Popular</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#recents" [ngClass]="{ 'active':activeTab==='recent'}" data-toggle="tab"
+                     (click)="recent('recent')" style="padding-top: 0px !important;color:black;">Recents</a>
+                </li>
+              </ul>
+            
+              <div  class="tab-content">
+                <div class="tab-pane" id="popular" [ngClass]="{ 'active':activeTab==='popular'}">
+                  <div >
+                   
+                   <div class="card  mt-3 cardBorder" >
+                       <div class="row">
+                         <div class="col-lg-4 ">
+                             <img src="../../../../../assets/img/Rectangle 1980.png" class="img-fluid rounded-start"  alt="...">
+                          </div>
+                      <div class="col ">
+                       <div >
+                         <p ><small class="text-muted">Last updated 3 mins ago,Last updated 3 mins ago</small></p>
+                       </div>
+                      </div>
+                       </div>
+                       <div class="row mt-3">
+                        <div class="col-lg-4">
+                            <img src="../../../../../assets/img/Rectangle -1.png" class="img-fluid rounded-start"  alt="...">
+                         </div>
+                     <div class="col">
+                      <div >
+                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                     </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-lg-4">
+                            <img src="../../../../../assets/img/Rectangle -2.png" class="img-fluid rounded-start" height="150px" alt="...">
+                         </div>
+                     <div class="col">
+                      <div >
+                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                     </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-lg-4">
+                            <img src="../../../../../assets/img/Rectangle -3.png" class="img-fluid rounded-start" height="10px" alt="...">
+                         </div>
+                     <div class="col">
+                      <div >
+                           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                     </div>
+                     </div>
+                   </div>
+                  
+                  </div>
+                </div>
+                <div class="tab-pane" id="recents" [ngClass]="{ 'active':activeTab==='recent'}">recents screen</div>
+              </div>
+            
+            </div>
+            <!-- <div class="smallCard">
+            <div class="row">
+              <div class="col">
+               <h6 style="margin-left: 30px;text-decoration: underline;">Popular</h6>
+              
+              </div>
+               <div class="col"  >
+               <h6 style="margin-left: 34px;" >Recent</h6>
+              
+              </div>
+           </div>
+           <div class="card mb-3 mt-3 cardBorder" style="width: 280px;max-height: 5rem;margin-left: 30px;">
+               <div class="row">
+                 <div class="col-lg-4">
+                     <img src="assets/images/Rectangle 1980.png" class="img-fluid rounded-start"  alt="...">
+                  </div>
+              <div class="col">
+               <div >
+                 <p ><small class="text-muted">Last updated 3 mins ago</small></p>
+               </div>
+              </div>
+           </div>
+           </div>
+           <div class="card mb-3 cardBorder" style="width: 280px;max-height: 5rem;margin-left: 30px;">
+               <div class="row ">
+                 <div class="col-lg-4">
+                     <img src="assets/images/Rectangle -1.png" class="img-fluid rounded-start" height="150px" alt="...">
+                  </div>
+              <div class="col">
+               <div >
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+               </div>
+              </div>
+           </div>
+           </div>
+           <div class="card mb-3 cardBorder" style="width: 280px;max-height: 5rem;margin-left: 30px;">
+               <div class="row ">
+                 <div class="col-lg-4">
+                     <img src="assets/images/Rectangle -2.png" class="img-fluid rounded-start" height="150px" alt="...">
+                  </div>
+              <div class="col">
+               <div >
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+               </div>
+              </div>
+           </div>
+           </div>
+           <div class="card mb-3 cardBorder" style="width: 280px;max-height: 5rem;margin-left: 30px;">
+               <div class="row">
+                 <div class="col-lg-4">
+                     <img src="assets/images/Rectangle -3.png" class="img-fluid rounded-start" height="10px" alt="...">
+                  </div>
+              <div class="col">
+               <div >
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+               </div>
+              </div>
+           </div>
+           </div>
+          </div> -->
+          </div>
+        </div>
+         
+         
+</div>
+
+<!--Paragraph start-->
+
+<div class="container-fluid px-sm-5">
+  <div class="row" class="mobileView">
+    <div class="col-lg-8 col-md-12 col-sm-12 col-12 p-0 ">
+  <h4 style="font-weight: 600;">Matrimonial for the better half of your life</h4>
+  <p >
+    We are looking for a suitable match for my sister, who has completed her MSW and is currently working in social work. She is a caring and compassionate individual with an optimistic outlook toward life that everyone who knows her adores. She enjoys spending time with family and friends, reading books, and exploring new places. We are looking for a well-educated, like-minded groom with similar values and interests. A strong bond is built on mutual respect, understanding, and support, and we are looking for someone willing to embark on this journey of love and companionship with her.
+  </p>
+    </div>
+  </div>
+</div>
+
+<!--Paragraph end-->
+
+<!--Other Articles start-->
+<div class="otherArticle container-fluid px-sm-5">
+  <h3  style="font-weight: 600;" class="center">Other Articles</h3>
+</div>
+
+
+<!--Slider start-->
+
+
+
+
+<!-- here is the id -->
+
+
+
+<div id="demo" class="carousel slide" data-ride="carousel" >
+<!-- Indicators -->
+<ul class="carousel-indicators">
+  <li data-target="#demo" data-slide-to="0" class="active"></li>
+  <li data-target="#demo" data-slide-to="1"></li>
+  <li data-target="#demo" data-slide-to="2"></li>
+</ul>
+
+<!-- The slideshow -->
+<div class="container carousel-inner no-padding"  >
+  <div  class="carousel-item active"  >
+    <div class="row flex-row flex-nowrap overflow-hidden   mt-2 p-1 pr-0">
+      <div class="col-lg-4 col-12 col-md-6 card2 d-inline-block mb-3 mt-2 "  *ngFor="let cardObj of cards2" >
+  
+        <div class=" img2 text-center  mr-4 border " style="gap: 1rem;"
+      style="box-shadow: 0px 0px 15px #ffffff; width: 100%;">
+          <!-- <div style="background-image: url({{cardObj.img}});
+          background-size: cover;height:230px;background-position: center;" ></div> -->
+          <div style="background-image: url({{cardObj.img}});
+    background-size: cover;height:190px !important;background-position: center;"></div>
+    
+            <div class="card-body d-flex flex-column p-4" style="background-color: white;">
+        <div class="row ">
+          <div class="  d-flex  justify-content-between  col-12 ">
+            
+            <div class="col-auto p-0 ">
+              <p class=" mb-2 " style="text-align: start;" style="font-size: 12px; font-weight: 600; color:#000000">
+                {{cardObj.date}}
+              </p>
+            </div>
+            <div class="col-auto p-0">
+              <p class=" mb-2 " style="text-align: end;" style="font-size: 12px; font-weight: 600; color:#000000">
+                {{cardObj.auther}}
+              </p>
+            </div>
+          </div>
+    
+        </div>
+        <span class="h5 text-start " style="font-weight: 700;">{{cardObj.title}}
+        </span>
+        <p class="" style="font-size: 12px; font-weight: 600; text-align: justify;">{{cardObj.description}}<span
+            class="">Some
+            quick example text to build on the card title and make up the bulk of the card's content.</span>
+        </p>
+    
+        <button type="button" style="border-radius: 25px !important; padding: 1px 10px; width: 65px;"
+          class="btn btn-danger  mt-auto align-self-center" routerLink="/articles"  (click)="onBtnClick(cardObj.id)"> > > </button>
+      </div>
+            <!-- <div class="card-footer bg-white " style="border-top: none;">
+              <button type="button" routerLink="article-detail"  class="btn btn-danger mt-auto align-self-center">>></button>
+              
+            </div> -->
+            
+          </div>
+  
+      </div>
+      </div>
+   
+  </div>
+  <div class="carousel-item" >
+    <div class="row flex-row flex-nowrap overflow-hidden   mt-2 p-1 pr-0">
+      <div class="col-lg-4 col-12 col-md-6 card2 d-inline-block mb-3 mt-2 "  *ngFor="let cardObj of cards2" >
+  
+        <div class=" img2 text-center  mr-4 border " style="gap: 1rem;"
+      style="box-shadow: 0px 0px 15px #ffffff; width: 100%;">
+          <!-- <div style="background-image: url({{cardObj.img}});
+          background-size: cover;height:230px;background-position: center;" ></div> -->
+          <div style="background-image: url({{cardObj.img}});
+    background-size: cover;height:190px !important;background-position: center;"></div>
+    
+            <div class="card-body d-flex flex-column p-4" style="background-color: white;">
+        <div class="row ">
+          <div class="  d-flex  justify-content-between  col-12 ">
+            
+            <div class="col-auto p-0 ">
+              <p class=" mb-2 " style="text-align: start;" style="font-size: 12px; font-weight: 600; color:#000000">
+                {{cardObj.date}}
+              </p>
+            </div>
+            <div class="col-auto p-0">
+              <p class=" mb-2 " style="text-align: end;" style="font-size: 12px; font-weight: 600; color:#000000">
+                {{cardObj.auther}}
+              </p>
+            </div>
+          </div>
+    
+        </div>
+        <span class="h5 text-start " style="font-weight: 700;">{{cardObj.title}}
+        </span>
+        <p class="" style="font-size: 12px; font-weight: 600; text-align: justify;">{{cardObj.description}}<span
+            class="">Some
+            quick example text to build on the card title and make up the bulk of the card's content.</span>
+        </p>
+    
+        <button type="button" style="border-radius: 25px; padding: 1px 10px; width: 65px;"
+          class="btn btn-danger  mt-auto align-self-center" routerLink="/articles" (click)="onBtnClick(cardObj.id)" > > > </button>
+      </div>
+            <!-- <div class="card-footer bg-white " style="border-top: none;">
+              <button type="button" routerLink="article-detail"  class="btn btn-danger mt-auto align-self-center">>></button>
+              
+            </div> -->
+            
+          </div>
+  
+      </div>
+      </div>
+  </div>
+  <div class="carousel-item">
+    <div class="row flex-row flex-nowrap overflow-hidden   mt-2 p-1 pr-0">
+    <div class="col-lg-4 col-12 col-md-6 card2 d-inline-block mb-3 mt-2 "  *ngFor="let cardObj of cards2" >
+
+      <div  class=" img2 text-center  mr-4 border " style="gap: 1rem;"
+    style="box-shadow: 0px 0px 15px #ffffff; width: 100%;">
+        <!-- <div style="background-image: url({{cardObj.img}});
+        background-size: cover;height:230px;background-position: center;" ></div> -->
+        <div style="background-image: url({{cardObj.img}});
+  background-size: cover;height:190px !important;background-position: center;"></div>
+  
+          <div class="card-body d-flex flex-column p-4" style="background-color: white;">
+      <div class="row ">
+        <div class="  d-flex  justify-content-between  col-12 ">
+          
+          <div class="col-auto p-0 ">
+            <p class=" mb-2 " style="text-align: start;" style="font-size: 12px; font-weight: 600; color:#000000">
+              {{cardObj.date}}
+            </p>
+          </div>
+          <div class="col-auto p-0">
+            <p class=" mb-2 " style="text-align: end;" style="font-size: 12px; font-weight: 600; color:#000000">
+              {{cardObj.auther}}
+            </p>
+          </div>
+        </div>
+  
+      </div>
+      <span class="h5 text-start " style="font-weight: 700;">{{cardObj.title}}
+      </span>
+      <p class="" style="font-size: 12px; font-weight: 600; text-align: justify;">{{cardObj.description}}<span
+          class="">Some
+          quick example text to build on the card title and make up the bulk of the card's content.</span>
+      </p>
+  
+      <button type="button" style="border-radius: 25px !important; padding: 1px 10px; width: 65px;"
+        class="btn btn-danger  mt-auto align-self-center" routerLink="/articles" (click)="onBtnClick(cardObj.id)"  > > > </button>
+    </div>
+          <!-- <div class="card-footer bg-white " style="border-top: none;">
+            <button type="button" routerLink="article-detail"  class="btn btn-danger mt-auto align-self-center">>></button>
+            
+          </div> -->
+          
+        </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- Left and right controls -->
+<a class="carousel-control-prev" href="#demo" data-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo" data-slide="next">
+  <span class="carousel-control-next-icon"></span>
+</a>
+
+</div>
+<br>
+<br>

@@ -1,0 +1,48 @@
+<div class="container-fluid verification-page">
+    <div class="row">
+  
+      <div class="col-6 d-flex justify-content-center align-items-center verify-div">
+        <div class="col-8 d-flex flex-column align-items-center verification-form-container ">
+          
+          <h1 class="mb-3 text-center headingv" id="verify">Verify your Phone Number</h1>
+  
+          <p class="mb-0">OTP send to +91 ***** {{numberlastdigit }}</p>
+
+          <p class="mb-4 skipForNow"><a href="#" (click)="skipForNow()">Skip for now</a></p>
+
+          <!-- <div class="otp-container mb-4">
+            <input #otp1Input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp1" [ngClass]="{ 'filled': otp1 }"
+              (keydown)="handleInputNavigation($event, otp2Input)" (input)="handleInputNavigation2($event, otp2Input)">
+            <input #otp2Input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp2" [ngClass]="{ 'filled': otp2 }"
+              (keydown)="handleInputNavigation($event, otp3Input)" (input)="handleInputNavigation2($event, otp3Input)">
+            <input #otp3Input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp3" [ngClass]="{ 'filled': otp3 }"
+              (keydown)="handleInputNavigation($event, otp4Input)" (input)="handleInputNavigation2($event, otp4Input)">
+            <input #otp4Input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp4" [ngClass]="{ 'filled': otp4 }"
+              (keydown)="handleInputNavigation($event)" (input)="handleInputNavigation2($event)">
+          </div> -->
+          <div class="otp-container mb-4">
+            <input #otp1Input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp1" [ngClass]="{ 'filled': otp1 }"
+              (keydown)="handleInput(otp1Input, otp2Input)">
+            <input #otp2Input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp2" [ngClass]="{ 'filled': otp2 }"
+              (keydown)="handleInput(otp2Input, otp3Input)">
+            <input #otp3Input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp3" [ngClass]="{ 'filled': otp3 }"
+              (keydown)="handleInput(otp3Input, otp4Input)">
+            <input #otp4Input type="text" class="otp-input" maxlength="1" [(ngModel)]="otp4" [ngClass]="{ 'filled': otp4 }"
+              (keydown)="handleInput(otp4Input)">
+          </div>
+          <!-- Timestamp countdown from 1 min to 0 min -->
+          <p class="mb-1">(0:{{ countdown | number: '2.0' }})</p>
+          <p class="mb-1">Didn't receive any code?</p>
+          <p class="mb-4 linkresend"><a href="#" (click)="resendCode()">RESEND NEW CODE</a></p>
+  
+          <button class="btn btn-block w-100 text-white" style="background-color: #D93134;" (click)="verifyNumber()">Verify Number</button>
+        </div>
+      </div>
+  
+      <div class="col-6 p-0 d-flex align-items-stretch image-div">
+        <img src="../../../../assets/img/Rectangle 1885.png" alt="Verification Image"
+          class="img-fluid h-100 w-100 verification-image">
+      </div>
+    </div>
+  </div>
+  

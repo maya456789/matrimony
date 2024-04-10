@@ -1,0 +1,47 @@
+.org-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+.org-description{
+    font-size: 16px;
+}
+.org-link {
+    font-size: 15px;
+}
+
+@media screen and (max-width:990px){
+
+  .org-title {
+      font-size: 22px;
+  }
+  .org-description{
+      font-size: 15px;
+  }
+  .org-link {
+      font-size: 14px;
+  }
+}
+@media screen and (max-width:786px){
+
+  .org-title {
+      font-size: 18px;
+  }
+  .org-description{
+      font-size: 14px;
+  }
+  .org-link {
+      font-size: 14px;
+  }
+}
+@media screen and (max-width:425px){
+
+  .org-description{
+      display: none;
+  }
+  .org-title {
+      font-size: 16px;
+  }
+  .org-link {
+      font-size: 12px;
+  }
+}

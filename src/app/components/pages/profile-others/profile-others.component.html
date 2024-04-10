@@ -1,0 +1,661 @@
+<div class="" style="background-color: #f0f0f0;">
+
+<div>
+    <div class="banner" style="margin-top: 10px;background-color: rgb(230, 230, 230);">
+        <img src="../../../../../assets/img/HomePageBanner.png" width="100%" alt="...">
+
+    </div>
+    <div class="container main">
+        <div class="row">
+
+            <div class="col-lg-10 col-md-10 mt-5" *ngFor="let cardObj of cards">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="" style=" box-shadow: 15px 15px 25px 10px #cdcdcd;border-radius: 5px;">
+                            
+                            <div style="padding: 10px;">
+                                <img src="{{cardObj.img}}" width="100%" alt="">
+                                <p style="background-color: rgb(245, 216, 243); text-align: center;"><a href=""
+                                        style="color: #00801A;font-size: 10px;">Click
+                                        here to enlarge</a></p>
+                            </div>
+                            <a class="carousel-control-prev " data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                              </a>
+                              <a class="carousel-control-next"  data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                              </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8" style="">
+                        <div class="row personDetails">
+
+                            <div class="col-lg-11 col-md-11 mt-2 ">
+                                <div>
+                                    <div class="name d-flex justify-content-between ">
+                                        <div class="userName">
+                                            <h2>{{cardObj.name}}</h2>
+                                        </div>
+                                        <div class="ID">
+                                            <p>Anubandh ID <span style="color: #D93134; font-size: 25px;">:
+                                                    {{cardObj.id}}</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="summury mt-2">
+                                        <p class="items-i2">I am a very open-minded, calm and caring person. I am passionate about sketching, travelling and listening to music...
+                                            <span><a href=""
+                                                    style="text-decoration: none; color: #D93134;">Read more</a></span></p>
+                                    </div>
+                                    <div class="d-flex details mt-3">
+                                        <div class="details-com" >
+                                            <p class="items-i1">Age</p>
+                                            <p class="items-i2"><b>{{cardObj.age}}</b></p>
+                                        </div>
+                                        <div class="details-com" >
+                                            <p class="items-i1">Education</p>
+                                            <p class="items-i2"><b>{{cardObj.education}}</b></p>
+                                        </div>
+                                        <div class="details-com" >
+                                            <p class="items-i1">Occupation</p>
+                                            <p class="items-i2"><b>{{cardObj.occupation}}</b></p>
+                                        </div>
+                                        <div class="details-com" >
+                                            <p class="items-i1">Location</p>
+                                            <p class="items-i2"><b>{{cardObj.location}}</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex col-5 pl-0 AccDecBtns mt-5" style="width: 90%;">
+                                      
+                                        <button class="btn" 
+                                        ><a routerLink="/register-now">Send Intrest</a></button>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="photo-video">
+                                            <p>Photos & Videos</p>
+                                        </div>
+                                        <div class="row " >
+                                            <div 
+                                             style="background-image: url('../../../../assets/img/Group\ 21230.png');width: 50%;height: 60px;background-position:center;background-repeat: no-repeat;
+                                             background-size: cover;border-radius: 1%;margin-left: 10px;" >
+                                        </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 ">
+                                <div class="d-flex flex-column  shares">
+                                    <i class="fa-regular shape2 p-1 fa-heart i1 mb-3" routerLink="/register-now"></i>
+                                    <i class="fa-solid shape p-1 fa-share-nodes mb-3 i2" routerLink="/register-now"></i>
+                                    <i class="fa-solid shape2 p-1 fa-print mb-3 i1" routerLink="/register-now"></i>
+                                    <i class="fa-solid shape p-1 fa-mobile i2 " routerLink="/register-now"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row personDetails2"> <!-- mobile view only-->
+                            <div class="col-lg-11 col-md-11 mt-2 ">
+                                <div>
+                                    <div class="mt-3">
+                                        <div>
+                                            <img src="./assets/img/Scroll Group 9.png" width="100%" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="row " >
+                                        <div  class=" text-center ml-1 "
+                                         style="background-image: url('../../../../assets/img/Group\ 21230.png');width: 100%;height: 60px;background-position:center;
+                                         background-repeat: no-repeat;
+                                         background-size: cover;border-radius: 1%;margin-top: 0px;margin-bottom: 20px;" >
+                                    </div>
+                                    
+                                    </div>
+                                    <div class="name ">
+                                        <div class="userName">
+                                            <h2>{{cardObj.name}}</h2>
+                                        </div>
+                                        <div class="ID">
+                                            <p>Anubandh ID <span style="color: #D93134; font-size: 25px;">:
+                                                    {{cardObj.id}}</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="summury mt-2">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut itaque suscipit
+                                            facilis nostrum dolorem.... <span><a href=""
+                                                    style="text-decoration: none; color: #D93134;">Read more</a></span></p>
+                                    </div>
+                                    <div class="  AccDecBtns mt-4" >
+                                        
+                                        <button class="col-12 mt-2" 
+                                        routerLink="/register-now">Send Intrest</button>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-center">
+                                        <div class="d-flex justify-content-between shares">
+                                            <i class="fa-regular fa-heart i1" routerLink="/register-now"></i>
+                                            <i class="fa-solid fa-share-nodes i2" routerLink="/register-now"></i>
+                                            <i class="fa-solid fa-print i1" routerLink="/register-now"></i>
+                                            <i class="fa-solid fa-mobile i2" routerLink="/register-now"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row details mt-3">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-5">
+                                                <p>Age</p>
+                                                <p><b>{{cardObj.age}}</b></p>
+                                            </div>
+                                            <div class="col-5">
+                                                <p>Education</p>
+                                                <p><b>{{cardObj.education}}</b></p>
+                                            </div>
+
+                                        </div>
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-5">
+                                                <p>Occupation</p>
+                                                <p><b>{{cardObj.occupation}}</b></p>
+                                            </div>
+                                            <div class="col-5">
+                                                <p>Location</p>
+                                                <p><b>{{cardObj.location}}</b></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="d-flex justify-content-end detailsLink">
+                        <a href="" style="color: #D93134;">* Click here to login & view the masked details </a>
+                    </div>
+                </div>
+
+
+                <div class="row mt-3 personalDetails" style="box-shadow: 15px 15px 25px 5px #cdcdcd;border-radius: 5px;">
+                    <div style="padding: 25px;">
+                        <div>
+                            <div class="detail-head"
+                            >Personal Details</div>
+                            <hr>
+                        </div>
+                        <div class="wrapper">
+                            <div class="details2">
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Marital Status</p>
+                                    <p class="items-i2"><b>{{cardObj.marital_status}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Height</p>
+                                    <p class="items-i2"><b>{{cardObj.height}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Gotra 1</p>
+                                    <p class="items-i2"><b>{{cardObj.gotra1}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Gotra 2</p>
+                                    <p class="items-i2"><b>{{cardObj.gotra2}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Special Cases</p>
+                                    <p class="items-i2"><b>{{cardObj.special_cases}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Date Of Birth:</p>
+                                    <p class="items-i2"><b>{{cardObj.date_of_birth}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Blood Group</p>
+                                    <p class="items-i2"><b>{{cardObj.blood_group}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Annual income</p>
+                                    <p class="items-i2"><b>{{cardObj.annual_income}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">email ID:</p>
+                                    <p class="items-i2"><b>{{cardObj.email_id}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Candidate Mobile:</p>
+                                    <p class="items-i2"><b>{{cardObj.candidates_mobile}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Parent's Mobile</p>
+                                    <p class="items-i2"><b>{{cardObj.parents_number}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Mother Tongue</p>
+                                    <p class="items-i2"> <b>{{cardObj.mother_tongue}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Lifestyle Prefernces</p>
+                                    <p class="items-i2"><b>{{cardObj.lifestyle}}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mt-5" style="box-shadow: 15px 15px 25px 5px #cdcdcd;border-radius: 5px;">
+                    <div style="padding: 25px;">
+                        <div>
+                            <div class="detail-head">Astro</div>
+                            <hr>
+                        </div>
+                        <div class="wrapper">
+                            <div class="details2">
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Birth Name</p>
+                                    <p class="items-i2"><b>{{cardObj.birth_name}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Birth Place</p>
+                                    <p class="items-i2"><b>{{cardObj.birth_place}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Time of Birth</p>
+                                    <p class="items-i2"><b>{{cardObj.time_of_birth}}</b></p>
+                                </div>
+                                <div class="items">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row mt-5 familyDetails" style="box-shadow: 15px 15px 25px 5px #cdcdcd;border-radius: 5px;">
+                    <div style="padding: 25px;">
+                        <div>
+                            <div class="detail-head">Family Details</div>
+                            <hr>
+                        </div>
+                        <div class="wrapper">
+                            <div class="details2">
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Father's first name</p>
+                                    <p class="items-i2"><b>{{cardObj.father_name}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Father's Occupation</p>
+                                    <p class="items-i2"><b>{{cardObj.father_occupation}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Father's Education</p>
+                                    <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                </div>
+                                <div class="items">
+
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Mother's first name</p>
+                                    <p class="items-i2"><b>{{cardObj.mother_name}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Mother's Occupation</p>
+                                    <p class="items-i2"><b>{{cardObj.mother_occupation}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Mother's Education</p>
+                                    <p class="items-i2"><b>{{cardObj.mother_education}}</b></p>
+                                </div>
+                                <div class="items">
+
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Number of Brothers</p>
+                                    <p class="items-i2"><b>{{cardObj.number_of_brother}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Brother & his spouse's Details</p>
+                                    <p class="items-i2"><b>{{cardObj.brother_spourses}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Number of Sisters</p>
+                                    <p class="items-i2"><b>{{cardObj.number_of_sister}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Sisters & his spouse's Details</p>
+                                    <p class="items-i2"><b>{{cardObj.sister_spourses}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Diet Type</p>
+                                    <p class="items-i2"><b>{{cardObj.diet_type}}</b></p>
+                                </div>
+                            </div>
+                            <div class="wrapper mt-5">
+                                <div class="details2">
+                                    <div class="box1">
+                                        <div class="container1">
+                                            <div class="div1">
+                                                <div class="details2">
+                                                    <div class="items2" style="margin-top: 1rem;">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Maternal Family Full Name</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_name}}</b></p>
+                                                    </div>
+                                                    <div class="items2 maternalFamily" style="margin-top: 1rem;">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Maternal  Mobile Number</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_occupation}}</b></p>
+                                                    </div>
+                                                    <div class="items2">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Relation</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div2">
+                                                <p style="color: white;">Maternal Family</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box2">
+                                        <div class="container1">
+                                            <div class="div1">
+                                                <div class="details2">
+                                                    <div class="items2" style="margin-top: 1rem;">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Mediator's Full Name</p>
+                                                        <p class="items-i2"><b>{{cardObj.mediator_name}}</b></p>
+                                                    </div>
+                                                    <div class="items2 mediatorMobile" style="margin-top: 1rem;">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Mediator's Mobile Number
+                                                        </p>
+                                                        <p class="items-i2"><b>{{cardObj.mediator_number}}</b></p>
+                                                    </div>
+                                                    <div class="items2 text-justify ">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Mediator's Email ID</p>
+                                                        <p class="items-i2"><b>{{cardObj.mediator_email}}</b></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div2">
+                                                <p style="color: white;">Mediator's Details</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row mt-5 education" style="box-shadow: 15px 15px 25px 5px #cdcdcd;border-radius: 5px;">
+                    <div style="padding: 25px;">
+                        <div>
+                            <div class="detail-head">Education</div>
+                            <hr>
+                        </div>
+                        <div class="wrapper ">
+                            <div class="details2">
+                                <div class="box1">
+                                    <div class="container1">
+                                        <div class="div1">
+                                            <div class="details2">
+                                                <div class="items2 mb-4" style="margin-top: 1rem;font-size: 13px;">
+                                                    <p class="" style="margin-bottom: 5px;"><b>MBA/PGDM information
+                                                            Technology</b></p>
+                                                    <p class="">Indian Institute of Management(IIM)</p>
+                                                    <p class="">2016-2018</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box2">
+                                    <div class="container1">
+                                        <div class="div1">
+                                            <div class="details2">
+                                                <div class="items2 mb-4" style="margin-top: 1rem;font-size: 13px;">
+                                                    <p class="" style="margin-bottom: 5px;"><b>B.Tech Computer Science</b></p>
+                                                    <p class="">Indian Institute of Technology(IIT)</p>
+                                                    <p class="">2011-2015</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5 occupationDetails" style="box-shadow: 15px 15px 25px 5px #cdcdcd;border-radius: 5px;">
+                    <div style="padding: 25px;">
+                        <div>
+                            <div class="detail-head">Occupation Details</div>
+                            <hr>
+                        </div>
+                        <div class="wrapper">
+                            <div class="details2">
+                                <div class="items">
+                                    <p class="items-i1"  style="margin-bottom: 5px;">Occupation Type</p>
+                                    <p class="items-i2"><b>{{cardObj.birth_name}}</b></p>
+                                </div>
+                                <div class="items">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Compony Name</p>
+                                    <p class="items-i2"><b>{{cardObj.birth_place}}</b></p>
+                                </div>
+                                <div class="items ">
+                                    <p class="items-i1 " style="margin-bottom: 5px;">Designation & Role</p>
+                                    <p class="items-i2"><b>{{cardObj.time_of_birth}}</b></p>
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row mt-5 address" style="box-shadow: 15px 15px 25px 5px #cdcdcd;border-radius: 5px;">
+                    <div style="padding: 25px;">
+                        <div>
+                            <div class="detail-head">Address</div>
+                            <hr>
+                        </div>
+                        <div class="wrapper">
+
+                            <div class="wrapper mt-5">
+                                <div class="details2">
+                                    <div class="box1">
+                                        <div class="container1">
+                                            <div class="div1">
+                                                <div class="details2">
+                                                    <div class="items2" style="margin-top: 1rem;">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Country</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_name}}</b></p>
+                                                    </div>
+                                                    <div class="items2 maternalFamily" style="margin-top: 1rem;">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">State</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_occupation}}</b></p>
+                                                    </div>
+                                                    <div class="items2">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">City</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                                    </div>
+                                                    <div class="items2">
+
+                                                    </div>
+                                                    <div class="items2">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Address 1</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                                    </div>
+                                                    <div class="items2">
+                                                        <p class="items-i1"  style="margin-bottom: 5px;">Address 2</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div2">
+                                                <p class="items-i1" style="color: white;">Permanent Address</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box2">
+                                        <div class="container1">
+                                            <div class="div1">
+                                                <div class="details2">
+                                                    <div class="items2" style="margin-top: 1rem;">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Country</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_name}}</b></p>
+                                                    </div>
+                                                    <div class="items2 maternalFamily" style="margin-top: 1rem;">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">State</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_occupation}}</b></p>
+                                                    </div>
+                                                    <div class="items2">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">City</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                                    </div>
+                                                    <div class="items2">
+
+                                                    </div>
+                                                    <div class="items2">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Address 1</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                                    </div>
+                                                    <div class="items2">
+                                                        <p class="items-i1" style="margin-bottom: 5px;">Address 2</p>
+                                                        <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div2">
+                                                <p class="items-i1" style="color: white;">Current Address</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mt-5 partnerExpectation mb-5" style="box-shadow: 15px 15px 25px 5px #cdcdcd;border-radius: 5px;">
+                    <div style="padding: 25px;">
+                        <div>
+                            <div class="detail-head">Partner's Expectation</div>
+                            <hr>
+                        </div>
+                        <div class="wrapper">
+                            <div class="details2">
+                                <div class="items3">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Age</p>
+                                    <p class="items-i2"><b>{{cardObj.father_name}}</b></p>
+                                </div>
+                                <div class="items3">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Partner's Minimum Height</p>
+                                    <p class="items-i2"><b>{{cardObj.father_occupation}}</b></p>
+                                </div>
+                                <div class="items3">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Partner's Qualification</p>
+                                    <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                </div>
+                                <div class="items3">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Partner's Occupation</p>
+                                    <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                </div>
+                                <div class="items3">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Partner's Annual income</p>
+                                    <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                </div>
+                                <div class="items3">
+                                    <p class="items-i1" style="margin-bottom: 5px;">Prefer City</p>
+                                    <p class="items-i2"><b>{{cardObj.father_education}}</b></p>
+                                </div>
+                                <div class="items3">
+                                </div>
+                                <div class="items3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div class="row mt-5" style="box-shadow: 0px 0px 15px #999;border-radius: 5px;">
+                    <div style="padding: 25px;">
+                        <div>
+                            <h2 style="color: #D93134; font-weight: 500;margin-bottom: 2rem;">Family Details</h2>
+                            <hr>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="row d-flex justify-content-between">
+
+                                    <div class="col-lg-5 col-md-5 col-sm-12">
+                                        <p>55555</p>
+        
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12">
+                                        <p>55555</p>
+        
+                                    </div>
+                                </div>
+     
+                             </div>
+                        </div>
+
+                    </div>
+
+                </div> -->
+
+
+                <!-- <div class="row mt-5" style="box-shadow: 0px 0px 15px #999;border-radius: 5px;">
+                    <div style="padding: 25px;">
+                        <div>
+                            <h2 style="color: #D93134; font-weight: 500;margin-bottom: 2rem;">Family Details</h2>
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-6">
+                                <p>Time of Birth</p>
+                                <p><b>{{cardObj.time_of_birth}}</b></p>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col=5">
+                                <p>Time of Birth</p>
+                                <p><b>{{cardObj.time_of_birth}}</b></p>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-5">
+                                <p>Time of Birth</p>
+                                <p><b>{{cardObj.time_of_birth}}</b></p>
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div> -->
+
+            </div>
+
+
+            <div class="col-lg-2 mt-5 col-md-2  advertise">
+                <div class="row mb-2 pl-2">
+                    <img src="./assets/img/anubandh3.png" width="100%" alt="">
+                </div>
+                <div class="row mb-2 pl-2">
+                    <img src="./assets/img/anubandh-1.png" width="100%" alt="">
+                </div>
+                <div class="row pl-2">
+                    <img src="./assets/img/anubandh-2.png" width="100%" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

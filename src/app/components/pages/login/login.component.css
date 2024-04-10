@@ -1,0 +1,101 @@
+/* Custom styles for the login page */
+.login-page {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .login-form-container {
+    max-width: 100%;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    top: -6%;
+  }
+  
+
+  .login-form-container form {
+    margin-top: 20px;
+  }
+  .login-form-container .form-group label {
+    font-weight: bold;
+    color: #343a40;
+  }
+  .login-form-container .form-text {
+    color: #6c757d;
+    font-weight: 500;
+  }
+  /* Center login button and input fields */
+  .login-form-container .btn-block,
+  .login-form-container .form-control {
+    display: block;
+    width: 100%;
+  }
+  
+  /* Ensure equal width for input fields and login button
+  .login-form-container .form-control,
+  .login-form-container .btn-block {
+    flex: 1;
+  } */
+#login-image{
+    height: 100vh !important;
+}
+
+#anubandh{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 4.5rem!important;
+}   
+a{
+    text-decoration: none;
+    color: #131313;
+}
+.no-outline:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+#register{
+    color: rgba(214, 14, 14, 0.954);
+}
+.login-div{
+  background-color:white;
+  height: 100vh ;
+}
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  #anubandh{
+    font-size: 49px;
+  }
+}
+
+@media (max-width: 766.98px) {
+  .login-form-container{
+   margin-top: 3.5rem;
+   }
+  .image-div{  
+    display: none !important;
+  }
+  .login-div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  #anubandh{
+    font-size: 35px;
+    margin-bottom: 3.5rem !important;
+  }
+}
+
+@media (max-width: 766.98px) and (min-width:568px) {
+  #anubandh{
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 575.98px) {
+ .login-form-container{
+  width: 95%;
+ }
+ 
+}
+.error-msg {
+  color: red;
+  font-size: smaller;
+}

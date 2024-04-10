@@ -1,0 +1,287 @@
+.userName h2 {
+    font-weight: 700;
+}
+
+
+.ID p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.details {
+    background: var(--unnamed-color-eeeeee) 0% 0% no-repeat padding-box;
+    box-shadow: -15px -15px 25px var(--unnamed-color-ffffff);
+    background: #EEEEEE 0% 0% no-repeat padding-box;
+    box-shadow: 15px 15px 25px 5px #cdcdcd;
+   
+    border-radius: 4px;
+    opacity: 1;
+}
+
+
+.AccDecBtns button {
+    border: 2px solid #CCCCCC;
+    margin-right: 30px;
+    flex: 1;
+    border-radius: 3px;
+    background: #CCCCCC;
+    padding: 5px 0;
+}
+
+.AccDecBtns button a {
+    text-decoration: none;
+    color: #909090;
+}
+
+
+.details2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 13px;
+}
+
+.items,
+.items3 {
+    flex: 1;
+    flex-basis: 20%;
+}
+
+.items2,
+.box1,
+.box2 {
+    flex: 1;
+    flex-basis: 40%;
+}
+
+.box2 {
+    margin-left: 25px !important;
+}
+
+.container1 {
+    position: relative;
+    box-shadow: 15px 15px 25px 5px #cdcdcd;
+    border-radius: 5px;
+}
+
+.div1 {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    z-index: 1;
+}
+
+.div2 {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background-color: #D93134 !important;
+    z-index: 2;
+    border-radius: 5px;
+}
+
+.div2 p {
+    padding: 5px 20px;
+    margin: 0 !important;
+}
+
+.personDetails2 {
+    display: none !important;
+}
+.modal-body{
+    height: 300px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .shares {
+        width: 80% !important;
+    }
+
+    .main {
+        padding: 0 2rem !important;
+    }
+
+    .items {
+        flex-basis: 40% !important;
+    }
+
+    .advertise {
+        display: none !important;
+    }
+
+    .items1 {
+        flex-basis: 50% !important;
+    }
+
+    .items2,
+    .items3 {
+        flex-basis: 50% !important;
+    }
+
+    .box1,
+    .box2 {
+        flex-basis: 50% !important;
+    }
+
+    .box2 {
+        margin-top: 2rem !important;
+    }
+
+    .div2 {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center;
+        text-align: center;
+    }
+
+    .div2 p {
+        padding: 5px 20px;
+        width: 100%;
+    }
+
+    .mediatorMobile,
+    .maternalFamily {
+        margin-top: 0 !important;
+    }
+
+    .box2 {
+        margin-left: 0px !important;
+    }
+
+    .details {
+        padding: 10px !important;
+    }
+
+    .details div {
+        margin-right: 5px !important;
+    }
+
+    .detailsLink {
+        display: none !important;
+    }
+
+    .personDetails {
+        display: none !important;
+    }
+
+    .personDetails2 {
+        display: block !important;
+    }
+
+    .personalDetails {
+        margin-top: 2rem !important;
+    }
+}
+
+
+
+.photo-video{
+    margin-top: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+
+.details-com{
+    margin-right: 10px;
+    margin-left: 30px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.details-info{
+    font-size: 16px;
+}
+
+.shape{
+    width: 27px;
+
+  height: 27px;
+
+border-radius: 50%;
+
+border: 1px solid #F79C19;
+}
+.shape2{
+    width: 27px;
+
+  height: 27px;
+
+border-radius: 50%;
+
+border: 1px solid #C5C5C5;
+}
+
+.detail-head{
+color: #D93134;
+font-size: 18px; 
+font-weight: 600;
+margin-left: 25px;
+margin-bottom: 2rem;
+}
+
+hr{
+    margin-left: 20px;
+}
+
+.items-i1{
+    font-size: 15px;
+    font-weight: 450;
+    margin-left: 10px;
+}
+.items-i2{
+    font-size: 12px;
+    font-weight: 450;
+    margin-left: 10px;
+}
+
+
+.i1  {
+    font-size: 18px;
+    color: #C5C5C5;
+    margin-top: 15px;
+    margin-left: 20px;
+  
+}
+
+.i2  {
+    font-size: 18px;
+    color: #F79C19;
+    margin-top: 15px;
+    margin-left: 20px;
+  
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 40px;
+  width: 40px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+  background-color: white   ;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 30px;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 30px;
+  color: red;
+  
+}

@@ -1,0 +1,138 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-search-result',
+  templateUrl: './search-result.component.html',
+  styleUrls: ['./search-result.component.css']
+})
+export class SearchResultComponent {
+
+
+  cards = [
+    {
+      id:'215AD35',
+      name:'Sayali Bompilwar',
+      age: '29 ',
+      img: 'assets/img/Group 2123.png',
+      address:'pune,India',
+      occupation:'MBA, Project Manager',   
+      lastseen:'last seen on 16-10-2022'
+    },
+    
+      {
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   
+        lastseen:'last seen on 16-10-2022'
+      },
+      {
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   
+        lastseen:'last seen on 16-10-2022'
+      },
+      {
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   
+        lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',  
+         lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   
+        lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   
+        lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   
+        lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   
+        lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   
+        lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   
+        lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   
+        lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   lastseen:'last seen on 16-10-2022'
+      },{
+        id:'215AD35',
+        name:'Sayali Bompilwar',
+        age: '29 ',
+        img: 'assets/img/Group 2123.png',
+        address:'pune,India',
+        occupation:'MBA, Project Manager',   lastseen:'last seen on 16-10-2022', 
+      },
+      
+    
+  ];
+
+}

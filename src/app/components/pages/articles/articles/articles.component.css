@@ -1,0 +1,120 @@
+/* 
+.card{
+  min-width: 100%;
+  height: 35rem;
+
+}
+
+
+
+.custom-card {
+height: 308px;
+max-width: 190px;
+}
+
+.center {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.embed-responsive .card-img-top {
+  object-fit: cover;
+}
+
+img{
+  background-size: cover;
+  height: auto;
+} */
+
+
+
+/* .btn-danger {
+  font-family: Raleway-SemiBold;
+  font-size: 13px;
+  color: rgba(217, 83, 78, 0.75);
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid rgba(217, 83, 78, 0.75);
+  border-radius: 40px;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+  width: 80px;
+  
+} */
+/* 
+.btn-danger {
+  color: #FFF;
+  background: rgba(217, 83, 78, 0.75);
+  border: 2px solid rgba(217, 83, 78, 0.75);
+} */
+/* 
+.shadowEffect{
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+}
+
+.fontSize{
+font-size: 14px;
+}
+.headingSize{
+font-size: 26px;
+}
+
+.banner {
+  display: flex;
+  position: relative;
+}
+.banner img{
+  width: 100%;
+  object-fit: contain;
+  background-size:contain;
+}
+
+ @media(min-width:576px) and (max-width:767px){
+  .card{
+    width: 15rem;
+    
+  }
+  .fontSize{
+    font-size: 12px;
+
+  }
+}
+
+  @media(max-width:576px){
+    
+    .card{
+   
+    height: 17.5rem;
+    margin-top: 10px !important;
+  }
+  .subHeading{
+    margin-top: 0px !important;
+  }
+  .fontSize{
+    font-size: 5px;
+
+  }
+  .headingSize{
+    font-size: 12px;
+    font-weight: 500;
+   }
+   p{
+    font-size: 9px;
+   }
+   .paraHide{
+    display:none;
+  }
+}
+
+@media(min-width:992px) and (max-width:1200px){
+  .card{
+    height: 36rem;
+    width: 11rem;
+  }
+}
+
+ */

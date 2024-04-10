@@ -1,0 +1,214 @@
+.filterBtn button {
+    background-color: white;
+    border: 2px solid #D91046 !important;
+    border-radius: 2px !important;
+    text-align: center;
+    padding: 5px 0px !important;
+    width: 70% !important;
+}
+
+.filterBtn button a {
+    text-decoration: none !important;
+    color: black !important;
+    cursor: pointer !important;
+
+}
+
+.filterBtn {
+    display: flex !important;
+    gap: 5px !important;
+    /* width: 80% !important; */
+}
+
+.cardHeight{
+    height: 26rem;
+   
+}
+
+.receivedInterst{
+    font-size: 15px;
+}
+
+.ID {
+    align-items: baseline !important;
+}
+
+.ids p {
+    font-size: 14px !important;
+}
+
+.views p {
+    font-size: 10px !important;
+    align-items: center;
+    text-align: center !important;
+}
+
+.name p {
+    font-size: 12px !important;
+}
+
+.likeProfile{
+    font-size: 14px;
+}
+
+.viewBtn button {
+    border: 1px solid #D91046 !important;
+    background: white;
+    padding: 5px 15px !important;
+    border-radius: 15px !important;
+    outline: none !important;
+}
+
+.viewBtn button a {
+    text-decoration: none !important;
+    color: white;
+
+}
+
+@media (max-width: 768px) {
+    .fa-bars {
+        display: block !important;
+    }
+
+    .searchBar {
+        display: none !important;
+    }
+
+    .searchBar2 {
+        align-items: center;
+        display: block !important;
+        padding: 10px 20px 3rem 10px;
+    }
+
+    .filterBtn2 button {
+        background-color: white;
+        border: 2px solid #D91046 !important;
+        border-radius: 4px !important;
+        text-align: center;
+        padding: 5px 10px !important;
+        margin-right: 10px;
+        /* width: 70% !important; */
+    }
+
+    .filterBtn2 button a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .main1 {
+        margin-top: 2rem !important;
+    }
+
+
+
+}
+
+/* @media(min-width:5001px) and (max-width:576px){
+    .cardHeight{
+        height: 28rem;
+        width: 5.4rem;
+    }
+
+    .ids p {
+        font-size: 4px !important;
+    }
+
+    .name p {
+        font-size: 8px !important;
+    }
+
+    .receivedInterst{
+        font-size: 8px;
+    }
+} */
+
+@media(max-width:576px){
+    .cardHeight{
+        height: 22rem;
+        width: 8rem;
+    }
+
+    .ids p {
+        font-size: 8px !important;
+    }
+
+    .name p {
+        font-size: 8px !important;
+    }
+
+    .receivedInterst{
+        font-size: 8px;
+    }
+
+    .likeProfile1{
+        font-size: 8px;
+        
+    }
+    a{
+        font-size: 8px;
+    }
+    .viewBtn button {
+        border: 1px solid #D91046 !important;
+        background: white;
+        padding: 3px 3px !important;
+        border-radius: 15px !important;
+        outline: none !important;
+    }
+}
+
+@media(max-width:476px){
+    .cardHeight{
+        height: 24rem;
+        width: 5.4rem;
+    }
+
+    .ids p {
+        font-size: 8px !important;
+    }
+
+    .name p {
+        font-size: 8px !important;
+    }
+
+    .receivedInterst{
+        font-size: 8px;
+    }
+
+    .likeProfile1{
+        font-size: 8px;
+        
+    }
+    a{
+        font-size: 8px;
+    }
+    .viewBtn button {
+        border: 1px solid red !important;
+        background: white;
+        padding: 3px 3px !important;
+        border-radius: 15px !important;
+        outline: none !important;
+    }
+}
+
+
+@media(min-width:768px) and (max-width:768px){
+    .likeProfile{
+        font-size: 9px;
+        
+    }
+}
+
+@media(min-width:1200px){
+    .likeProfile1{
+        display: none;
+        
+    }
+}
+
+@media(max-width:1200px){
+    .likeProfile{
+        display: none;
+        
+    }
+}
+

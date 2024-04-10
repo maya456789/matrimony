@@ -1,0 +1,140 @@
+<div class="page" style="overflow-x: hidden;">
+<div class="img-bann">
+    <img src="../../../../assets/img/HomePageBanner.png" style="width: 200%;" class="img-fluid" alt="Responsive image" > 
+</div>
+
+<div class="shadow-sm p-2 w-100 topMunubar">
+  <ul class="d-flex justify-content-around align-itmes-center nav nav-pills" id="pills-tab" role="tablist" >
+    <li class="nav-item pill-1 mainHeading" role="presentation">
+      <button
+        class="nav-link "
+        id="pills-home-tab"
+       
+        type="button"
+        role="tab"
+        aria-controls="pills-home"
+        aria-selected="true"
+        routerLink="/search"
+        style="color:black"
+      >
+        Quick Search
+      </button>
+    </li>
+    <li class="nav-item pill-2 mainHeading" role="presentation">
+      <button
+        class="nav-link"
+        id="pills-profile-tab"
+        type="button"
+        role="tab"
+        aria-controls="pills-profile"
+        aria-selected="false"
+        routerLink="/search"
+        style="color:black"
+      >
+        Advanced Search
+      </button>
+    </li>
+    <li class="nav-item pill-3 mainHeading" role="presentation">
+      <button
+        class="nav-link"
+        id="pills-contact-tab"
+        type="button"
+        role="tab"
+        aria-controls="pills-contact"
+        aria-selected="false"
+        routerLink="/search"
+        style="color:black"
+      >
+        My Saved Search
+      </button>
+    </li>
+  </ul>
+</div>
+
+<div class="shadow-sm p-3 w-100" style="margin-top: 0px !important;">
+  
+
+    <div class="row">
+        <div class="col-lg-5 d-flex align-items-center  ">
+          <div class="col-12 " >
+           
+            <input type="text" class="form-control" placeholder="Modify search" style="background-color: #F8F8F8;" />
+          </div>
+        </div>
+        <div class="col-lg-7 d-flex justify-content-end align-items-center subSearchMenu ">
+          <div class="mr-2">
+           <p style="color:#101010;" routerLink="/search">Quick Search &nbsp;|</p>
+          </div>
+          <div>
+            <p style="color:#101010;">Advanced Search &nbsp;|</p>
+          </div>
+          <div class="ml-1 mr-3">
+            <p style="color:#101010;">My Saved Searches</p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm pt-1 subSearchMenu">
+   <p style="margin-left: 31px;">Home >> Search >> <span style="font-weight: bold;">Search Result</span></p>
+    </div>
+    <div class="col-sm-9 col-12 pt-1 ml-2">
+    <p style="color:#101010">128 results | Age 20-28, Height 5.1, Annual Income - 10L & above, Education- Post Graduates...</p>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="col-sm-9 col-12 mt-0 pt-0">
+        <div class="row ml-lg-3 ml-md-3 ml-sm-3 ">
+          <div class="card-outer">
+            <div class="row">
+              <div class="col-xl-3 col-lg-4 col-md-4  col-sm-6 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+                <div class="card-sl" style="border-radius: 35px;">
+      
+                  <div class="card-image " style="border-radius: 35px;">
+      
+                    <div class="card-profile-image"
+                      style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                    </div>
+                    <div class="last-seen" style="background-color: rgb(245 229 245)">
+                      {{cardObj.lastseen}}
+                    </div>
+                  </div>
+      
+                  <div class="card-heading-id text-left ">
+                    ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+                  </div>
+                  <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                    <p class="profile-text-m">{{cardObj.name}} </p>
+                    <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+      
+                    <p class="profile-text-m">{{cardObj.occupation}}</p>
+      
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+      </div>
+
+      <div class="col-sm-3 advertise mt-3">
+       
+        <div>
+            <img src="../../../../../assets/img/Group 20922.png " style="width: 100%;" alt="">
+        </div>
+    </div>
+
+    <div class="col-12 saveThisSearchBtn">
+      <div class="footer fixed-bottom">
+        <div class="shadow-sm p-3 w-100" style="margin-top: 0px !important;">
+        <button type="button" style="background-color: #C1C1C1;color:#808080;padding: 15px;" class="btn btn btn-block">Save This Search</button>
+        </div>
+        </div>
+      </div>
+   </div>
+  <br>
+  <br>
+</div>

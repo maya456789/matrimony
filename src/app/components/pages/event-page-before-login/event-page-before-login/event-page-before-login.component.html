@@ -1,0 +1,387 @@
+<div class="" style="padding: 0;overflow-x: hidden;">
+    <div class="banner" style="margin-top: 0px;">
+        <img src="../../../../../assets/img/HomePageBanner.png" width="100%" alt="...">
+
+    </div>
+
+    <div class="row">
+        <div class="text-center pb-5 pt-5 mt-0 mt-sm-4 pink-color-head " >
+          <h3 class="main-menu">Events</h3>
+          <p routerLink="/home">Home >> <span class="sub-menu">Events</span></p>
+        </div> 
+      </div>
+
+    <div class="d-flex justify-content-end flex-wrap nextButtons mt-4">
+        <button class="btn btn-outline-primary bg-danger" style="border-color: rgb(249, 106, 106);color: #fff;">Today</button>
+        <button class="btn">Tommorow</button>
+        <button class="btn">Next Week</button>
+        <button class="btn">Next Weekend</button>
+        <button class="btn">This Month</button>
+        <button class="btn">Next Month</button>
+        <button class="btn">Next Month </button>
+    </div>
+    <div class="filter-bar d-flex justify-content-end" >
+        <!-- <i class="fa fa-bars" style="cursor: pointer; z-index: 1 !important;" id="scrollIcon" (click)="toggleFilterDiv()"
+        ></i> -->
+        <!-- <i  class="fa-solid fa-angle-down" style="cursor: pointer;"  (click)="toggleFilterDiv()"></i> -->
+
+        <div class="dropdown2">
+            <button class="dropbtn2 mt-2 mr-4" style="padding: 0px;  "><i class="fa fa-bars" style="font-size: 25px; color: black;"></i></button>
+            <div class="dropdown-content2 bg-white" style="z-index: 14 !important;">
+                <div class="col py-2" 
+                style="box-shadow: 0px 0px 6px #00000029;padding-right: 10; ">
+                <div class="d-flex justify-content-between align-items-center " style="align-items: center; text-align: center;">
+                    <div>
+                        <h5 class="m-0">Filter</h5>
+                    </div>
+                    <div><span>Clear All</span></div>
+                </div>
+                <div class="hrLine"></div>
+                <div class="events mt-3">
+                    <h4>Events</h4>
+                    <div>
+                        <button class="btn"><a href="">Melava</a></button>
+                        <button class="btn"><a href="">Festivals</a></button>
+                    </div>
+                    <div class="mt-2">
+                        <button class="btn"><a href="">Free Event</a></button>
+                        <button class="btn"><a href="">All Events</a> </button>
+                    </div>
+                </div>
+                <div class="date mt-3">
+                    <h4>Date</h4>
+                    <div class="mt-2 col p-0 d-flex justify-content-between">
+                        <div class="col-lg-6 col-sm-6 col-6 pl-0 pr-1 ">
+                            <!-- <label for="exampleInputText">Age</label> -->
+                            <div class="d-flex justify-content-center align-items-center" style="gap: 1rem">
+                              <select class="form-select" formControlName="minAge">
+                                <option value="">Min Age</option> 
+                                <option value="18">18</option>
+                                <option value="22">22</option>
+                              </select>
+              
+                            </div>
+                            <!-- <span *ngIf="isFormSubmited && advanceSearch.controls['minAge'].errors">
+                            <span *ngIf="advanceSearch.controls['minAge'].errors['required']" style="color:red">
+                             Please select the minimum age.
+                            </span>
+                            </span> -->
+                          </div>
+                            <div class="col-lg-6  col-sm-6 col-6 pr-0 pl-1">
+                            
+                                <!-- <label for=""></label> -->
+                                <select class="form-select" formControlName="maxAge">
+                                <option value="">Max Age</option> 
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                              </select>
+                          
+                              <!-- <span *ngIf="isFormSubmited && advanceSearch.controls['maxAge'].errors">
+                                <span *ngIf="advanceSearch.controls['maxAge'].errors['required']" style="color:red">
+                                <small> Please select the maximum age.</small>
+                                </span>
+                               </span> -->
+                            </div>
+                    </div>
+                </div>
+                <div class="location mt-3">
+                    <h4>Location</h4>
+                    <div class="d-flex flex-column">
+                        <label for="time_zone">Country</label>
+                        <select class="" name="status" id="status">
+                            <option value="Select Restaurant">Select Country</option>
+                        </select>
+                    </div>
+                    <div class="d-flex flex-column mt-2">
+                        <label for="time_zone">State</label>
+                        <select class="" name="status" id="status">
+                            <option value="Select Restaurant">Select State</option>
+                        </select>
+                    </div>
+                    <div class="d-flex flex-column mt-2">
+                        <label for="time_zone">City</label>
+                        <select class="" name="status" id="status">
+                            <option value="Select Restaurant">Select City</option>
+                        </select>
+                    </div>
+    
+    
+                </div>
+                <div class="d-flex w-100 justify-content-center align-item-center p-2 ">
+                    <button class="btn btn-danger my-2 my-sm-0" style="border-radius: 3px !important;width: 150px;" type="button">Apply</button>
+                   </div>
+            </div>
+            
+            </div>
+          </div>
+    </div>
+  
+    <div class="main" style="padding: 0px 60px; margin-top: 3rem;">
+        <div class="row m-0" #mainDiv id="mainDiv">
+            <div class="col-sm-3 col-md filter" [class.d-none]="!showFiltersDiv" 
+                style="box-shadow: 0px 0px 6px #00000029; margin-bottom: 3rem;padding-right: 10; height: 100% !important;">
+                <div class="d-flex justify-content-between filterDiv" style="align-items: center; text-align: center;">
+                    <div>
+                        <h5 class="m-0">Filter</h5>
+                    </div>
+                    <div><span>Clear All</span></div>
+                </div>
+                <div class="hrLine"></div>
+                <div class="events mt-3">
+                    <h4>Events</h4>
+                    <div>
+                        <button class="btn"><a href="">Melava</a></button>
+                        <button class="btn"><a href="">Festivals</a></button>
+                    </div>
+                    <div class="mt-2">
+                        <button class="btn"><a href="">Free Event</a></button>
+                        <button class="btn"><a href="">All Events</a> </button>
+                    </div>
+                </div>
+                <div class="date mt-3">
+                    <h4>Date</h4>
+                    <div class=" d-flex mt-2 justify-content-between  align-items-center col p-0">
+                        <div class="col-lg-6 col-sm-6 col-6 pl-0 pr-1 ">
+                            <!-- <label for="exampleInputText">Age</label> -->
+                            <div class="d-flex justify-content-center align-items-center" style="gap: 1rem">
+                              <select class="form-select" formControlName="minAge">
+                                <option value="">Min Age</option> 
+                                <option value="18">18</option>
+                                <option value="22">22</option>
+                              </select>
+              
+                            </div>
+                            <!-- <span *ngIf="isFormSubmited && advanceSearch.controls['minAge'].errors">
+                            <span *ngIf="advanceSearch.controls['minAge'].errors['required']" style="color:red">
+                             Please select the minimum age.
+                            </span>
+                            </span> -->
+                          </div>
+                            <div class="col-lg-6  col-sm-6 col-6 pr-0 pl-1">
+                            
+                                <!-- <label for=""></label> -->
+                                <select class="form-select" formControlName="maxAge">
+                                <option value="">Max Age</option> 
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                              </select>
+                          
+                              <!-- <span *ngIf="isFormSubmited && advanceSearch.controls['maxAge'].errors">
+                                <span *ngIf="advanceSearch.controls['maxAge'].errors['required']" style="color:red">
+                                <small> Please select the maximum age.</small>
+                                </span>
+                               </span> -->
+                            </div>
+                    </div>
+                </div>
+                <div class="location mt-3">
+                    <h4>Location</h4>
+                    <div class="d-flex flex-column">
+                        <label for="time_zone">Country</label>
+                        <select class="form-select"  aria-label="Default select example" name="status" id="status">
+                            <option value="Select Restaurant">Select Country</option>
+                        </select>
+                    </div>
+                    <div class="d-flex flex-column mt-2">
+                        <label for="time_zone">State</label>
+                        <select class="form-select" name="status" id="status">
+                            <option value="Select Restaurant">Select State</option>
+                        </select>
+                    </div>
+                    <div class="d-flex flex-column mt-2">
+                        <label for="time_zone">City</label>
+                        <select class="form-select" name="status" id="status">
+                            <option value="Select Restaurant">Select City</option>
+                        </select>
+                    </div>
+
+
+                </div>
+                <div class="d-flex w-100 justify-content-center align-item-center mb-4 mt-3">
+                    <button class="btn btn-danger my-2 my-sm-0" style="border-radius: 3px !important;width: 150px;" type="button">Apply</button>
+                   </div>
+            </div>
+
+
+
+
+
+            <!-- <div class="col-sm-6">
+                <div class=" middleContainer d-flex" style="box-shadow: 0 0 10px #999;padding: 15px;">
+                    <div class="first">
+                        <div style="padding: 10px;">
+                            <div class="d-flex justify-content-between dateAndHeading mt-2">
+                                <div>
+                                    <p>25th october 2022</p>
+                                </div>
+                                <div>
+                                    <p>anubandh</p>
+                                </div>
+                            </div>
+                            <div class="firstAddress">
+                                <h3 style="font-size: 27px; font-weight: 700;">Pune Wedding Special <br> Exhibiton</h3>
+                            </div>
+                            <div>
+                                <div class="date" style="font-size: 15px; font-weight: 500;">Wed,25th - Fri,27th</div>
+                                <div class="venue" style="font-size: 15px; font-weight: 500;">Parth Banquet Hall,
+                                    Kothrud,</div>
+                            </div>
+                            <div class="mt-2 link"><a href=""
+                                    style="font-size: 17px; text-decoration: none;">http://codebeautify.org/hyperlink-generator</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="second">
+                        <div>
+                            <img src="../../../../../assets/img/02.png" style="width: 100%; height: 170px;" alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class=" middleContainer d-flex mt-3" style="box-shadow: 0 0 10px #999;padding: 15px;">
+                    <div class="first">
+                        <div style="padding: 10px;">
+                            <div class="d-flex justify-content-between dateAndHeading mt-2">
+                                <div>
+                                    <p>25th october 2022</p>
+                                </div>
+                                <div>
+                                    <p>anubandh</p>
+                                </div>
+                            </div>
+                            <div class="firstAddress">
+                                <h3 style="font-size: 27px; font-weight: 700;">Pune Wedding Special <br> Exhibiton</h3>
+                            </div>
+                            <div>
+                                <div class="date" style="font-size: 15px; font-weight: 500;">Wed,25th - Fri,27th</div>
+                                <div class="venue" style="font-size: 15px; font-weight: 500;">Parth Banquet Hall,
+                                    Kothrud,</div>
+                            </div>
+                            <div class="mt-2 link"><a href=""
+                                    style="font-size: 17px; text-decoration: none;">http://codebeautify.org/hyperlink-generator</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="second">
+                        <div>
+                            <img src="../../../../../assets/img/02.png" style="width: 100%; height: 170px;" alt="">
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <div class=" middleContainer d-flex mt-3" style="box-shadow: 0 0 10px #999;padding: 15px;">
+                    <div class="first">
+                        <div style="padding: 10px;">
+                            <div class="d-flex justify-content-between dateAndHeading mt-2">
+                                <div>
+                                    <p>25th october 2022</p>
+                                </div>
+                                <div>
+                                    <p>anubandh</p>
+                                </div>
+                            </div>
+                            <div class="firstAddress">
+                                <h3 style="font-size: 27px; font-weight: 700;">Pune Wedding Special <br> Exhibiton</h3>
+                            </div>
+                            <div>
+                                <div class="date" style="font-size: 15px; font-weight: 500;">Wed,25th - Fri,27th</div>
+                                <div class="venue" style="font-size: 15px; font-weight: 500;">Parth Banquet Hall,
+                                    Kothrud,</div>
+                            </div>
+                            <div class="mt-2 link"><a href=""
+                                    style="font-size: 17px; text-decoration: none;">http://codebeautify.org/hyperlink-generator</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="second">
+                        <div>
+                            <img src="../../../../../assets/img/02.png" style="width: 100%; height: 170px;" alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="applyBtn">
+                    <button class="btn">View More</button>
+                </div>
+            </div> -->
+
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="cards" *ngFor="let cardObj of cards">
+                        <div class="d-flex"
+                            style="box-shadow:  0px 0px 6px #0000004D;padding: 10px; margin: 0px 10px 20px 10px;" >
+                            <div class="first col-sm-8 col-md-7 col-8">
+                                <div style="" routerLink="/eventdetails-beforelogin">
+                                    <div class="d-flex justify-content-between dateAndHeading mt-2">
+                                        <div class="date">
+                                            <p>{{cardObj.date}}</p>
+                                        </div>
+                                        <div class="auther">
+                                            <p>{{cardObj.auther}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="firstAddress">
+                                        <p style=" font-weight: 700;">{{cardObj.address}}</p>
+
+                                    </div>
+                                    <div>
+                                        <div class="date1" style=" font-weight: 500;">{{cardObj.date2}}
+                                        </div>
+                                        <div class="venue" style=" font-weight: 500;">
+                                            {{cardObj.address2}}</div>
+                                    </div>
+                                    <div class=" link t-link w-80 d-inline"><a href="" class=" "
+                                            style=" text-decoration: none;"><span style="word-break: break-all;">http://codebeautify.org/hyperlink-generator</span></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="second col-sm-4 col-md-5 col-4" style="padding: 1rem;"> 
+                            <div class=" mat-img w-100 h-100" style="background-image: url('{{cardObj.img}}');
+                                background-repeat: no-repeat; background-position: center;background-size: cover;">
+                     
+                            
+                                    <!-- <img src="{{cardObj.img}}" > -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                        <div class="d-flex justify-content-center align-item-center mb-4">
+                        <button class="btn btn-danger my-2 my-sm-0" style="border-radius: 3px !important;" type="button">View More</button>
+                       </div>
+                   
+                </div>
+
+            </div>
+
+
+
+
+            <div class="col-sm-3 advertise pr-0" style="padding-left: 3rem;" >
+                <div>
+                    <img src="../../../../../assets/img/Group 20922.png " style="width: 100%;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

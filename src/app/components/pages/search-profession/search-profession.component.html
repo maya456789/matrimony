@@ -1,0 +1,52 @@
+<div class="page" style="overflow-x: hidden;">
+    <div class="img-bann">
+        <img src="../../../../assets/img/HomePageBanner.png" style="width: 200%;" class="img-fluid" alt="Responsive image" > 
+    </div>
+    
+    <div class=" p-3 w-100" style="margin-top: 0px !important;">
+      
+    
+      </div>
+    
+      <div class="row">
+        <div class="col-sm pt-1 ">
+       <p style="margin-left: 31px;">Home >> Search By Profession >> <span style="font-weight: bold;">Search Result</span></p>
+        </div>
+        <div class="col-sm-9 pt-1 pl-5">
+        <p style="color:#101010">128 results | Age 20-28, Height 5.1, Annual Income - 10L & above, Education- Post Graduates...</p>
+        </div>
+       </div>
+    
+       <div class="card-outer">
+        <div class="row">
+          <div class="col-lg-3  col-md-4  col-sm-4 col-6 " *ngFor="let cardObj of cards" routerLink="/profile-others"><br>
+            <div class="card-sl" style="border-radius: 35px;">
+  
+              <div class="card-image " style="border-radius: 35px;">
+  
+                <div class="card-profile-image"
+                  style="background-image: url('{{cardObj.img}}'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%;    border-radius: 31px 31px 0px 0px;">
+                </div>
+                <div class="last-seen" style="background-color: rgb(245 229 245)">
+                  {{cardObj.lastseen}}
+                </div>
+              </div>
+  
+              <div class="card-heading-id text-left ">
+                ID: {{cardObj.id}} <i class="fa-solid fa-award" style="color: #ff881a;"></i>
+              </div>
+              <div class="card-text-all text-left" style="border-radius: 0px 0px 35px 35px; padding-bottom: 15px;">
+                <p class="profile-text-m">{{cardObj.name}} </p>
+                <p class="profile-text-m">{{cardObj.age}} , {{cardObj.address}}</p>
+  
+                <p class="profile-text-m">{{cardObj.occupation}}</p>
+  
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>

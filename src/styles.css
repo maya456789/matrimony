@@ -1,0 +1,320 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap'); */
+/* body{
+  font-family: 'Noto Sans', sans-serif !important;
+} */
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,900&display=swap');
+body{
+  font-family: 'Poppins', sans-serif !important;
+}
+form .form-control:focus{
+    /* border-color: #0dfd8d; */
+    box-shadow: none;
+    outline: none ;
+  }
+  form .form-select:focus{
+    /* border-color: #0dfd8d; */
+    box-shadow: none;
+    outline: none ;
+  }
+
+  .form-control{
+    height: 35px!important;
+  }
+
+  button{
+    box-shadow: none!important;
+    border-radius: 4px !important;
+  }
+  .btn{
+    border-radius: 4px;
+  }
+
+
+
+  :root {
+
+    /* Colors: */
+    --unnamed-color-d98231: #D98231;
+    --unnamed-color-00801a: #00801A;
+    --unnamed-color-d93134: #D93134;
+    --unnamed-color-eeeeee: #EEEEEE;
+    --unnamed-color-ffeaed: #FFEAED;
+    --unnamed-color-ffffff: #FFFFFF;
+    --unnamed-color-101010: #101010;
+    --unnamed-color-a7a7a7: #A7A7A7;
+    
+    /* Font/text values */
+    --unnamed-font-family-poppins: Poppins;
+    --unnamed-font-style-normal: normal;
+    --unnamed-font-weight-600: 600px;
+    --unnamed-font-weight-medium: medium;
+    --unnamed-font-weight-bold: bold;
+    --unnamed-font-weight-normal: normal;
+    --unnamed-font-size-16: 16px;
+    --unnamed-font-size-18: 18px;
+    --unnamed-font-size-20: 20px;
+    --unnamed-font-size-24: 24px;
+    --unnamed-font-size-26: 26px;
+    --unnamed-font-size-30: 30px;
+    --unnamed-font-size-38: 38px;
+    --unnamed-font-size-48: 48px;
+    --unnamed-character-spacing-0: 0px;
+    --unnamed-line-spacing-25: 25px;
+    --unnamed-line-spacing-27: 27px;
+    --unnamed-line-spacing-30: 30px;
+    --unnamed-line-spacing-39: 39px;
+    --unnamed-line-spacing-49: 49px;
+    --unnamed-line-spacing-57: 57px;
+    --unnamed-line-spacing-72: 72px;
+    }
+    
+    /* Character Styles */
+    .h1-white {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-bold);
+    font-size: var(--unnamed-font-size-48);
+    line-height: var(--unnamed-line-spacing-72);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    }
+    .h2 {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-medium);
+    font-size: var(--unnamed-font-size-38);
+    line-height: var(--unnamed-line-spacing-57);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    }
+    .h3 {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-600);
+    font-size: var(--unnamed-font-size-30);
+    line-height: var(--unnamed-line-spacing-49);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    }
+    .h4 {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-26);
+    line-height: var(--unnamed-line-spacing-39);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    }
+    .h6 {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-bold);
+    font-size: var(--unnamed-font-size-24);
+    line-height: var(--unnamed-line-spacing-49);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    }
+    .body {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-16);
+    line-height: var(--unnamed-line-spacing-25);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    }
+    .body-large {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-20);
+    line-height: var(--unnamed-line-spacing-30);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    }
+    .body-large-white {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-20);
+    line-height: var(--unnamed-line-spacing-30);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    }
+    .body-field {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-16);
+    line-height: var(--unnamed-line-spacing-25);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-a7a7a7);
+    }
+    .button {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-medium);
+    font-size: var(--unnamed-font-size-18);
+    line-height: var(--unnamed-line-spacing-27);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    }
+    .button-white {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-medium);
+    font-size: var(--unnamed-font-size-18);
+    line-height: var(--unnamed-line-spacing-27);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    }
+    .menu {
+    font-family: var(--unnamed-font-family-poppins);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-600);
+    font-size: var(--unnamed-font-size-18);
+    line-height: var(--unnamed-line-spacing-27);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-101010);
+    }
+
+.main-menu{
+font-weight: 600 !important;
+}
+    .sub-menu{
+font-weight: 600 !important;
+    }
+
+    .pink-color-head{
+      background-color: #FFEAED !important;
+    }
+
+    .multiselect-dropdown[_ngcontent-ng-c1411523848] .dropdown-btn[_ngcontent-ng-c1411523848] {
+      border: 1px solid #dee2e6 !important;
+    }
+
+    .multiselect-dropdown[_ngcontent-ng-c1411523848] .dropdown-btn[_ngcontent-ng-c1411523848] .selected-item-container[_ngcontent-ng-c1411523848] .selected-item[_ngcontent-ng-c1411523848] {
+      border: 1px solid black !important;
+      margin-right: 4px;
+      background: #ffffff !important;
+      padding: 0 5px;
+      color: #000 !important;
+      border-radius: 2px;
+      float: left;
+      max-width: 100px;
+  }
+  .multiselect-dropdown[_ngcontent-ng-c1411523848] .dropdown-btn[_ngcontent-ng-c1411523848] .selected-item-container[_ngcontent-ng-c1411523848] .selected-item[_ngcontent-ng-c1411523848] a[_ngcontent-ng-c1411523848] {
+    color: red !important;
+    text-decoration: none;
+}
+
+.multiselect-item-checkbox[_ngcontent-ng-c1411523848] input[type=checkbox][_ngcontent-ng-c1411523848]:checked+div:before {
+  animation: _ngcontent-ng-c1411523848_borderscale .2s ease-in;
+  background: #00801A !important;
+}
+.multiselect-item-checkbox[_ngcontent-ng-c1411523848] input[type=checkbox]+div[_ngcontent-ng-c1411523848]:before {
+  box-sizing: content-box;
+  content: "";
+  color: #8b8b8b !important;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: -9px;
+  border: 2px solid #8e8e8e !important;
+  text-align: center;
+  transition: all .4s ease;
+}
+
+.form-check-input:checked {
+  background-color: #00801A !important;
+  border-color: #00801A !important;
+}
+.ngx-slider .ngx-slider-pointer {
+  cursor: pointer;
+  width: 22px !important;
+  height: 22px !important;
+  top: -10px !important;
+  background-color: #00801A !important;
+  z-index: 3;
+  border-radius: 16px;
+}
+.ngx-slider .ngx-slider-selection {
+  z-index: 2;
+  background: #00801A !important;
+  border-radius: 2px;
+}
+.ngx-slider .ngx-slider-pointer:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border-radius: 4px;
+  background: #00801A !important;
+}
+
+.form-select{
+  color:#A7A7A7 !important;
+  font-size: 12px !important;
+}
+input::placeholder {
+  color: #A7A7A7 !important;
+   /* font-weight: 400 !important; */
+   font-size: 12px !important;
+  
+ }
+.multiselect-dropdown[_ngcontent-ng-c1411523848] .dropdown-btn[_ngcontent-ng-c1411523848] {
+  color:#A7A7A7 !important; 
+  font-size: 14px !important;
+}
+
+.ngx-slider .ngx-slider-bubble {
+  font-size: 14px !important;
+}
+
+
+
+
+
+/* Change the width and color of the scrollbar track (background) */
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+   /* Adjust the width of the scrollbar */
+}
+
+/* Change the color of the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  /* /background-color: transparent; Change the background color of the thumb */
+}
+
+/* Change the color of the scrollbar track (background) on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background-color:transparent; Change the background color on hover */
+}
+
+/* Change the color of the scrollbar track (background) when clicked */
+::-webkit-scrollbar-thumb:active {
+  /* background-color:transparent#777; Change the background color when clicked */
+}
+
+
+.sticky-div{
+
+padding:10px 0px !important; 
+
+}
+
+@media screen  and (max-width:575px){
+  .sticky-div{
+
+    padding:0px 0px !important; 
+    
+    }
+    
+}

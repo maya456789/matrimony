@@ -1,0 +1,278 @@
+<div class="container-fluid d-flex justify-content-between bg-light  " style="align-items: center; box-shadow: 0px 3px 6px #00000029;">
+
+    <div>
+        <a class="navbar-brand" routerLink="/homepage-afterlogin">
+            <img src="../../../assets/img/HomePageBanner2-removebg-preview.png" alt="Logo" style="height: 70px">
+        </a>
+        <i id="toggleNavLinks" class="fa-solid fa-angle-down navToggleIcon" (click)="toggleNavLinks()"></i>
+    </div>
+    <div class="d-flex">
+    <div class="d-flex justify-content-start navlink" (click)="toggleNavLinks()"
+        [ngClass]="{ 'show': navLinksVisible }">
+
+        <div class="d-flex justify-content-start element-cus">
+        <ul class="d-flex collapse navbar-collapse" id="navbarNav">
+            <li class="nav-item home" routerLink="/homepage-afterlogin">
+                <a class="nav-link" routerLink="/homepage-afterlogin">Home</a>
+            </li>
+            <hr>
+            <li class="nav-item" routerLink="/event-beforelogin">
+                <a class="nav-link" routerLink="/event-beforelogin" [routerLinkActive]="['active-link']"
+                    [routerLinkActiveOptions]="{ exact: true }">Event</a>
+            </li>
+            <hr>
+            <li class="nav-item" routerLink="/articles" >
+                <a class="nav-link" routerLink="/articles" [routerLinkActive]="['active-link']"
+                    [routerLinkActiveOptions]="{ exact: true }">Articles</a>
+            </li>
+            <hr>
+            <li class="nav-item dropdown" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Search
+                </a>
+                <div class="dropdown-menu" aria-labelledby="searchDropdown">
+                    <a class="dropdown-item" routerLink="/search-tabs/quick-search" (click)="toggleNavLinks()">Quick Search</a>
+                    <a class="dropdown-item" routerLink="/search-tabs/advance-search" (click)="toggleNavLinks()">Advanced Search</a>
+                    <a class="dropdown-item" routerLink="/search-tabs/save-my-search" (click)="toggleNavLinks()">My Saved Search</a>
+                </div>
+            </li>
+            <hr>
+            <li class="nav-item" routerLink="/premium-membership">
+                <a class="nav-link" routerLink="/premium-membership">Premium Membership</a>
+            </li>
+            <hr>
+            <li class="nav-item" routerLink="/before-mediator">
+                <a class="nav-link" routerLink="/before-mediator">Mediators</a>
+            </li>
+            <hr>
+            <li class="nav-item" routerLink="/other-organization">
+                <a class="nav-link" routerLink="/other-organization">Other Organizations</a>
+            </li>
+            <hr>
+            <li class="nav-item FAQ" routerLink="/faq">
+                <a class="nav-link" routerLink="/faq">FAQ's</a>
+            </li>
+            <li class="dropdown dropdownNotification" style="margin-left: 35px;">
+                <span data-toggle="dropdown" role="button"><img src="../../../assets/img/Group 6214.svg"></span>
+                <span class="button__badge">8</span>
+                <ul class="dropdown-menu" style="width:300px;height: 250px; overflow-y: scroll;list-style-type: none">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="ml-2">New</p>
+                        </div>
+                        <div class="col-2 ">
+                            <a routerLink="/search"><i style="font-size:13px" class="fas fa-user-alt ml-2"></i></a>
+                        </div>
+                        <div class="col-10" style="font-size:12px">
+                            Vaishnavi pudawal accept your friend request. <span style="color:lightgray">23h</span>
+                        </div>
+                        <div class="col-2 ">
+                            <i style="font-size:13px" class="fas fa-user-alt ml-2"></i>
+                        </div>
+                        <div class="col-10" style="font-size:12px">
+                            Vaishnavi pudawal accept your friend request. <span style="color:lightgray">23h</span>
+                        </div>
+
+                        <div class="col-12">
+                            <p class="ml-2 mt-2">This Week</p>
+                        </div>
+                        <div class="col-2 ">
+                            <i style="font-size:13px" class="fas fa-user-alt ml-2"></i>
+                        </div>
+                        <div class="col-10" style="font-size:12px">
+                            Vaishnavi pudawal accept your friend request. <span style="color:lightgray">23h</span>
+                        </div>
+                        <div class="col-2 ">
+                            <i style="font-size:13px" class="fas fa-user-alt ml-2"></i>
+                        </div>
+                        <div class="col-10" style="font-size:12px">
+                            Vaishnavi pudawal accept your friend request. <span style="color:lightgray">23h</span>
+                        </div>
+
+                        <div class="col-12">
+                            <p class="ml-2 mt-2">Earlier</p>
+                        </div>
+                        <div class="col-2 ">
+                            <i style="font-size:13px" class="fas fa-user-alt ml-2"></i>
+                        </div>
+                        <div class="col-10" style="font-size:12px">
+                            Vaishnavi pudawal accept your friend request. <span style="color:lightgray">23h</span>
+                        </div>
+                        <div class="col-2 ">
+                            <i style="font-size:13px" class="fas fa-user-alt ml-2"></i>
+                        </div>
+                        <div class="col-10" style="font-size:12px">
+                            Vaishnavi pudawal accept your friend request. <span style="color:lightgray">23h</span>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+
+    <div class="d-flex justify-content-between dropdownNotification" style="margin-right: 45px;" *ngFor="let cardObj of cards">
+
+        <div class="d-flex justify-content-center align-items-center" style="margin-left: 35px; " >
+            <button class="d-flex mx-2 text-center bg-white" (click)="toggleFilterDiv()" style="    background-color: white !important;
+            border-radius: 25px !important;
+            border: 1px solid #999;
+            padding: 2px 2px 2px 11px;">
+                <i class="fa-solid fa-bars" style="color: #080808; margin-right: 10px;padding-top: 7px;"></i>
+               <!-- <img src="{{cardObj.img}}" width="100%" style="height: 30px;" alt="">-->
+                <span style="background-image: url('{{cardObj.img}}');height: 30px;width: 30px;background-position:center;background-repeat: no-repeat;background-size: cover;border-radius: 50%;">       </span>
+            </button>
+
+
+        </div>
+
+    </div>
+
+    <div class="slider-container ml-2 " [class.d-none]="!showFiltersDiv" style="height: 100vh;  overflow-y: auto;">
+        <div class="slider-content" *ngFor="let cardObj2 of cards2">
+            <div class="row" style="padding: 5px 20px; margin: 0px !important;">
+                <div class="d-flex p-0 justify-content-end">
+                    <i class="fa-regular fa-circle-xmark" (click)="toggleFilterDiv()" style="color: orange; font-size: 25px;cursor: pointer;"></i>
+
+                </div>
+                <div class="row border m-0 p-0 mt-1" >
+                    <div class="col-auto ">
+                       <!-- <img src="{{cardObj2.img}}" width="100%" style="height: 40px;margin-top: 10px;" alt="">
+                        -->
+                        <div style="background-image: url('{{cardObj2.img}}');height: 80px;width: 80px;background-position:center;background-repeat: no-repeat;background-size: cover;border-radius: 50%;
+                        margin-top: 10px;">   </div> 
+                    </div>
+                    <div class="col-lg-8 ">
+                        <p class="mb-0 mt-1 "><b>ID:{{cardObj2.id}}</b></p>
+                        <p class="mb-0">{{cardObj2.name}}</p>
+                        <p class="mb-0">{{cardObj2.address}}</p>
+                        <p>{{cardObj2.education}} </p>
+                        <div class="mb-2">
+                            <a routerLink="/my-profile" style="color: red;text-decoration: none;">Update & View Profile</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- <div class="row p-0 m-0">
+                    <div class="col-lg-3 text-center" style="border: 1px solid;">
+                        <p>Interest Sent</p>
+                        <p>12</p>
+                    </div>
+                    <div class="col-lg-3"style="border: 1px solid;">
+                        <p>Interest Sent</p>
+                        <p>12</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>Interest Sent</p>
+                        <p>12</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>Interest Sent</p>
+                        <p>12</p>
+                    </div>
+                 
+
+                </div> -->
+
+                <div class="  d-flex justify-content-between interest mt-3 p-0" style="gap: 10px;">
+                    <div class="border" routerLink="/intrest-sent" style="">
+                        <p>Interest Sent</p>
+                        <p>12</p>
+                    </div>
+                    <div class="border" routerLink="/intrest-recived" style="">
+                        <p>Interest Recevied</p>
+                        <p>12</p>
+                    </div>
+                    <div class="border" routerLink="/intrest-accepted">
+                        <p>Interest Accepted</p>
+                        <p>12</p>
+                    </div>
+                    <div class="border" routerLink="/my-favorite">
+                        <p>My Favorite Profile</p>
+                        <p>12</p>
+                    </div>
+
+                </div>
+                <div class="mt-3 py-3 border" >
+                    <button class="bg-white border d-flex justify-content-between py-2"
+                        style="width: 100%;text-align: center; align-items: center;">
+                        <p class="mb-0">My Membership</p>
+                        <p class="mb-0">></p>
+                    </button>
+                    <button class=" bg-white border d-flex justify-content-between py-2 mt-2"
+                        style="width: 100%;text-align: center; align-items: center;">
+                        <p class="mb-0">Hide/Delet Profile</p>
+                        <p class="mb-0">></p>
+                    </button>
+                </div>
+                <div class="mt-3 py-3 border">
+                    <button class=" border bg-white d-flex justify-content-between py-2" routerLink="/terms-condition"
+                        style="width: 100%;text-align: center; align-items: center;">
+                        <p class="mb-0">Terms & Conditions</p>
+                        <p class="mb-0">></p>
+                    </button>
+                    <button class="bg-white border d-flex justify-content-between py-2 mt-2"
+                        style="width: 100%;text-align: center; align-items: center;" routerLink="/faq">
+                        <p class="mb-0">FAQ's</p>
+                        <p class="mb-0">></p>
+                    </button>
+                </div>
+
+                <div class=" border contactsDetails mt-3 " style="">
+                    <div class="">
+                        <h5>Contact Us</h5>
+                    </div>
+                    <div class="d-flex">
+                        <div class="" style="margin-right: 10px;">
+                            <i class="fa-solid fa-location-dot" style="color: orange"></i>
+                        </div>
+                        <div>
+                            <span class="">
+                                404, Ved Vihar, Bhusari Colony Kothrud,<br />
+                                pune 411038
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="d-flex">
+                        <div class="" style="margin-right: 10px;">
+                            <i class="fa-solid fa-phone" style="color: orange"></i>
+                        </div>
+                        <div>
+                            <span class="">
+                                +91 930 955 4954 ( 9 AM - 6 PM India time )
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="d-flex">
+                        <div class="" style="margin-right: 10px;">
+                            <i class="fa-solid fa-envelope" style="color: orange"></i>
+                        </div>
+                        <div>
+                            <span class="">
+                                <a href="" style="text-decoration: none; color: #080808;">info@anubandh.com</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 py-3 border" >
+                    <button class=" bg-white border d-flex justify-content-between py-2"
+                        style="width: 100%;text-align: center; align-items: center;" (click)="logout2()">
+                        <p class="mb-0">Log Out</p>
+                        <p class="mb-0">></p>
+                    </button>
+                  
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>

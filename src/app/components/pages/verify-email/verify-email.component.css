@@ -1,0 +1,99 @@
+.verification-page {
+    height: 100vh;
+  }
+  
+  .verification-form-container {
+    padding-top: 5% !important;
+    max-width: 100%;
+    padding: 20px;
+    background-color:#fff;
+  }
+  
+  .verification-form-container p {
+    font-weight: 500;
+    font-size: small;
+  }
+  .verification-image{
+    min-height: 100vh;
+  }
+  /* Add your custom CSS for OTP input fields */
+  .otp-container {
+    display: flex;
+  }
+  
+  .otp-input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+  .otp-input:focus {
+    outline: none;
+    border-color: #D93134;
+    /* background-color: #f44336; */
+    /* color: white; */
+  }
+  
+  /* Add your custom CSS for the countdown timer and other elements */
+  .headingv{
+    font-size: 45px !important;
+    font-weight: bolder !important;
+    line-height: 1;
+  }
+  .skipForNow a{
+    color: #D93134;
+    font-size: smaller;
+    font-weight: 400;
+  } 
+
+  .linkresend a{
+    text-decoration: none;
+    color: #D93134;
+    font-weight: bold;
+    font-size: small;
+  }
+  .otp-input.filled {
+    background-color: #D93134;
+    color: white;
+  }
+
+  .verify-div{
+    background-color:#fff;
+    
+   
+  }
+  
+  
+  @media (min-width: 767.98px) and (max-width: 991.98px) {
+    #verify{
+      font-size: 25px !important;
+     }
+  }
+  
+  @media (max-width: 766.98px) {
+    .image-div{  
+      display: none !important;
+    }
+    .verify-div{
+      width: 100%;
+      height: 100vh;
+    }
+  }
+  
+  @media (max-width: 766.98px) and (min-width:568px) {
+   
+  }
+  
+  @media (max-width: 575.98px) {
+   .registration-form-container{
+    margin-top: 2rem;
+    width: 95%;
+   }
+   #verify{
+    font-size: 25px !important;
+   }
+   
+  }

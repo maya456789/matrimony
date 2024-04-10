@@ -1,0 +1,252 @@
+
+
+.shiftRight{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px !important;
+}
+
+
+.card-sl {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .card-image img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 8px 8px 0px 0;
+  }
+  .card-heading {
+    font-size: 18px;
+    font-weight: bold;
+    background: #fff;
+    padding: 10px 15px;
+  }
+  
+  .card-text {
+    padding: 5px 10px;
+    background: #fff;
+    font-size: 14px;
+    color: #636262;
+  }
+  
+  .card-button {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 90%;
+    background-color: #1F487E;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .card-button:hover {
+    text-decoration: none;
+    background-color: #1D3461;
+    color: #fff;
+  
+  }
+
+
+  
+@media (max-width:575px) {
+    .advertise {
+        display: none !important;
+    }
+
+    
+}  
+
+
+/* Card Styles */
+
+.card-sl {
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-image img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 8px 8px 0px 0;
+}
+
+.card-action {
+  position: relative;
+  float: right;
+  margin-top: -25px;
+  margin-right: 20px;
+  z-index: 2;
+  color: #E26D5C;
+  background: #fff;
+  border-radius: 100%;
+  padding: 15px;
+  font-size: 15px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-action:hover {
+  color: #fff;
+  background: #E26D5C;
+
+}
+.home-p{
+overflow: hidden;
+}
+.card-heading {
+  font-size: 18px;
+  font-weight: bold;
+  background: #fff;
+  padding: 10px 15px;
+}
+
+.card-text {
+  padding: 10px 15px;
+  background: #fff;
+  font-size: 14px;
+  color: #636262;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 90%;
+  background-color: #1F487E;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+
+.card-button:hover {
+  text-decoration: none;
+  background-color: #1D3461;
+  color: #fff;
+
+}
+
+
+.section-name {
+  height: 3rem;
+  padding: 0.8em;
+}
+.form-control{
+  background-color: #e9ecef;
+}
+.error-msg {
+  color: red;
+  font-size: smaller;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.card-container{
+  display:inline-block ; max-width: 400px;   padding: 8px;
+}
+
+.card{
+  background-color: whitesmoke;
+max-width: 500px;
+}
+
+.radiocolor{
+  accent-color: red;  
+}
+.card-title{
+  font-weight: 600;
+}
+.card-image{
+padding: 5px;
+}
+.card-image img{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+
+
+
+/* -----------------------------------css for profile cards ----------- */
+
+
+
+
+
+.card-profile-image{
+  height: 200px;
+}
+.card-outer{
+  /* margin-top:20px; */
+  padding-left: 3rem;
+  padding-right: 3rem;box-shadow: none;background-color: white;
+}
+.last-seen{
+color: green;
+font-size: 14px;
+}
+
+.card-heading-id{
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 15px;
+}
+.card-text-all{
+  padding: 15px ;
+  padding-top: 0px;
+}
+
+.profile-text-m{
+  margin-bottom: 5px;
+  color: #636262;
+}
+
+@media screen and (max-width: 769px)  {
+  .card-profile-image{
+    height: 150px;
+  }
+  .card-outer{
+    padding: 0rem 1rem !important;
+  }
+
+.last-seen{
+  color: green;
+  font-size: 10px;
+  }
+  
+  .card-heading-id{
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px 10px;
+  }
+  .card-text-all{
+    padding: 10px ;
+    padding-top: 0px;
+  }
+  
+  .profile-text-m{
+    margin-bottom: 5px;
+    color: #636262;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 567px)  {
+  .card-profile-image{
+    height: 140px;
+  }
+  .card-outer{
+    padding: 20px !important;
+  }
+  .card-image{
+    padding: 4px !important;
+  }
+  .card-sl[_ngcontent-ng-c3218285678] {
+    border-radius: 8px;
+    box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19) !important;
+}
+.profile-text-m{
+  margin-bottom: 3px !important;
+}
+}

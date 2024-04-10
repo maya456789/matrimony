@@ -1,0 +1,291 @@
+<div class="container-fluid">
+
+    <div class="row only-mobile">
+        <div class="col-12 ">
+            <div class="row d-flex justify-content-between">
+                <div class="col-2" style="min-width: 200px;">
+                    <div class="">
+                        <a routerLink="/mediators" style="text-decoration: none; color: black;">
+                            <h6 style="padding: 10px 2px;"> <i class="fa fa-chevron-left"></i> Education</h6>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-2" style="min-width: 120px;">
+                    <button class="clear-button " style=" padding: 10px 2px; font-size: 14px;" type="reset"
+                      >Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row sticky-div">
+        <div class="col-12 ">
+            <div class="row scrolling-container  d-flex justify-content-center">
+                <div class="col-11 section-container  d-flex justify-content-between">
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">1</div>
+                        <div class="line half-line"></div>
+                        <div class="section-name detail font-weight-bold">Personal Details</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">2</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Photo & Video</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">3</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Astro</div>
+                    </div>
+                    <div class=" container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">4</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Family Details</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">5</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Mediators</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle green">6</div>
+                        <div class="line full-line"></div>
+                        <div class="section-name detail font-weight-bold">Education</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">7</div>
+                        <div class="line  full-line"></div>
+                        <div class="section-name">Occupation</div>
+                    </div>
+                    <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">8</div>
+                        <div class="only-mobile line  full-line"></div>
+                        <div class="only-desktop line half-line2"></div>
+                        <div class="section-name">Address</div>
+                    </div>
+                    <div
+                        class="only-mobile  container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">9</div>
+                        <div class="line  full-line"></div>
+                        <div class="section-name">Partner's Expectations</div>
+                    </div>
+                    <div class="only-mobile container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">10</div>
+                        <div class="line  full-line"></div>
+                        <div class="section-name">Upload Document</div>
+                    </div>
+                    <div class="only-mobile container-box d-flex flex-column justify-content-center align-items-center">
+                        <div class="circle ">11</div>
+                        <div class="line half-line2"></div>
+                        <div class="section-name">About him</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-3 ">
+        <div class="col-12 d-flex justify-content-center">
+            <div class="col-11">
+                <div class="card  mb-3" *ngFor="let card of data" >
+                    <div class="card-body d-flex justify-content-between">
+                        <div class="col-10"> <h5 class="card-title fw-bold">{{card.instituteSelect}} / {{card.specializationSelect}}</h5>
+                            <small class="card-text" >{{card.instituteName}}</small><br>
+                            <small class="text-muted" >{{card.passoutYear}}</small>
+                        </div>
+                        <div class="col-2 d-flex " style="justify-content: end; align-items: flex-start;">  <a (click)="edit()" class="fw-bold" style="text-decoration: none; color: black;">Edit</a></div>
+                     
+                    
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    
+   
+
+
+    <div class="row mt-5 mb-5" style="height: 65vh;">
+        <div class="col d-flex justify-content-center edu" >
+            <div class="col-12">
+                <div class="continue-buttondiv d-flex align-items-center">
+                    <button class="continue-button btn btn-danger btn-block text-center" type="button" style="width: 13rem;"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" >+Add Education</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="offcanvas offcanvas-end  add-education"
+        data-bs-backdrop="static"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+        >
+       <div class="offcanvas-header shadow" >
+        <div class="row w-100 only-mobile">
+            <div class="col-12 ">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-2" style="min-width: 200px;">
+                        <div class="">
+                            <button  class="clear-button"  data-bs-dismiss="offcanvas"  >
+                                <h6 > <i class="fa fa-chevron-left"></i> Add Education</h6>
+                            </button>
+    
+                        </div>
+                    </div>
+                    <div class="col-2 text-center" style="min-width: 120px;">
+                        <button class="clear-button " style=" padding: 10px 2px; font-size: 14px;" type="reset" (click)="resetForm()"
+                          >Clear All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+           <h5 class="offcanvas-title only-desktop" id="offcanvasRightLabel">+Add Education</h5>
+           <button #closebutton type="button" class="btn-close only-desktop" data-bs-dismiss="offcanvas" aria-label="Close" (click)="cancel()"></button>
+       </div>
+       <div class="offcanvas-body" >
+           <form [formGroup]="myForm" (ngSubmit)="submitForm()" >
+            
+            <div class="row d-flex justify-content-center"  >
+                <div class="col-11">
+                    <div class="row" >
+                       
+                        <div class=" col-md-4 input-div" >
+                            <label for="instituteSelect">Education</label>
+                            <select class="form-select" id="instituteSelect" name="instituteSelect" formControlName="instituteSelect"
+                                  required  (click)="onclickeducation()" >
+                                <option value="" disabled selected>Institute</option>
+                                <option value="institute1">Institute 1</option>
+                                <option value="institute2">Institute 2</option>
+                             
+                            </select>
+                            <div *ngIf="myForm?.get('instituteSelect')?.hasError('required') && myForm?.get('instituteSelect')?.touched"
+                                 class="error-msg">
+                                Please select an institute.
+                            </div>
+                        </div>
+                        <div *ngIf="oneducation"  class="col-md-4 input-div">
+                            <label for="instituteName">Institute Name</label>
+                            <input type="text" class="form-control" id="instituteName" name="instituteName" formControlName="instituteName"
+                                   placeholder="Enter Institute Name" required>
+                            <div *ngIf="myForm?.get('instituteName')?.hasError('required') && myForm?.get('instituteName')?.touched"
+                                 class="error-msg">
+                                Please enter institute name.
+                            </div>
+                        </div>
+        
+                        <div  *ngIf="oneducation"  class="col-md-4 input-div">
+                            <label for="passoutYear">Passout Year</label>
+                        
+                            <select class="form-select" id="passoutYear" name="passoutYear" formControlName="passoutYear"
+                                    required>
+                                <option value="" disabled selected>Select Passout Year</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                             
+                            </select>
+                            <div  *ngIf="myForm?.get('passoutYear')?.hasError('required') && myForm?.get('passoutYear')?.touched"
+                                 class="error-msg">
+                                Please select a passout year.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div  *ngIf="oneducation"  class="row d-flex justify-content-center" style="margin-bottom: 5rem;">
+                <div class="col-11">
+                    <div class="row"  style="height: 60vh;">
+                        <div class="col-md-4 input-div">
+                            <label for="educationAreaSelect">Education Area</label>
+                           
+                            <select class="form-select" id="educationAreaSelect" name="educationAreaSelect" formControlName="educationAreaSelect"
+                                    required>
+                                <option value="" disabled selected>Select Education Area</option>
+                                <option value="area1">Education Area 1</option>
+                                <option value="area2">Education Area 2</option>
+
+                            </select>
+                            <div *ngIf="myForm?.get('educationAreaSelect')?.hasError('required') && myForm?.get('educationAreaSelect')?.touched"
+                                 class="error-msg">
+                                Please select an education area.
+                            </div>
+                        </div>
+        
+                        <div class="col-md-4 input-div">
+                            <label for="specializationSelect">Specialization</label>
+                            <select class="form-select" id="specializationSelect" name="specializationSelect" formControlName="specializationSelect"
+                                    required>
+                                <option value="" disabled selected>Select Specialization</option>
+                                <option value="spec1">Specialization 1</option>
+                                <option value="spec2">Specialization 2</option>
+                       
+                            </select>
+                            <div *ngIf="myForm?.get('specializationSelect')?.hasError('required') && myForm?.get('specializationSelect')?.touched"
+                                 class="error-msg">
+                                Please select a specialization.
+                            </div>
+                        </div>
+        
+                        <div class="col-md-4">
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            
+            <div  *ngIf="oneducation"  class="row sticky-div-foot" >
+                <div class="col-12 div d-flex justify-content-center add-education" >
+                    <div class="col-11 button-container d-flex justify-content-between">
+                        <div class="only-desktop clear-alldiv">
+                            <button #outsideButton class="clear-button " type="reset">Clear All</button>
+                        </div>
+                        <div class="b-buttons d-flex justify-content-between gap-2">
+                            <div class=" previous-buttondiv d-flex align-items-center">
+                                <button class="previous-button btn btn-outline-danger" (click)="cancel()"  type="button"   data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Cancel</button>
+                            </div>
+                            <div class="continue-buttondiv d-flex align-items-center">
+                                <button class="continue-button btn btn-danger btn-block" type="submit">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </form>
+           
+       </div>
+       
+   </div>
+   
+
+
+   <div class="row  sticky-div-foot" *ngIf="data.length!==0">
+    <div class="col-12 d-flex justify-content-center">
+        <div class="col-11 button-container d-flex justify-content-between">
+            <div class="only-desktop clear-alldiv">
+                <button #outsideButton class="clear-button " type="reset">Clear All</button>
+            </div>
+            <div class="b-buttons d-flex justify-content-between gap-2">
+                <div class="only-desktop previous-buttondiv d-flex align-items-center">
+                    <button class="previous-button btn btn-outline-danger" (click)="previous()">Previous</button>
+                </div>
+                <div class="continue-buttondiv d-flex align-items-center">
+                    <button class="continue-button btn btn-danger btn-block" type="" (click)="continue()">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      
+      
+
+        
+
+
+</div>

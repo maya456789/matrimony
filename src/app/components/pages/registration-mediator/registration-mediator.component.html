@@ -1,0 +1,307 @@
+<div class="container-fluid">
+
+    <div class="row only-mobile">
+        <div class="col-12 ">
+            <div class="row d-flex justify-content-between">
+                <div class="col-2 " style="min-width: 200px;">
+                    <div class="">
+                        <a routerLink="/family-details" style="text-decoration: none; color: black;">
+                            <h6 style="padding: 10px 2px;"> <i class="fa fa-chevron-left"></i> Astro</h6>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-2" style="min-width: 120px;">
+                    <button class="clear-button " style=" padding: 10px 2px; font-size: 14px;" type="reset"
+                        (click)="resetForm()">Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+        <div class="row sticky-div">
+            <div class="col-12 ">
+                <div class="row scrolling-container  d-flex justify-content-center">
+                    <div class="col-11 section-container  d-flex justify-content-between">
+                        <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle green">1</div>
+                            <div class="line half-line"></div>
+                            <div class="section-name detail font-weight-bold">Personal Details</div>
+                        </div>
+                        <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle green">2</div>
+                            <div class="line full-line"></div>
+                            <div class="section-name detail font-weight-bold">Photo & Video</div>
+                        </div>
+                        <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle green">3</div>
+                            <div class="line full-line"></div>
+                            <div class="section-name detail font-weight-bold">Astro</div>
+                        </div>
+                        <div class=" container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle green">4</div>
+                            <div class="line full-line"></div>
+                            <div class="section-name detail font-weight-bold">Family Details</div>
+                        </div>
+                        <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle green">5</div>
+                            <div class="line full-line"></div>
+                            <div class="section-name detail font-weight-bold">Mediators</div>
+                        </div>
+                        <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle ">6</div>
+                            <div class="line full-line"></div>
+                            <div class="section-name">Education</div>
+                        </div>
+                        <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle ">7</div>
+                            <div class="line  full-line"></div>
+                            <div class="section-name">Occupation</div>
+                        </div>
+                        <div class="container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle ">8</div>
+                            <div class="only-mobile line  full-line"></div>
+                            <div class="only-desktop line half-line2"></div>
+                            <div class="section-name">Address</div>
+                        </div>
+                        <div
+                            class="only-mobile  container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle ">9</div>
+                            <div class="line  full-line"></div>
+                            <div class="section-name">Partner's Expectations</div>
+                        </div>
+                        <div
+                            class="only-mobile container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle ">10</div>
+                            <div class="line  full-line"></div>
+                            <div class="section-name">Upload Document</div>
+                        </div>
+                        <div
+                            class="only-mobile container-box d-flex flex-column justify-content-center align-items-center">
+                            <div class="circle ">11</div>
+                            <div class="line half-line2"></div>
+                            <div class="section-name">About him</div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="only-mobile row d-flex justify-content-center mt-2 mb-2">
+                    <div class="col-11 d-flex justify-content-center">
+                        <input type="text" class="form-control" id="search" name="search" 
+                        placeholder="Search"  (input)="updateFilteredItems()" [(ngModel)]="search" >
+                        <i class="fa fa-search" style=" position: relative;
+                    top: 8px;
+                    right: 35px;
+                    opacity: 0.8; "  (click)="updateFilteredItems()"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="only-desktop row d-flex justify-content-center mt-4">
+            <div class="col-11 d-flex justify-content-center">
+                <input type="text" class="form-control" id="search" name="search" 
+                    placeholder="Search"  (input)="updateFilteredItems()" [(ngModel)]="search" >
+                <i class="fa fa-search" style=" position: relative;
+            top: 8px;
+            right: 35px;
+            opacity: 0.8; " (click)="updateFilteredItems()"></i>
+            </div>
+        </div>
+        <form  (ngSubmit)="submitForm()">
+        <div class="row d-flex justify-content-center  mt-3">
+            <div class="col-11 ">
+                <div class="error-msg fst-italic">Note: Kindly connect with mediator before selection</div>
+                <div class="error-msg mt-2 fst-italic">Note: Once selected can not be changed</div>
+
+                <div *ngIf="mederror" class="error-msg mt-2 fst-italic">Please select one mediator</div>
+            </div>
+        </div>
+
+
+        <div class="row d-flex justify-content-center mt-3" style="margin-bottom: 5rem;">
+            <div class="col-11 " >
+                <div class="col-12 radio-container" style="padding: 8px;">
+                    <input type="radio" name="mediator" value="none" id="none" class="radiocolor"  required   [(ngModel)]="selectedMediator">
+         <label for="none" style="padding-left: 10px;">None of them</label>
+                </div>
+                <div class="card-container mb-2 mr-2 ml-2 " *ngFor="let card of filteredItems">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="col-1 radio-container">
+                            <input type="radio" name="mediator" value="{{card.id}}"
+                            id="{{card.id}}" class="radiocolor"  [(ngModel)]="selectedMediator">
+                        </div>
+                        <label for="{{card.id}}">
+                        <div class="col-11">
+                            <div class="card ">
+                                <div class="row g-0">
+                                    <div class="col-4 card-image">
+                                        <img src="{{card.img}}" class="img-fluid rounded-center"   alt="...">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{card.name}}</h5>
+                                            <small class="text-muted">{{card.city}}</small> <br>
+                                            <small class="text-muted">{{card.mobilenumber}}</small><br>
+                                            <small class="text-muted">{{card.email}}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                    </div>
+                </div>
+
+                <!-- <div class="card-container mb-2 mr-2 ml-2 ">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="col-1">
+                            <input type="radio">
+                        </div>
+                        <div class="col-11">
+                            <div class="card ">
+                                <div class="row g-0">
+                                    <div class="col-4">
+                                        <img src="./assets/Rectangle 1.png" class="img-fluid rounded-center" alt="...">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bishal Binpwar</h5>
+                                            <small class="text-muted">Pune</small> <br>
+                                            <small class="text-muted">+99 99293299323</small><br>
+                                            <small class="text-muted">abc@gmail.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container mb-2 mr-2 ml-2 ">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="col-1">
+                            <input type="radio">
+                        </div>
+                        <div class="col-11">
+                            <div class="card ">
+                                <div class="row g-0">
+                                    <div class="col-4">
+                                        <img src="./assets/Rectangle 1.png" class="img-fluid rounded-center" alt="...">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bishal Binpwar</h5>
+                                            <small class="text-muted">Pune</small> <br>
+                                            <small class="text-muted">+99 99293299323</small><br>
+                                            <small class="text-muted">abc@gmail.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container mb-2 mr-2 ml-2 ">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="col-1">
+                            <input type="radio">
+                        </div>
+                        <div class="col-11">
+                            <div class="card ">
+                                <div class="row g-0">
+                                    <div class="col-4">
+                                        <img src="./assets/Rectangle 1.png" class="img-fluid rounded-center" alt="...">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bishal Binpwar</h5>
+                                            <small class="text-muted">Pune</small> <br>
+                                            <small class="text-muted">+99 99293299323</small><br>
+                                            <small class="text-muted">abc@gmail.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container mb-2 mr-2 ml-2 ">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="col-1">
+                            <input type="radio">
+                        </div>
+                        <div class="col-11">
+                            <div class="card ">
+                                <div class="row g-0">
+                                    <div class="col-4">
+                                        <img src="./assets/Rectangle 1.png" class="img-fluid rounded-center" alt="...">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bishal Binpwar</h5>
+                                            <small class="text-muted">Pune</small> <br>
+                                            <small class="text-muted">+99 99293299323</small><br>
+                                            <small class="text-muted">abc@gmail.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="c0l d-flex justify-content-between mb-3" style="max-width: 500px; min-width: 400px;">
+            <div class="col-1">
+                <input type="radio">
+            </div>
+            <div class="col-11"><div class="card " style="max-width: 500px;">
+                <div class="row g-0">
+                   
+                  <div class="col-4">
+                    <img src="./assets/anubandh-2.png" class="img-fluid rounded-center" alt="...">
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Bishal Binpwar</h5>
+                    <small class="text-muted">Pune</small> <br>
+                    <small class="text-muted">+99 99293299323</small><br>
+                      <small class="text-muted">abc@gmail.com</small>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> -->
+            </div>
+        </div>
+
+
+        <div class="row sticky-div-foot">
+            <div class="col-12 div d-flex justify-content-center">
+                <div class="col-11 button-container d-flex justify-content-between">
+                    <div class="only-desktop clear-alldiv">
+                        <button #outsideButton class="clear-button " type="reset">Clear All</button>
+                    </div>
+                    <div class="b-buttons d-flex justify-content-between gap-2">
+                        <div class="only-desktop previous-buttondiv d-flex align-items-center">
+                            <button class="previous-button btn btn-outline-danger"
+                                (click)="previous()">Previous</button>
+                        </div>
+                        <div class="continue-buttondiv d-flex align-items-center">
+                            <button class="continue-button btn btn-danger btn-block" type="submit">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>

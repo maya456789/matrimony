@@ -1,0 +1,57 @@
+.bank-details-text{
+  margin-bottom: 0;
+  color:rgb(62,3,224);
+}
+.txt-clr{
+  color:rgb(62,3,224);
+}
+.abt-permium{
+  margin-bottom: 0;
+}
+
+li{
+  margin-right:2rem;
+}
+li:before {
+  content: '\ffee';
+  color:black;
+  margin-right: 0.5em;
+}
+
+.abt-permium, .btm-txt{
+  font-size:14px;
+}
+
+.card-txt{
+  font-size:14px;
+}
+
+.price{
+  font-weight: 700;
+  font-size:30px;
+}
+
+@media screen and (max-width: 769px){
+  li{
+     display: block !important;
+  }
+  ul{
+      padding-left:3rem;
+  }
+  .pointer-div{
+      justify-content: start !important;
+      padding-left:2rem;
+  }
+}
+@media screen and (max-width: 426px){
+  li{
+     display: block !important;
+  }
+  ul{
+      padding-left:0;
+  }
+  .pointer-div{
+      justify-content: start !important;
+      padding-left:2rem;
+  }
+}

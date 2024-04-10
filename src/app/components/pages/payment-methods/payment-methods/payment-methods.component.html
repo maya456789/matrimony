@@ -1,0 +1,493 @@
+<div id="banner" style="width: 100%">
+  <img
+    src="../../../../assets/img/HomePageBanner.png"
+    alt=""
+    style="max-width: 100%; background-image: contain"
+  />
+</div>
+<div id="main-page-content" class="mb-5">
+  <div class="d-flex justify-content-center">
+    <div style="width: 90%">
+      <!-- card -->
+
+      <div
+        class="card mt-4 d-flex justify-content-center"
+        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      >
+        <div class="p-2" style="background-color: pink">
+          <h5 style="padding-left: 1rem; color: white">Basic</h5>
+        </div>
+        <div
+          class="row pb-3 pt-3 d-flex align-items-center justify-content-center"
+        >
+          <div
+            class="col-lg-2 col-md-3 d-flex align-items-center justify-content-center"
+          >
+            <div class="">
+              <p style="margin-bottom: 0; font-size: 24px">
+                <sup>₹</sup><b class="price">1,499</b>/<sub>mo</sub>
+              </p>
+              <i>Exclusive of GST</i>
+            </div>
+          </div>
+          <div class="vr px-0 mt-2"></div>
+          <div
+            class="col-lg-5 col-md-5 d-flex align-items-center justify-content-center "
+          >
+            <p class="p-3">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet,
+              laboriosam.
+            </p>
+          </div>
+          <div class="vr px-0 mt-2"></div>
+          <div class="col-lg-4 col-md-4 d-flex align-items-center pointer-div">
+            <div>
+              <ul class="pt-3">
+                <li>Pointer 1</li>
+                <li>Pointer 2</li>
+                <li>Pointer 3</li>
+              </ul>
+            </div>
+            <div style="margin-left: 5rem">
+              <ul class="pt-3">
+                <li>Pointer 1</li>
+                <li>Pointer 2</li>
+                <li>Pointer 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div style="width: 100%">
+      <div class="d-flex justify-content-center">
+        <div style="width: 90%">
+          <div class="mt-5">
+            <h4>Payment Options</h4>
+          </div>
+          <div class="row mt-4 d-flex justify-content-center">
+            <div class="col-lg-3 pt-3">
+              <label
+                class="p-2"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                  width: 100%;
+                  position: relative;
+                "
+                for="wallet"
+                (click)="divToDisplay(1)"
+              >
+                <input
+                  type="radio"
+                  id="wallet"
+                  name="fav_language"
+                  value="wallet"
+                  style="accent-color: red"
+                />
+                <label style="margin-left: 1rem" for="wallet">Wallet</label>
+                <img
+                  style="position: absolute; right: 1rem; top: 0.8rem"
+                  src="../../../../assets/img/Icon awesome-wallet.png"
+                  alt=""
+                />
+              </label>
+              <label
+                class="mt-2 p-2"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                  width: 100%;
+                "
+                (click)="divToDisplay(2)"
+                for="cod"
+              >
+                <input
+                  type="radio"
+                  id="cod"
+                  name="fav_language"
+                  value="cod"
+                  style="accent-color: red"
+                />
+                <label style="margin-left: 1rem" for="cod"
+                  >Cash On Delivery (COD)</label
+                >
+              </label>
+              <label
+                class="mt-2 p-2"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                  width: 100%;
+                  position: relative;
+                "
+                (click)="divToDisplay(3)"
+                for="paytm"
+              >
+                <input
+                  type="radio"
+                  id="paytm"
+                  name="fav_language"
+                  value="paytm"
+                  style="accent-color: red"
+                />
+                <label style="margin-left: 1rem" for="paytm">Paytm</label>
+                <img
+                  style="position: absolute; right: 1rem; top: 0.7rem"
+                  src="../../../../assets/img/Paytm-Logo-With-White-Border-PNG-image.png"
+                  alt=""
+                />
+              </label>
+              <label
+                class="mt-2 p-2"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                  width: 100%;
+                "
+                (click)="divToDisplay(4)"
+                for="netbanking"
+              >
+                <input
+                  type="radio"
+                  id="netbanking"
+                  name="fav_language"
+                  value="netbanking"
+                  style="accent-color: red"
+                />
+                <label style="margin-left: 1rem" for="netbanking"
+                  >Net Banking</label
+                >
+              </label>
+              <label
+                class="mt-2 p-2"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                  width: 100%;
+                "
+                (click)="divToDisplay(5)"
+                for="creditDebitCard"
+              >
+                <input
+                  type="radio"
+                  id="creditDebitCard"
+                  name="fav_language"
+                  value="creditDebitCard"
+                  style="accent-color: red"
+                  checked
+                />
+                <label style="margin-left: 1rem" for="creditDebitCard"
+                  >Credit/Debit Card</label
+                >
+              </label>
+              <label
+                class="mt-2 p-2"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                  width: 100%;
+                  position: relative;
+                "
+                (click)="divToDisplay(6)"
+                for="gpay"
+              >
+                <input
+                  type="radio"
+                  id="gpay"
+                  name="fav_language"
+                  value="gpay"
+                  style="accent-color: red"
+                />
+                <label style="margin-left: 1rem" for="gpay">Google Pay</label>
+                <img
+                  style="
+                    position: absolute;
+                    right: 1rem;
+                    top: -0.07rem;
+                    width: 4rem;
+                  "
+                  src="../../../../assets/img/Google-Pay-logo.png"
+                  alt=""
+                />
+              </label>
+            </div>
+            <div class="col-lg-6 pt-3">
+              <!-- creditDebitDiv -->
+              <div
+                id="Option-5"
+                class="creditDebitDiv p-3"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                "
+              >
+                <!-- [formGroup]="cardForm"  -->
+                <form [formGroup]="cardForm">
+                  <div class="form-group col-md-12">
+                    <input
+                      style="background-color: rgb(245, 245, 245)"
+                      type="text"
+                      class="form-control"
+                      id="CardNumber"
+                      formControlName="CardNumber"
+                      placeholder="Enter Card Number"
+                      required
+                    />
+                    <!-- <div *ngIf="submitted && f.CardNumber.errors" class="text-danger small" [ngClass]="{
+                'is-invalid': submitted && f.CardNumber.errors
+              }">
+                    <div *ngIf="f.CardNumber.errors?.required">Card Number is required</div>
+                    <div *ngIf="f.CardNumber.errors?.pattern">
+                      Card Number invalid
+                    </div>
+                  </div> -->
+                  </div>
+                  <div class="form-group col-md-12 mt-3">
+                    <input
+                      style="background-color: rgb(245, 245, 245)"
+                      type="text"
+                      class="form-control"
+                      formControlName="name"
+                      id="name"
+                      placeholder="Enter the name on the card"
+                      required
+                    />
+                    <!-- <div *ngIf="submitted && f.name.errors" class="text-danger small" [ngClass]="{
+                'is-invalid': submitted && f.name.errors
+              }">
+                    <div *ngIf="f.name.errors?.required">Name is required</div>
+                    <div *ngIf="f.name.errors?.name">Please enter valid name</div>
+                  </div> -->
+                  </div>
+                  <div class="form-group col-md-12 mt-3">
+                    <input
+                      style="background-color: rgb(245, 245, 245)"
+                      type="text"
+                      class="form-control"
+                      id="validThru"
+                      formControlName="validThru"
+                      placeholder="Valid Thru (MM/YY)"
+                      required
+                    />
+                    <!-- <div *ngIf="submitted && f.validThru.errors" class="text-danger small" [ngClass]="{
+                'is-invalid': submitted && f.validThru.errors
+              }">
+                    <div *ngIf="f.validThru.errors?.required">Valid Thru is required</div>
+                    <div *ngIf="f.validThru.errors?.pattern">Please enter valid date</div>
+                  </div> -->
+                  </div>
+                  <div class="form-group col-md-12 mt-3">
+                    <input
+                      style="background-color: rgb(245, 245, 245)"
+                      type="text"
+                      class="form-control"
+                      formControlName="cvv"
+                      id="cvv"
+                      placeholder="CVV"
+                      required
+                    />
+                    <!-- <div *ngIf="submitted && f.cvv.errors" class="text-danger small" [ngClass]="{
+                'is-invalid': submitted && f.cvv.errors
+              }">
+                    <div *ngIf="f.cvv.errors?.required">CVV is required</div>
+                    <div *ngIf="f.cvv.errors?.pattern">Please enter valid CVV</div>
+                  </div> -->
+                  </div>
+
+                  <div class="pt-3" style="text-align: end">
+                    <button
+                      class="btn"
+                      style="border: 1px solid red; margin-right: 1rem"
+                    >
+                      Save the Card
+                    </button>
+                    <button
+                      type="submit"
+                      (click)="onSubmit()"
+                      class="btn btn-danger"
+                    >
+                      Pay Now
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!-- creditDebitDiv Ends -->
+
+              <div
+                id="Option-1"
+                class="wallet p-3"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                "
+              >
+                <h1>Wallet</h1>
+              </div>
+
+              <div
+                id="Option-2"
+                class="p-3 cash-on-delivery"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                "
+              >
+                <h1>Cash On Delivery</h1>
+              </div>
+
+              <div
+                id="Option-3"
+                class="p-3 paytm"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                "
+              >
+                <h1>Paytm</h1>
+              </div>
+
+              <div
+                id="Option-4"
+                class="p-3 net-banking"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                "
+              >
+                <h1>Net Banking</h1>
+              </div>
+
+              <div
+                id="Option-6"
+                class="p-3 gpay"
+                style="
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                "
+              >
+                <h1>Google Pay</h1>
+              </div>
+            </div>
+            <div class="col-lg-3 pt-3 payment-option-row">
+              <div
+                style="
+                  width: 100%;
+                  height: 100%;
+                  position: relative;
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  border-radius: 5px;
+                  border-radius: 5px;
+                "
+              >
+                <div
+                  class="d-flex justify-content-center"
+                  style="
+                    width: 100%;
+                    height: 10rem;
+                    position: absolute;
+                    z-index: 9;
+                    top: -2rem;
+                    left: 0;
+                  "
+                >
+                  <div
+                    style="
+                      width: 80%;
+                      background-color: pink;
+                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                      border-radius: 5px;
+                      border-radius: 5px;
+                    "
+                  >
+                    <!-- card -->
+                    <div class="p-4">
+                      <h3>John Doe</h3>
+                      <p>**** **** ***** 9898</p>
+                      <div class="d-flex justify-content-between">
+                        <p style="margin-bottom: 0">09/22</p>
+                        <img
+                          style="width: 2rem"
+                          src="../../../../assets/img/master-card-logo.jpg"
+                          alt="card-img"
+                        />
+                      </div>
+                    </div>
+                    <!-- card -->
+                  </div>
+                </div>
+                <div
+                  class="p-3"
+                  style="padding-top: 160px !important; font-size: 14px"
+                >
+                  <div class="d-flex justify-content-between">
+                    <p style="margin-bottom: 0">Total MRP</p>
+                    <p style="margin-bottom: 0">₹20,000</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p style="margin-bottom: 0">Discount on MRP</p>
+                    <p style="margin-bottom: 0">₹1,500</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p style="margin-bottom: 0">GST + other Taxes</p>
+                    <p style="margin-bottom: 0">₹1,500</p>
+                  </div>
+                  <hr style="margin-top: 0rem !important" />
+                  <div class="d-flex justify-content-between">
+                    <p style="margin-bottom: 0; font-weight: 700">Subtotal</p>
+                    <p style="margin-bottom: 0; font-weight: 700">₹20,000</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p style="margin-bottom: 0">Handling Charge</p>
+                    <p style="margin-bottom: 0">₹50</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p style="margin-bottom: 0; font-weight: 700">Total</p>
+                    <p style="margin-bottom: 0; font-weight: 700">₹20,050.00</p>
+                  </div>
+                  <p style="margin-bottom: 0">*25% off on Diamond Plans</p>
+                </div>
+              </div>
+            </div>
+            <!-- card -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal"
+  id="modal"
+  tabindex="-1"
+  style="display: none"
+  style="background-color: rgba(128, 128, 128, 0.32);"
+
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background-color: white">
+      <div class="modal-body text-center p-5" style="position: relative;">
+        <button
+          (click)="closeDialog()"
+          type="button"
+          style="
+            position: absolute;
+            right: -1rem;
+            top: -1rem;
+            width: 30px;
+            border-radius: 30px;
+            background-color: white;
+            border-color: red;
+          "
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4>Thank you for Subscription</h4>
+        <p style="margin-bottom: 0">Details are shared through email and SMS</p>
+      </div>
+    </div>
+  </div>
+</div>

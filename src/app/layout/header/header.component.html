@@ -1,0 +1,134 @@
+
+<div class="container-fluid d-flex justify-content-between bg-light  " style="align-items: center;z-index: 21; box-shadow: 0px 3px 6px #00000029;">
+  <div>
+    <a class="navbar-brand" routerLink="">
+      <img src="../../../assets/img/HomePageBanner2-removebg-preview.png" alt="Logo" style="height: 70px">
+    </a>
+    <i id="toggleNavLinks" class="fa-solid fa-angle-down" (click)="toggleNavLinks()"></i>
+  </div>
+
+  <div class="d-flex">
+  <div class="d-flex justify-content-start navlink    navbar-mobile" (click)="toggleNavLinks()" [ngClass]="{ 'show': navLinksVisible }" style="z-index: 22 !important;">
+
+    <div class="d-flex justify-content-start element-cus">
+
+    
+    <ul class="d-flex collapse navbar-collapse" id="navbarNav">
+      <li class="nav-item home"  routerLink="/homepage">
+        <a class="nav-link"  routerLink="/homepage">Home</a>
+      </li>
+      <hr>
+      <li class="nav-item" routerLink="/event-beforelogin">
+        <a class="nav-link" routerLink="/event-beforelogin" [routerLinkActive]="['active-link']"
+          [routerLinkActiveOptions]="{ exact: true }">Event</a>
+      </li>
+      <hr>
+      <li class="nav-item" routerLink="/articles">
+        <a class="nav-link" routerLink="/articles" [routerLinkActive]="['active-link']"
+          [routerLinkActiveOptions]="{ exact: true }">Articles</a>
+      </li>
+      <hr>
+      <li class="nav-item dropdown" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Search
+        </a>
+        <div class="dropdown-menu" aria-labelledby="searchDropdown">
+          <a class="dropdown-item" routerLink="/search-tabs/quick-search" (click)="toggleNavLinks()">Quick Search</a>
+          <a class="dropdown-item" routerLink="/search-tabs/advance-search" (click)="toggleNavLinks()">Advanced Search</a>
+          <a class="dropdown-item" routerLink="/search-tabs/save-my-search" (click)="toggleNavLinks()">My Saved Search</a>
+</div>
+      </li>
+      <hr>
+      <li class="nav-item" routerLink="/premium-membership">
+        <a class="nav-link" routerLink="/premium-membership">Premium Membership</a>
+      </li>
+      <hr>
+      <li class="nav-item" routerLink="/before-mediator">
+        <a class="nav-link" routerLink="/before-mediator">Mediators</a>
+      </li>
+      <hr>
+      <li class="nav-item" routerLink="/other-organization">
+        <a class="nav-link" routerLink="/other-organization">Other Organizations</a>
+      </li>
+      <hr>
+      <li class="nav-item FAQ" routerLink="/faq">
+        <a class="nav-link" routerLink="/faq">FAQ's</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+
+
+  <div class="d-flex" style="margin-left: 35px;">
+    <div>
+      <button class="btn btn-outline login-red my-sm-0 " style="border: 1px solid #D93134;box-shadow: none;; color: #000;"
+        [routerLinkActive]="['active-link']" [routerLinkActiveOptions]="{ exact: true }"
+        type="button"
+        data-toggle="modal"  data-target="#exampleModalAcceptButton">Log In</button>
+    </div>
+    <div class="registor-now" style="margin-left: 35px; margin-right: 35px;">
+      <button class="btn btn-danger my-2 my-sm-0" style="border-radius: 3px !important;" routerLink="/registration"
+        [routerLinkActive]="['active-link']" [routerLinkActiveOptions]="{ exact: true }" type="button">Register
+        Now</button>
+    </div>
+
+  </div>
+</div>
+
+
+</div>
+
+<div class="modal fade px-2" id="exampleModalAcceptButton" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalAcceptButton" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px !important;">
+        <div class="modal-content px-2 py-1">
+            <div class="modal-body">
+                <div class="d-flex flex-row justify-content-center align-items-center p-1 bg-white">
+                    <h2 class=" text-center " id="exampleModalLongTitle2">
+                    Login As
+                    </h2>
+
+                </div>
+                <div class="d-flex justify-content-center">
+                    <p>Please select the role you want to login as </p>
+
+                </div>
+
+
+                <div class="d-flex justify-content-center text-center">
+
+                  <div class="d-flex justify-content-center  gap-3 mt-3 ">
+                    <div class="m-0 pr-3 " data-toggle="buttons"    [routerLinkActive]="['home-active']">
+                      <label class="btn  m-0  " [style.color]="isActive ? 'red':'black'"  style="width: 100px;background-color: transparent;border: none;box-shadow: none; ">
+                        <input type="radio" name="options" id="bride" vlaue="radio1" [checked]="isActive" (change)="istrue()" > Bride/Groom
+                      </label>
+                    </div>
+                    <div class="m-0 " data-toggle="buttons" [style.color]="!isActive ? 'red':'black'"  [routerLinkActive]="['home-active']">
+                      <label class="btn  m-0  "style="width: 100px;background-color: transparent;border: none;box-shadow: none; ">
+                        <input type="radio" name="options" id="groom" value="radio2" [checked]="!isActive" (change)="istrue()"  > Mediator
+                      </label>
+                    </div>
+                  
+                  </div>
+
+                  </div>
+                  <div class="d-flex justify-content-center  gap-3 mt-3 ">
+                  <div class="m-0 text-center "
+                  data-toggle="buttons">
+                    <div class="col-6">
+                      <button type="button" class="btn btn-primary" style="background-color: #D93134;border: none;box-shadow: none;"  
+                      data-dismiss="modal" routerLink="/login">Continue</button>
+                    </div></div>
+                  </div> 
+                  
+                
+                 
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+
